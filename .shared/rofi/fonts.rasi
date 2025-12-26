@@ -1,0 +1,4 @@
+* {
+	font: "SF Pro medium 11";
+	fontM: "SF Pro medium 12";
+}

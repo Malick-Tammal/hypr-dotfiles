@@ -1,0 +1,184 @@
+//---------------------------------------------------------
+//--  HACK: Lanucher "App launcher"
+//---------------------------------------------------------
+
+// Importing shared colors ---
+@import "~/.shared/rofi/colors.rasi"
+@import "~/.shared/rofi/fonts.rasi"
+
+// Configuration ---
+configuration {
+	modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               " ";
+	drun-display-format:        "{name}";
+
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+
+
+    kb-remove-to-eol:           "";
+    kb-remove-char-back:        "BackSpace";
+    kb-mode-complete:           "";
+
+    kb-row-up:                  "Control+k";
+    kb-row-down:                "Control+j";
+    kb-accept-entry:            "Control+l,Return";
+}
+
+* {
+	background-color:           @BG;
+}
+
+// Main Window  ---
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       800px;
+    height:                      500px;
+
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      1px solid;
+    border-radius:               8px;
+    border-color:                @BOR;
+    background-color:            @BG;
+    cursor:                      "default";
+}
+
+
+// Main Box ---
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                @BOR;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+// Inputbar ---
+inputbar {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px 0px 20px 0px;
+    padding:                     20px 0px 20px 20px;
+    border:                      0px 0px 1px 0px;
+    border-radius:               0px;
+    border-color:                @DARK5;
+    background-color:            transparent;
+    text-color:                  @DARK5;
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "::";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+entry {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Type to search";
+    placeholder-color:           inherit;
+    margin:                      0 0 0 10px;
+
+    font: @fontM;
+}
+
+// Listview
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       2;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @BOR;
+    background-color:            transparent;
+    text-color:                  @FG;
+    cursor:                      "default";
+}
+scrollbar {
+    handle-width:                5px ;
+    handle-color:                @SEL;
+    border-radius:               0px;
+    background-color:            @BG-ALT;
+}
+
+// Elements
+element {
+    enabled:                     true;
+    spacing:                     20px;
+    margin:                      0px 10px 0px 10px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               4px;
+    border-color:                @SEL;
+    background-color:            transparent;
+    text-color:                  @FG;
+    cursor:                      pointer;
+}
+element normal.normal {
+    text-color:                  @FG;
+}
+element selected.normal {
+    background-color:            @SEL-BG;
+    text-color:                  @DARK1;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        28px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+// Message
+error-message {
+    padding:                     15px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @SEL;
+    background-color:            transparent;
+    text-color:                  @RED;
+}
+textbox {
+    background-color:            transparent;
+    text-color:                  @RED;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
+}

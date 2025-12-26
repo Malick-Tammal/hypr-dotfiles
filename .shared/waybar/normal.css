@@ -1,0 +1,8 @@
+/*  INFO: Normal colors */
+
+@define-color BG @DARKER;
+@define-color BG-ALT @DARK;
+@define-color FG @WHITE;
+@define-color FG-ALT #4C474D;
+@define-color BOR @YELLOW;
+@define-color SEL-BG @ORANGE;

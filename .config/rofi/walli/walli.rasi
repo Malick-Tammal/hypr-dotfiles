@@ -1,0 +1,95 @@
+//---------------------------------------------------------
+//--  HACK: Walli "Wallpaper switcher"
+//---------------------------------------------------------
+
+@import "~/.shared/rofi/colors.rasi"
+@import "~/.shared/rofi/fonts.rasi"
+
+configuration {
+    show-icons:             true;
+
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+
+
+    kb-mode-complete:           "";
+    kb-remove-char-back:        "BackSpace";
+    kb-remove-to-eol:           "";
+
+    kb-row-up:                  "Control+h";
+    kb-row-down:                "Control+l";
+    kb-accept-entry:            "Control+k,Return";
+}
+
+* {
+	background-color:       @BG;
+}
+
+window {
+    width:                  100%;
+    height:                 350px;
+    border:                 1px;
+    border-color:           @BOR;
+    border-radius:          8px;
+    margin:                 10px;
+    location:               north;
+    anchor:                 north;
+    background-color:       @BG;
+    padding:                20px 0px 0px 20px;
+}
+
+mainbox {
+	children:               ["listview"];
+}
+
+listview {
+    columns:                1;
+    lines:                  6;
+    spacing:                20px;
+    cycle:                  true;
+    dynamic:                true;
+    layout:                 horizontal;
+    scrollbar:              false;
+	expand:                 true;
+	background-color:       transparent;
+    fixed-height:           true;
+    fixed-columns:          false;
+    scrollbar:              false;
+}
+
+element {
+    border-radius:          4px;
+    text-color:             @FG;
+    padding:                0px;
+    margin:                 0px;
+    width:                  229px;
+    orientation:            vertical;
+    expand:                 true;
+    border:                 0px;
+}
+
+element-icon {
+    background-color:       @DARK2;
+    size:                   288px;
+    cursor:                 pointer;
+	border-radius: 	        5px;
+    expand:                 true;
+    border:                 0px;
+    padding:                0px;
+    margin:                 0px;
+    expand:                 true;
+}
+
+element selected {
+    border:                 4px;
+    border-color:           @SEL-BG;
+}
+
+element-text {
+	enabled:                false;
+}
+
+inputbar {
+	enabled:                false;
+}
+

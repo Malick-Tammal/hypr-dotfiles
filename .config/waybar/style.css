@@ -1,0 +1,159 @@
+@import "../../.shared/waybar/colors.css";
+
+* {
+    font-family: "SF Pro", "Liga SFMonoNerdFont";
+    font-weight: 600;
+    font-size: 11px;
+    background: transparent;
+    transition: all 100ms ease;
+}
+
+/*  INFO: Modules */
+.modules-left,
+.modules-right {
+    background-color: @BG;
+    border: 1px solid @BOR;
+    margin: 10px 10px 0px 10px;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.modules-left {
+    padding: 5px 0 5px 5px;
+}
+
+windows#waybar {}
+
+.modules-center {}
+
+/*  INFO: Workspaces */
+#workspaces {
+    background-color: @BG;
+    border: 1px solid @BOR;
+    border-radius: 19px;
+    margin: 10px 0 0 0;
+    padding: 0 2px;
+}
+
+#workspaces button {
+    color: #ADA6AF;
+    background: @BG-ALT;
+    border-radius: 8px;
+    padding: 2px 5px;
+    margin: 10px 8px;
+    min-height: 0px;
+    transition: all 150ms ease-in;
+}
+
+#workspaces button.active {
+    color: @DARK;
+    background: @GREEN;
+    min-width: 50px;
+    box-shadow: 0px 0px 0px 4px rgba(168, 218, 117, 0.5);
+}
+
+#workspaces button.active:hover {
+    background: alpha(@GREEN, 0.85)
+}
+
+/*  INFO: Power */
+#custom-power {
+    padding: 0 10px;
+    background-color: @RED;
+    border-radius: 3px;
+    color: @DARK;
+}
+
+#custom-power:hover {
+    background-color: alpha(@RED, 0.85)
+}
+
+/*  INFO: Battery */
+#battery {
+    padding: 0 13px;
+    background-color: @ORANGE;
+    border-radius: 3px;
+    color: @DARK;
+    margin: 0px 5px;
+}
+
+#battery.plugged,
+#battery.charging {
+    /* background: @GREEN; */
+    background: @GREEN;
+}
+
+#battery:hover {
+    background-color: alpha(@GREEN, 0.85)
+}
+
+/*  INFO: Network */
+#network {
+    padding: 0 10px;
+    background-color: @PURPLE;
+    border-radius: 3px;
+    color: @DARK;
+}
+
+#network:hover {
+    background-color: alpha(@PURPLE, 0.85)
+}
+
+/*  INFO: Audio */
+#pulseaudio {
+    padding: 0 10px;
+    background-color: @BLUE;
+    border-radius: 3px;
+    color: @DARK;
+
+    margin: 0px 5px 0px 0px;
+}
+
+#pulseaudio.muted {
+    background-color: @BG-ALT;
+    color: @FG;
+}
+
+#pulseaudio:hover {
+    background-color: alpha(@BLUE, 0.85)
+}
+
+/*  INFO: Clock */
+#clock {
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 100px;
+    margin-left: 10px;
+}
+
+/*  INFO: Notification */
+#custom-notifications {
+    padding: 0 13px 0 10px;
+    background-color: @ORANGE;
+    border-radius: 3px;
+    color: @DARK;
+    margin: 0px 10px 0px 0px;
+}
+
+#custom-notifications:hover {
+    background-color: alpha(@ORANGE, 0.85)
+}
+
+/*  INFO: Active app */
+#window {
+    margin: 0 10px 0 10px;
+    padding-left: 10px;
+}
+
+/*  INFO: Tooltip */
+tooltip label {
+    margin-top: 5px;
+    border-radius: 8px;
+    /* Added 'px' - GTK sometimes ignores unitless numbers */
+    border: 1px solid @BOR;
+    /* Optional: adds a border to match your modules */
+    background: @BG;
+    padding: 8px;
+    /* Adds space inside the tooltip so text doesn't touch edges */
+    color: @FG;
+}

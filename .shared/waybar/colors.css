@@ -1,0 +1,19 @@
+/*  INFO: Defaults colors */
+
+@define-color GREEN #A9DC76;
+@define-color RED #FF6188;
+@define-color ORANGE #fc9867;
+@define-color YELLOW #FFD866;
+@define-color PURPLE #AB9DF2;
+@define-color BLUE #78DCE8;
+@define-color DARK #403E41;
+@define-color DARKER #1D1E19;
+@define-color WHITE #FDFFF1;
+
+@define-color DARK-TRA alpha(@DARK, 0.6);
+@define-color DARKER-TRA alpha(@DARKER, 0.6);
+
+/*  INFO: Type (transparent / normal) */
+
+/* @import "./normal.css"; */
+@import "./transparent.css";
