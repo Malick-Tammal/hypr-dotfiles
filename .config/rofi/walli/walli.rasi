@@ -2,29 +2,31 @@
 //--  HACK: Walli "Wallpaper switcher"
 //---------------------------------------------------------
 
+// Importing shared colors ---
 @import "~/.shared/rofi/colors.rasi"
 @import "~/.shared/rofi/fonts.rasi"
 
+// Configuration ---
 configuration {
     show-icons:             true;
 
-    me-select-entry:            "";
-    me-accept-entry:            "MousePrimary";
+    me-select-entry:        "";
+    me-accept-entry:        "MousePrimary";
 
+    kb-mode-complete:       "";
+    kb-remove-char-back:    "BackSpace";
+    kb-remove-to-eol:       "";
 
-    kb-mode-complete:           "";
-    kb-remove-char-back:        "BackSpace";
-    kb-remove-to-eol:           "";
-
-    kb-row-up:                  "Control+h";
-    kb-row-down:                "Control+l";
-    kb-accept-entry:            "Control+k,Return";
+    kb-row-up:              "h";
+    kb-row-down:            "l";
+    kb-accept-entry:        "k,Return";
 }
 
 * {
 	background-color:       @BG;
 }
 
+// Main Window  ---
 window {
     width:                  100%;
     height:                 350px;
@@ -38,10 +40,13 @@ window {
     padding:                20px 0px 0px 20px;
 }
 
+// Main Box ---
 mainbox {
 	children:               ["listview"];
+
 }
 
+// Listview
 listview {
     columns:                1;
     lines:                  6;
@@ -53,10 +58,11 @@ listview {
 	expand:                 true;
 	background-color:       transparent;
     fixed-height:           true;
-    fixed-columns:          false;
+    fixed-columns:          true;
     scrollbar:              false;
 }
 
+// Elements
 element {
     border-radius:          4px;
     text-color:             @FG;
@@ -89,6 +95,7 @@ element-text {
 	enabled:                false;
 }
 
+// Inputbar ---
 inputbar {
 	enabled:                false;
 }
