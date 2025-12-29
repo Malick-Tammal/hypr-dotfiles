@@ -28,6 +28,8 @@ configuration {
 
 * {
 	background-color:           @BG;
+
+    font:                       @font2;
 }
 
 // Main Window  ---
@@ -98,7 +100,7 @@ entry {
     placeholder-color:           inherit;
     margin:                      0 0 0 10px;
 
-    font: @fontM;
+    font: @font4;
 }
 
 // Listview

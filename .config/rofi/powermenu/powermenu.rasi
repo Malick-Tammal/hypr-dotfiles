@@ -1,0 +1,159 @@
+
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 false;
+}
+
+/*****----- Global Properties -----*****/
+@import                          "~/.shared/rofi/colors.rasi"
+@import                          "~/.shared/rofi/fonts.rasi"
+
+* {
+    font:                        @font1;
+}
+
+/*****----- Main Window -----*****/
+window {
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    north east;
+    fullscreen:                  false;
+    width:                       550px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    margin:                      10px;
+    padding:                     0px 0px 0px 0px;
+    border:                      1px solid;
+    border-radius:               8px;
+    border-color:                @SEL-BG;
+    cursor:                      "default";
+    background-color:            @BG;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     7px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @SEL-BG;
+    background-color:            transparent;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     7px;
+    margin:                      0px 0px 10px 0px;
+    padding:                     0px;
+    border:                      0px;
+    border-radius:               0px;
+    border-color:                @SEL-BG;
+    background-color:            transparent;
+    text-color:                  @FG;
+    children:                    [ "textbox-prompt-colon", "prompt"];
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "User: Malick Tammal";
+    padding:                     12px 16px;
+    border-radius:               4px;
+    background-color:            @SEL-BG;
+    text-color:                  @DARK;
+}
+prompt {
+    enabled:                     true;
+    padding:                     12px;
+    border-radius:               4px;
+    background-color:            @SEL-BG;
+    text-color:                  @DARK;
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     12px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @SEL-BG;
+    background-color:            @BG-ALT;
+    text-color:                  @FG;
+}
+textbox {
+    background-color:            inherit;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+    placeholder-color:           @FG;
+    blink:                       true;
+    markup:                      true;
+}
+error-message {
+    padding:                     12px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @SEL-BG;
+    background-color:            @BG;
+    text-color:                  @FG;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     5;
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     7px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @SEL-BG;
+    background-color:            transparent;
+    text-color:                  @FG;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    spacing:                     9px;
+    margin:                      0px;
+    padding:                     35px 0px;
+    border:                      0px solid;
+    border-radius:               4px;
+    border-color:                @SEL-BG;
+    background-color:            @DARK3;
+    text-color:                  @FG;
+    cursor:                      pointer;
+}
+element-text {
+    font:                        "feather 19";
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+element selected.normal {
+    background-color:            @SEL-BG;
+    text-color:                  @DARK;
+}

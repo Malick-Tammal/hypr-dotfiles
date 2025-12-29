@@ -1,4 +1,9 @@
 * {
-	font: "SF Pro medium 11";
-	fontM: "SF Pro medium 12";
+	font1: "SF Pro medium 9";
+	font2: "SF Pro medium 10";
+	font3: "SF Pro medium 11";
+	font4: "SF Pro medium 12";
+	font5: "SF Pro medium 13";
+
+    font: @font3;
 }
