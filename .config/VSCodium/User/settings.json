@@ -1,60 +1,76 @@
 {
-  "workbench.colorTheme": "Monokai Classic",
-  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace'",
-  "editor.fontSize": 15,
-  "editor.fontWeight": "500",
-  "workbench.iconTheme": "material-icon-theme",
-
-  // Vim keybinds / options
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"],
+    "workbench.colorTheme": "Monokai Classic",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace'",
+    "editor.fontSize": 15,
+    "editor.fontWeight": "500",
+    "workbench.iconTheme": "material-icon-theme",
+    // Vim keybinds / options
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ],
+        },
+    ],
+    "vim.useSystemClipboard": true,
+    "editor.formatOnSave": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Flash nvim
+        {
+            "before": [
+                "s"
+            ],
+            "commands": [
+                "flash-vscode.start"
+            ],
+        },
+        {
+            "before": [
+                "S"
+            ],
+            "commands": [
+                "flash-vscode.startSelection"
+            ],
+        },
+        {
+            "before": [
+                "tab"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ],
+        },
+        {
+            "before": [
+                "shift+tab"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ],
+        },
+    ],
+    // Cursor
+    "editor.cursorBlinking": "expand",
+    "editor.cursorSmoothCaretAnimation": "on",
+    // Scrolling
+    "editor.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    // UI
+    "window.titleBarStyle": "native",
+    "window.menuBarVisibility": "hidden",
+    "window.customTitleBarVisibility": "never",
+    "workbench.startupEditor": "none",
+    // Terminal
+    "terminal.integrated.commandsToSkipShell": [
+        "workbench.action.focusActiveEditorGroup",
+    ],
+    // Prettier formatter
+    "[jsonc]": {
+        "editor.defaultFormatter": "prettier.prettier-vscode",
     },
-  ],
-  "vim.useSystemClipboard": true,
-  "editor.formatOnSave": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    // Flash nvim
-    {
-      "before": ["s"],
-      "commands": ["flash-vscode.start"],
-    },
-    {
-      "before": ["S"],
-      "commands": ["flash-vscode.startSelection"],
-    },
-    {
-      "before": ["tab"],
-      "commands": ["workbench.action.nextEditor"],
-    },
-    {
-      "before": ["shift+tab"],
-      "commands": ["workbench.action.previousEditor"],
-    },
-  ],
-
-  // Cursor
-  "editor.cursorBlinking": "expand",
-  "editor.cursorSmoothCaretAnimation": "on",
-
-  // Scrolling
-  "editor.smoothScrolling": true,
-  "terminal.integrated.smoothScrolling": true,
-  "workbench.list.smoothScrolling": true,
-
-  // UI
-  "window.titleBarStyle": "native",
-  "window.menuBarVisibility": "hidden",
-  "window.customTitleBarVisibility": "never",
-
-  // Terminal
-  "terminal.integrated.commandsToSkipShell": [
-    "workbench.action.focusActiveEditorGroup",
-  ],
-
-  // Prettier formatter
-  "[jsonc]": {
-    "editor.defaultFormatter": "prettier.prettier-vscode",
-  },
 }
