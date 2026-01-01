@@ -1,0 +1,23 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+n",
+    "command": "workbench.view.explorer",
+    "when": "!sideBarVisible",
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "sideBarVisible && sideBarFocus",
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.closeSidebar",
+    "when": "sideBarVisible && sideBarFocus",
+  },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.view.explorer",
+    "when": "sideBarVisible && !sideBarFocus",
+  },
+]
