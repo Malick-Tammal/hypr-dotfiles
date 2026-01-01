@@ -17,8 +17,8 @@ configuration {
     kb-remove-char-back:    "BackSpace";
     kb-remove-to-eol:       "";
 
-    kb-row-up:              "h";
-    kb-row-down:            "l";
+    kb-row-up:              "h,Up";
+    kb-row-down:            "l,Down";
     kb-accept-entry:        "k,Return";
 }
 
@@ -43,7 +43,7 @@ window {
 // Main Box ---
 mainbox {
 	children:               ["listview"];
-
+	background-color:       transparent;
 }
 
 // Listview
@@ -57,8 +57,8 @@ listview {
     scrollbar:              false;
 	expand:                 true;
 	background-color:       transparent;
-    fixed-height:           true;
-    fixed-columns:          true;
+    fixed-height:           false;
+    fixed-columns:          false;
     scrollbar:              false;
 }
 
@@ -69,13 +69,15 @@ element {
     padding:                0px;
     margin:                 0px;
     width:                  229px;
+    height:                 229px;
     orientation:            vertical;
-    expand:                 true;
+    expand:                 false;
     border:                 0px;
+	background-color:       transparent;
 }
 
 element-icon {
-    background-color:       @DARK2;
+    background-color:       transparent;
     size:                   288px;
     cursor:                 pointer;
 	border-radius: 	        5px;
@@ -83,7 +85,8 @@ element-icon {
     border:                 0px;
     padding:                0px;
     margin:                 0px;
-    expand:                 true;
+    horizontal-align:       0.5;
+    vertical-align:         0.5;
 }
 
 element selected {

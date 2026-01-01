@@ -1,28 +1,32 @@
-# Current Theme
-style='~/.config/rofi/powermenu/powermenu.rasi'
+#!/bin/bash
+#----------------------------------------------------------
+#--  HACK: Powermenu
+#----------------------------------------------------------
+
+# Style
+style="$HOME/.config/rofi/powermenu/powermenu.rasi"
 
 # CMDs
 uptime="$(uptime -p | sed -e 's/up //g')"
-host=$(whoami)
 
-# Options
+# Options (Icons)
 shutdown='⏻'
 reboot=''
 lock=''
 suspend=''
 logout=''
-yes=''
-no=''
+yes=''
+no=''
 
 # Rofi CMD
 rofi_cmd() {
     rofi -dmenu \
         -p "Uptime: $uptime" \
         -mesg "Uptime: $uptime" \
-        -theme ${style}
+        -theme "${style}"
 }
 
-# Confirmation CMD
+# Confirmation CMD - Fixed the theme variable here
 confirm_cmd() {
     rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px;}' \
         -theme-str 'mainbox {children: [ "message", "listview" ];}' \
@@ -32,12 +36,7 @@ confirm_cmd() {
         -dmenu \
         -p 'Confirmation' \
         -mesg 'Are you Sure?' \
-        -theme ${dir}/${theme}.rasi
-}
-
-# Ask for confirmation
-confirm_exit() {
-    echo -e "$yes\n$no" | confirm_cmd
+        -theme "${style}"
 }
 
 # Pass variables to rofi dmenu
@@ -47,24 +46,22 @@ run_rofi() {
 
 # Execute Command
 run_cmd() {
-    selected="$(confirm_exit)"
+    selected="$(echo -e "$yes\n$no" | confirm_cmd)"
     if [[ "$selected" == "$yes" ]]; then
-        if [[ $1 == '--shutdown' ]]; then
-            systemctl poweroff
-        elif [[ $1 == '--reboot' ]]; then
-            systemctl reboot
-        elif [[ $1 == '--suspend' ]]; then
-            hyprlock
-        elif [[ $1 == '--logout' ]]; then
-            logout
-        fi
+        case $1 in
+        --shutdown) systemctl poweroff ;;
+        --reboot) systemctl reboot ;;
+        --suspend) systemctl suspend ;;
+        --logout) hyprctl dispatch exit ;;
+        esac
     else
         exit 0
     fi
 }
 
-# Actions
+# Main Actions
 chosen="$(run_rofi)"
+
 case ${chosen} in
 $shutdown)
     run_cmd --shutdown
@@ -73,6 +70,7 @@ $reboot)
     run_cmd --reboot
     ;;
 $lock)
+    # Lock doesn't need confirmation usually
     hyprlock
     ;;
 $suspend)

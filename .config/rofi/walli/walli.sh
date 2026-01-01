@@ -11,7 +11,7 @@ hyprctl keyword layerrule "dimaround ,rofi"
 WALLS_DIR="$HOME/Pictures/Wallpapers/Monokai/"
 CACHE_DIR="$HOME/.cache/wallpaper_thumbs"
 STYLE="$HOME/.config/rofi/walli/walli.rasi"
-ANIM_TYPE="wave" #  TIP: Options => simple | fade | left | right | top | bottom | wipe | grow | center | outer | random | wave
+ANIM_TYPE="grow" #  TIP: Options => simple | fade | left | right | top | bottom | wipe | grow | center | outer | random | wave
 
 # Ensure directories exist
 mkdir -p "$CACHE_DIR"
@@ -64,6 +64,6 @@ fi
 
 # Reseting layer rules
 hyprctl keyword layerrule "unset ,rofi"
-hyprctl keyword layerrule "blur ,rofi"
-hyprctl keyword layerrule "ignorezero ,rofi"
-hyprctl keyword layerrule "ignorealpha 0.5,rofi"
+# hyprctl keyword layerrule "blur ,rofi"
+# hyprctl keyword layerrule "ignorezero ,rofi"
+# hyprctl keyword layerrule "ignorealpha 0.5,rofi"
