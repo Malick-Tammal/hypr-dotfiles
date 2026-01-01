@@ -12,7 +12,6 @@ STYLE="$HOME/.config/rofi/launcher/launcher.rasi"
 
 # Rofu menu ---
 rofi \
-    -name malick \
     -show drun \
     -theme $STYLE
 
