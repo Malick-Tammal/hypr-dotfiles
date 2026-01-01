@@ -64,6 +64,6 @@ fi
 
 # Reseting layer rules
 hyprctl keyword layerrule "unset ,rofi"
-# hyprctl keyword layerrule "blur ,rofi"
-# hyprctl keyword layerrule "ignorezero ,rofi"
-# hyprctl keyword layerrule "ignorealpha 0.5,rofi"
+hyprctl keyword layerrule "blur ,rofi"
+hyprctl keyword layerrule "ignorezero ,rofi"
+hyprctl keyword layerrule "ignorealpha 0.5,rofi"
