@@ -24,7 +24,7 @@ configuration {
 
 * {
 	background-color:            @BG;
-    font:                        @font4;
+    font:                        @font2;
 }
 
 // Main Window  ---
@@ -46,7 +46,6 @@ window {
     cursor:                      "default";
 }
 
-
 // Main Box ---
 mainbox {
     enabled:                     true;
@@ -57,7 +56,7 @@ mainbox {
     border-radius:               0px 0px 0px 0px;
     border-color:                @BOR;
     background-color:            transparent;
-    children:                    [ "inputbar", "listview" ];
+    children:                    [ "inputbar", "message", "listview" ];
 }
 
 // Inputbar ---
@@ -91,11 +90,10 @@ entry {
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "Type to search";
+    placeholder:                 "Type to calculate or convert";
     placeholder-color:           inherit;
     margin:                      0 0 0 10px;
-
-    font: @font4;
+    font:                        @font4;
 }
 
 // Listview
@@ -149,7 +147,6 @@ element selected.normal {
     text-color:                  @DARK1;
 }
 element-icon {
-    enabled:                     true;
     background-color:            transparent;
     text-color:                  inherit;
     size:                        28px;
@@ -175,8 +172,13 @@ error-message {
 }
 textbox {
     background-color:            transparent;
-    text-color:                  @RED;
+    text-color:                  @ORANGE;
     vertical-align:              0.5;
     horizontal-align:            0.0;
     highlight:                   none;
+    margin:                      0 0px 20px 10px;
+    padding:                     10px;
+}
+message {
+    background-color:            transparent;
 }

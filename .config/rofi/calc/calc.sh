@@ -1,21 +1,23 @@
 #!/usr/bin/env bash
 
 #----------------------------------------------------------
-#--  HACK: Emoji picker
+#--  HACK: Clipboard
 #----------------------------------------------------------
 
 # Hyprland rules ---
 hyprctl keyword layerrule "animation slide bottom, rofi"
 
 # Style ---
-STYLE="$HOME/.config/rofi/emoji/emoji.rasi"
+STYLE="$HOME/.config/rofi/calc/calc.rasi"
 
 # Rofu menu ---
-rofi \
-    -modi emoji \
-    -show emoji \
-    -display-emoji "⚡" \
-    -theme $STYLE
+rofi -show calc \
+    -modi calc \
+    -no-show-match \
+    -no-sort \
+    -calc-command "echo -n '{result}' | wl-copy" \
+    -display-calc "🧮" \
+    -theme "${STYLE}"
 
 # Resetting layer rules ---
 hyprctl keyword layerrule "unset ,rofi"

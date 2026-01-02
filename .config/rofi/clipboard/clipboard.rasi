@@ -24,7 +24,7 @@ configuration {
 
 * {
 	background-color:            @BG;
-    font:                        @font4;
+    font:                        @font2;
 }
 
 // Main Window  ---
