@@ -85,6 +85,7 @@ source <(fzf --zsh)
 
 ##  INFO: Setting default editor to "nvim"
 export EDITOR="nvim"
+export VISUAL="coduim"
 
 ##  INFO: NVM Node version manager
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
