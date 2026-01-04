@@ -33,6 +33,10 @@ alias nvals="nv ~/.aliases"
 alias nvhypr="nvim ~/.config/hypr/hyprland.conf"
 alias chypr="code ~/.config/hypr/hyprland.conf"
 
+
+# INFO: TERMINAL
+alias rm="trash-put"
+
 # INFO: TERMINAL
 alias neo="neofetch"
 alias fast="fastfetch"
@@ -40,6 +44,8 @@ alias c="clear"
 alias rmrf="rm -rf"
 alias md="mkdir"
 alias t="touch" 
+
+
 
 #  INFO: Eza
 alias ls="eza --color=always --icons=always"
@@ -96,3 +102,6 @@ alias tl="tmux ls"
 alias tan="tmux attach -t"
 alias ta="tmux attach"
 alias tk="tmux kill-session -t"
+
+#  INFO: Reload touchpad drivers
+alias fix-touchpad="sudo modprobe -r i2c_hid_acpi && sudo modprobe i2c_hid_acpi"
