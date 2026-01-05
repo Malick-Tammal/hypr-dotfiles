@@ -96,11 +96,9 @@ trough {
     /* margin: 7px; */
 }
 
-/* icons */
-/* .notification .notification-content overlay { */
-/*     margin: 0px 15px 0px 15px; */
-/*     padding: 20px; */
-/* } */
+.widget-notifications label {
+    color: var(--fg-alt);
+}
 
 /* Target the image within your specific overlay structure */
 .notification .notification-content overlay .image {
