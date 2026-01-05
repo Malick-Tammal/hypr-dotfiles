@@ -5,6 +5,7 @@
   "editor.fontWeight": "500",
   "workbench.iconTheme": "material-icon-theme",
   // Vim keybinds / options
+  "vim.leader": "<space>",
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "j"],
@@ -30,6 +31,10 @@
     {
       "before": ["shift+tab"],
       "commands": ["workbench.action.previousEditor"],
+    },
+    {
+      "before": ["<leader>", "q"],
+      "commands": ["workbench.action.closeActiveEditor"],
     },
   ],
   // Cursor
