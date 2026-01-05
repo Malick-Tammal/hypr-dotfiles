@@ -56,7 +56,7 @@ if [ -n "$SELECTED_NAME" ]; then
         swww img "$FULL_PATH" --transition-type "$ANIM_TYPE" --transition-step 90 --transition-fps 60 &
 
         # Notify user
-        notify-send -t 2000 -a "Walli" "Walli" "$SELECTED_NAME" &
+        notify-send -a "Walli" "Walli" "$SELECTED_NAME" &
     else
         notify-send -a "Walli" "Error" "File not found: $SELECTED_NAME"
     fi
