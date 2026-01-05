@@ -105,3 +105,6 @@ alias tk="tmux kill-session -t"
 
 #  INFO: Reload touchpad drivers
 alias fix-touchpad="sudo modprobe -r i2c_hid_acpi && sudo modprobe i2c_hid_acpi"
+
+#  INFO: Yazi
+alias y="yazi"
