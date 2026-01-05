@@ -3,5 +3,5 @@ deps = []
 
 [[flavor.deps]]
 use = "malick-tammal/monokai"
-rev = "e99ef29"
-hash = "e7ca7351b0f338ed1fb81745851039e2"
+rev = "97110ca"
+hash = "17b34be0a0dbd22d4f3d19ac6c2ef0cc"
