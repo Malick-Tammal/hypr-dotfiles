@@ -149,11 +149,8 @@ windows#waybar {}
 tooltip label {
     margin-top: 5px;
     border-radius: 8px;
-    /* Added 'px' - GTK sometimes ignores unitless numbers */
     border: 1px solid @BOR;
-    /* Optional: adds a border to match your modules */
     background: @BG;
     padding: 8px;
-    /* Adds space inside the tooltip so text doesn't touch edges */
     color: @FG;
 }

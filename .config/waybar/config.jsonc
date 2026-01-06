@@ -10,7 +10,6 @@
         "hyprland/workspaces"
     ],
     "modules-right": [
-        "custom/battery_bar",
         "pulseaudio",
         "network",
         "battery",
