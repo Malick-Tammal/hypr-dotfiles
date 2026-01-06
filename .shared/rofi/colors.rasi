@@ -1,5 +1,3 @@
-//  INFO: Type (transparent / normal)
-
 * {
     //  TIP: Main colors
     GREEN  : #A9DC76;
@@ -27,6 +25,8 @@
     DARK-TRA4 : #727072B3;
     DARK-TRA5 : #949491B3;
 }
+
+//  INFO: Type (transparent / normal)
 
 // @import "./normal.rasi"
 @import "./transparent.rasi"
