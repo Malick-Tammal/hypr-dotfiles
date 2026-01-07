@@ -124,6 +124,7 @@ windows#waybar {}
     font-weight: 500;
     min-width: 100px;
     margin-left: 10px;
+    color: @FG;
 }
 
 /*  INFO: Notification */
