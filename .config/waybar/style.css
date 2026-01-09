@@ -3,7 +3,6 @@
 * {
     font-family: "SF Pro", "Liga SFMonoNerdFont";
     font-weight: 600;
-    font-size: 11px;
     background: transparent;
     transition: all 100ms ease;
 }
@@ -16,6 +15,7 @@
     margin: 10px 10px 0px 10px;
     border-radius: 6px;
     padding: 5px;
+    font-size: 11px;
 }
 
 .modules-left {
@@ -33,6 +33,7 @@ windows#waybar {}
     border-radius: 19px;
     margin: 10px 0 0 0;
     padding: 0 2px;
+    font-size: 12px;
 }
 
 #workspaces button {
@@ -154,4 +155,15 @@ tooltip label {
     background: @BG;
     padding: 8px;
     color: @FG;
+    font-size: 12px;
+}
+
+/*  INFO: Power profiles */
+#custom-power-profiles {
+    background-color: @BG;
+    border: 1px solid @BOR;
+    border-radius: 9999px;
+    margin: 12px 0px 2px 10px;
+    padding: 0 14px;
+    font-size: 12px;
 }

@@ -7,7 +7,8 @@
         "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "custom/power-profiles"
     ],
     "modules-right": [
         "pulseaudio",
@@ -119,7 +120,8 @@
             "3": "",
             "4": "󰉋",
             "5": "󰈔",
-            "active": ""
+            "active": "󰫢"
+            // "active": ""
         },
         "persistent-workspaces": {
             "1": [],
@@ -178,5 +180,10 @@
         "tooltip-format": "{percent}% Brightness",
         "scroll-step": 1,
         "min-length": 2
-    }
+    },
+    "custom/power-profiles": {
+        "format": "",
+        "tooltip-format": "Power profiles",
+        "tooltip": true,
+    },
 }
