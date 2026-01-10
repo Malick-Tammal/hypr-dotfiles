@@ -167,3 +167,12 @@ tooltip label {
     padding: 0 14px;
     font-size: 12px;
 }
+
+#tray {
+    background-color: @BG;
+}
+#tray menu {
+    background: @BG;
+    color: @FG;
+    border: 1px solid @BOR;
+}

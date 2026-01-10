@@ -28,5 +28,5 @@
 
 //  INFO: Type (transparent / normal)
 
-// @import "./normal.rasi"
-@import "./transparent.rasi"
+@import "./normal.rasi"
+// @import "./transparent.rasi"

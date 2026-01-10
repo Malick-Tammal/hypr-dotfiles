@@ -3,7 +3,7 @@
 # INFO: YAY (arch)
 alias i="yay -S"
 alias s="yay -Ss"
-alias r="yay -R"
+alias r="yay -Rns"
 alias update="yay -Syu"
 alias list="yay -Q"
 
@@ -22,6 +22,7 @@ alias vzsh="vim ~/.zshrc"
 alias vbsh="vim ~/.bashrc"
 alias nvzsh="nvim ~/.zshrc"
 alias nvbsh="nvim ~/.bashrc"
+alias zrefresh='rm -f ~/.zcompdump && exec zsh'
 
 # INFO: EDIT ALIASES
 alias vals="vim ~/.aliases"
@@ -42,10 +43,9 @@ alias neo="neofetch"
 alias fast="fastfetch"
 alias c="clear"
 alias rmrf="rm -rf"
-alias md="mkdir"
+alias realrm="/bin/rm -iv"
+alias md="mkdir -p"
 alias t="touch" 
-
-
 
 #  INFO: Eza
 alias ls="eza --color=always --icons=always"
@@ -94,7 +94,7 @@ alias bench="time zsh -i -c exit"
 alias matrix="cmatrix"
 
 #  INFO: Copy current dir path
-alias cdp="pwd | tr -d '\n' | pbcopy"
+alias cdp="pwd | tr -d '\n' | wl-copy"
 
 #  INFO: Tmux
 alias tn="tmux new-session -s"
