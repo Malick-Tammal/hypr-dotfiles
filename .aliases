@@ -22,7 +22,6 @@ alias vzsh="vim ~/.zshrc"
 alias vbsh="vim ~/.bashrc"
 alias nvzsh="nvim ~/.zshrc"
 alias nvbsh="nvim ~/.bashrc"
-alias zrefresh='rm -f ~/.zcompdump && exec zsh'
 
 # INFO: EDIT ALIASES
 alias vals="vim ~/.aliases"
