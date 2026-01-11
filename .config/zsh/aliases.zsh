@@ -1,6 +1,8 @@
-# HACK: "Aliases" MAKE YOUR LIFE EASY
+#----------------------------------------------------------
+#--  HACK: Aliases `Make your life easy`
+#----------------------------------------------------------
 
-# INFO: YAY (arch)
+#  INFO: YAY (arch) ---
 alias i="yay -S"
 alias s="yay -Ss"
 alias r="yay -Rns"
@@ -16,35 +18,36 @@ alias list="yay -Q"
 # alias bl="brew list"
 # alias bfu='brew update; brew upgrade --cask --greedy ; brew upgrade $(brew outdated | awk "{ print $1 }") ; brew cleanup'
 
-# INFO: ZSH / BASH
+#  INFO: ZSH / BASH ---
 alias szsh="source ~/.zshrc"
-alias vzsh="vim ~/.zshrc"
-alias vbsh="vim ~/.bashrc"
-alias nvzsh="nvim ~/.zshrc"
-alias nvbsh="nvim ~/.bashrc"
+alias vzsh="nvim ~/.zshrc"
+alias czsh="code ~/.zshrc"
+
+alias cbash="source ~/.bashrc"
+alias vbsh="nvim ~/.bashrc"
+alias cbsh="code ~/.bashrc"
+
 
 # INFO: EDIT ALIASES
-alias vals="vim ~/.aliases"
-alias bals="bat ~/.aliases"
-alias cals="code ~/.aliases"
-alias nvals="nv ~/.aliases"
+alias vals="nvim ~/.config/zsh/aliases.zsh"
+alias bals="bat ~/.config/zsh/aliases.zsh"
+alias cals="code ~/.config/zsh/aliases.zsh"
 
 # INFO: HYPRLAND
 alias nvhypr="nvim ~/.config/hypr/hyprland.conf"
 alias chypr="code ~/.config/hypr/hyprland.conf"
 
-
 # INFO: TERMINAL
-alias rm="trash-put"
 
 # INFO: TERMINAL
 alias neo="neofetch"
 alias fast="fastfetch"
 alias c="clear"
 alias rmrf="rm -rf"
-alias realrm="/bin/rm -iv"
+alias realrm="/bin/rm -iv"                              #-- Regular rm
 alias md="mkdir -p"
 alias t="touch" 
+alias rm="trash-put"                                    #-- Safe rm
 
 #  INFO: Eza
 alias ls="eza --color=always --icons=always"
@@ -58,16 +61,13 @@ alias lsc="ls --color=never --icons=never"
 # alias lsla="lsd -la"
 
 #  INFO: Move
+alias cd="z"
 alias ..="cd .."
 alias ...="cd ../.."
 
 #  INFO: Nvim
 alias nv="nvim"
 alias nvh="nv ."
-
-#  INFO: Mac borders
-alias cbor="code ~/.config/borders/bordersrc"
-alias rbor="brew services restart borders"
 
 #  INFO: Node
 alias npmi="npm i"
