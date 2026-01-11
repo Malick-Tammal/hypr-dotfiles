@@ -14,7 +14,6 @@ zinit snippet OMZP::git
 
 # fzf-tab
 zinit ice wait"0" lucid atinit'
-  # Initialize completion system first
   autoload -Uz compinit && compinit -C
 '
 zinit light Aloxaf/fzf-tab
