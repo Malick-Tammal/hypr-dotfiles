@@ -1,0 +1,6 @@
+# Theme
+--theme="Monokai Extended Bright"
+
+# Syntax highlighting
+--map-syntax="*.aliases:INI"
+--map-syntax="*.conf:INI"
