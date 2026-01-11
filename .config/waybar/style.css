@@ -169,10 +169,19 @@ tooltip label {
 }
 
 #tray {
-    background-color: @BG;
+    padding: 0 13px 0 10px;
+    background-color: @DARK;
+    border-radius: 3px;
+    color: @DARK;
+    margin: 0px 5px 0px 0px;
+    font-size: 20px;
 }
+
 #tray menu {
     background: @BG;
     color: @FG;
     border: 1px solid @BOR;
+}
+#tray menu item:hover {
+    background: #89b4fa;
 }

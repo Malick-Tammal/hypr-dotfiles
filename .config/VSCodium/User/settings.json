@@ -1,7 +1,7 @@
 {
-  "workbench.colorTheme": "Monokai Classic",
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
   "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace'",
-  "editor.fontSize": 14,
+  "editor.fontSize": 15,
   "editor.fontWeight": "500",
   "workbench.iconTheme": "material-icon-theme",
   // Vim keybinds / options
@@ -47,9 +47,10 @@
   // UI
   "window.titleBarStyle": "native",
   "window.menuBarVisibility": "hidden",
-  "window.customTitleBarVisibility": "never",
   "workbench.startupEditor": "none",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0.5,
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
   // Terminal
   "terminal.integrated.commandsToSkipShell": [
     "workbench.action.focusActiveEditorGroup",

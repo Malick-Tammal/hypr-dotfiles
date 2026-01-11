@@ -8,10 +8,10 @@ hyprctl keyword layerrule "animation slide top, rofi"
 hyprctl keyword layerrule "dimaround ,rofi"
 
 # --- Configuration ---
-WALLS_DIR="$HOME/Pictures/Wallpapers/Monokai/"
+WALLS_DIR="$HOME/Pictures/Wallpapers"
 CACHE_DIR="$HOME/.cache/wallpaper_thumbs"
 STYLE="$HOME/.config/rofi/walli/walli.rasi"
-ANIM_TYPE="grow" #  TIP: Options => simple | fade | left | right | top | bottom | wipe | grow | center | outer | random | wave
+ANIM_TYPE="random" #  TIP: Options => simple | fade | left | right | top | bottom | wipe | grow | center | outer | random | wave
 
 # Ensure directories exist
 mkdir -p "$CACHE_DIR"
@@ -54,6 +54,9 @@ if [ -n "$SELECTED_NAME" ]; then
 
         # Set wallpaper
         swww img "$FULL_PATH" --transition-type "$ANIM_TYPE" --transition-step 90 --transition-fps 60 &
+
+        # Cache it for others
+        cp $FULL_PATH "$HOME/.cache/current-wallpaper.png" &
 
         # Notify user
         notify-send -a "Walli" "Walli" "$SELECTED_NAME" &
