@@ -1,4 +1,4 @@
 export EDITOR="nvim"
-export VISUAL="codium"
+export VISUAL="nvim"
 export BUN_INSTALL="$HOME/.bun"
 export NVM_DIR="$HOME/.nvm"
