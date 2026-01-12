@@ -16,15 +16,15 @@
     --WHITE: #FDFFF1;
     --GRAY: #dadada;
 
-    --DARK-TRA: #1D1E19B3;
-    --DARK-TRA1: #221F22B3;
-    --DARK-TRA2: #2D2A2EB3;
-    --DARK-TRA3: #403E41B3;
-    --DARK-TRA4: #727072B3;
-    --DARK-TRA5: #949491B3;
+    --DARK-TRA: #1D1E19E6;
+    --DARK-TRA1: #221F22E6;
+    --DARK-TRA2: #2D2A2EE6;
+    --DARK-TRA3: #403E41E6;
+    --DARK-TRA4: #727072E6;
+    --DARK-TRA5: #949491E6;
 }
 
 /*  INFO: Type (transparent / normal) */
 
-@import "./normal.css";
-/* @import "./transparent.css"; */
+/* @import "./normal.css"; */
+@import "./transparent.css";

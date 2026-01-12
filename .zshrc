@@ -21,3 +21,5 @@ export ZSH_CONFIG="$HOME/.config/zsh"
 
 # 3. Load Environment variables
 [[ -f "$ZSH_CONFIG/env.zsh" ]] && source "$ZSH_CONFIG/env.zsh"
+
+source ./env.zsh
