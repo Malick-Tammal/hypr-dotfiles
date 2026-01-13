@@ -6,7 +6,7 @@ FONT="SF Pro Regular 11"            # Set Font
 CURSOR="Moga-Cursor"                # Set Cursor theme
 CURSOR_SIZE=2                       # Set Cursor size
 BUTTON_LAYOUT="appmenu:"            # Set Header bar menu  TIP: Show all of them : "appmenu:minimize,maximize,close"
-ICONS="Tela-brown-dark"             # Set your Icon theme
+ICONS="Colloid-Orange-Dark"         # Set your Icon theme
 
 #  INFO: APPLY GTK SETTINGS ---
 gsettings set org.gnome.desktop.interface gtk-theme "$THEME"
