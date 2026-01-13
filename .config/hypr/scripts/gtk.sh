@@ -6,11 +6,11 @@ FONT="SF Pro Regular 11"            # Set Font
 CURSOR="Moga-Cursor"                # Set Cursor theme
 CURSOR_SIZE=2                       # Set Cursor size
 BUTTON_LAYOUT="appmenu:"            # Set Header bar menu  TIP: Show all of them : "appmenu:minimize,maximize,close"
-# ICONS="Papirus-Dark"              # Set your Icon theme
+ICONS="Tela-brown-dark"             # Set your Icon theme
 
 #  INFO: APPLY GTK SETTINGS ---
 gsettings set org.gnome.desktop.interface gtk-theme "$THEME"
-# gsettings set org.gnome.desktop.interface icon-theme "$ICONS"
+gsettings set org.gnome.desktop.interface icon-theme "$ICONS"
 gsettings set org.gnome.desktop.interface font-name "$FONT"
 gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR"
 gsettings set org.gnome.desktop.interface cursor-size $CURSOR_SIZE
@@ -32,8 +32,6 @@ rm -f "$HOME/.config/gtk-4.0/settings.ini"
 mkdir -p "$HOME/.config/gtk-3.0"
 mkdir -p "$HOME/.config/gtk-4.0"
 
-# gtk-icon-theme-name=$ICONS
-
 #  INFO: Gtk 3.0
 cat >"$HOME/.config/gtk-3.0/settings.ini" <<EOF
 [Settings]
@@ -41,6 +39,7 @@ gtk-theme-name=$THEME
 gtk-font-name=$FONT
 gtk-cursor-theme-name=$CURSOR
 gtk-cursor-theme-size=$CURSOR_SIZE
+gtk-icon-theme-name=$ICONS
 gtk-application-prefer-dark-theme=1
 EOF
 
@@ -51,6 +50,7 @@ gtk-theme-name=$THEME
 gtk-font-name=$FONT
 gtk-cursor-theme-name=$CURSOR
 gtk-cursor-theme-size=$CURSOR_SIZE
+gtk-icon-theme-name=$ICONS
 EOF
 
 notify-send "Theme" "GTK Styles Applied"
