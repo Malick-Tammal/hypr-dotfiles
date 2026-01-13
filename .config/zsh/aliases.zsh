@@ -107,3 +107,5 @@ alias fix-touchpad="sudo modprobe -r i2c_hid_acpi && sudo modprobe i2c_hid_acpi"
 
 #  INFO: Yazi
 alias y="yazi"
+
+alias check-portals="systemctl --user status xdg-desktop-portal xdg-desktop-portal-hyprland"

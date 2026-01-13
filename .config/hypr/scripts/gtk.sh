@@ -1,41 +1,56 @@
 #!/bin/bash
-# ~/.config/hypr/scripts/gtk.sh
 
-# --- CONFIGURATION ---
-THEME="Colloid-Yellow-Dark-Gruvbox" # Set your GTK theme here (e.g., Tokyonight-Dark)
-ICONS="Papirus-Dark"                # Set your Icon theme here
-FONT="SF Pro Regular 11"            # Set your Font
-CURSOR="Moga-Cursor"                # Set your Cursor theme
-CURSOR_SIZE=24
+#  INFO: CONFIGURATION ---
+THEME="Colloid-Yellow-Dark-Gruvbox" # Set GTK theme
+FONT="SF Pro Regular 11"            # Set Font
+CURSOR="Moga-Cursor"                # Set Cursor theme
+CURSOR_SIZE=2                       # Set Cursor size
+BUTTON_LAYOUT="appmenu:"            # Set Header bar menu  TIP: Show all of them : "appmenu:minimize,maximize,close"
+# ICONS="Papirus-Dark"              # Set your Icon theme
 
-# --- APPLY SETTINGS ---
-# Apply to GNOME/GTK settings
+#  INFO: APPLY GTK SETTINGS ---
 gsettings set org.gnome.desktop.interface gtk-theme "$THEME"
-gsettings set org.gnome.desktop.interface icon-theme "$ICONS"
+# gsettings set org.gnome.desktop.interface icon-theme "$ICONS"
 gsettings set org.gnome.desktop.interface font-name "$FONT"
 gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR"
 gsettings set org.gnome.desktop.interface cursor-size $CURSOR_SIZE
 gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
+gsettings set org.gnome.desktop.wm.preferences button-layout "$BUTTON_LAYOUT"
 
-# Cleanup legacy config to ensure no conflicts
+#  INFO: FLATPAK FIXES ---
+if command -v flatpak &>/dev/null; then
+    flatpak override --user --filesystem="$HOME/.themes"
+    flatpak override --user --filesystem="$HOME/.icons"
+    flatpak override --user --filesystem="$HOME/.local/share/themes"
+    flatpak override --user --filesystem="$HOME/.local/share/icons"
+    flatpak override --user --env=GTK_THEME="$THEME"
+fi
+
+#  INFO: CLEANUP OF GTK CONFIGS ---
 rm -f "$HOME/.config/gtk-3.0/settings.ini"
 rm -f "$HOME/.config/gtk-4.0/settings.ini"
-
-# Force settings into config files for apps that don't read gsettings
 mkdir -p "$HOME/.config/gtk-3.0"
 mkdir -p "$HOME/.config/gtk-4.0"
 
+# gtk-icon-theme-name=$ICONS
+
+#  INFO: Gtk 3.0
 cat >"$HOME/.config/gtk-3.0/settings.ini" <<EOF
 [Settings]
 gtk-theme-name=$THEME
-gtk-icon-theme-name=$ICONS
 gtk-font-name=$FONT
 gtk-cursor-theme-name=$CURSOR
 gtk-cursor-theme-size=$CURSOR_SIZE
 gtk-application-prefer-dark-theme=1
 EOF
 
-# Copy same settings to GTK 4
-cp "$HOME/.config/gtk-3.0/settings.ini" "$HOME/.config/gtk-4.0/settings.ini"
+#  INFO: Gtk 4.0
+cat >"$HOME/.config/gtk-3.0/settings.ini" <<EOF
+[Settings]
+gtk-theme-name=$THEME
+gtk-font-name=$FONT
+gtk-cursor-theme-name=$CURSOR
+gtk-cursor-theme-size=$CURSOR_SIZE
+EOF
 
 notify-send "Theme" "GTK Styles Applied"

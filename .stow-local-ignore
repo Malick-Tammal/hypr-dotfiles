@@ -1,0 +1,14 @@
+# Ignore the README file
+README.md
+
+# Ignore the git folder
+\.git
+
+# Ignore your backup file (Contextual Example!)
+hyprland-backup-stable.*\.tar\.gz
+
+# Ignore the script used to install the dots
+install\.sh
+
+# Ignore keys
+keys.zsh
