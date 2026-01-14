@@ -102,4 +102,3 @@ element-text {
 inputbar {
 	enabled:                false;
 }
-

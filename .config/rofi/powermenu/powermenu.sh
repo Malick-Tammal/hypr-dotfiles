@@ -3,13 +3,11 @@
 #--  HACK: Powermenu
 #----------------------------------------------------------
 
-# Style
+#  INFO: Styling ---
 style="$HOME/.config/rofi/powermenu/powermenu.rasi"
 
-# CMDs
-uptime="$(uptime -p | sed -e 's/up //g')"
-
-# Options (Icons)
+#  INFO: Uptime --- uptime="$(uptime -p | sed -e 's/up //g')"
+#  INFO: Icons ---
 shutdown='⏻'
 reboot=''
 lock=''
@@ -18,7 +16,7 @@ logout=''
 yes=''
 no=''
 
-# Rofi CMD
+#  INFO: Rofi menu ---
 rofi_cmd() {
     rofi -dmenu \
         -p "Uptime: $uptime" \
@@ -26,7 +24,7 @@ rofi_cmd() {
         -theme "${style}"
 }
 
-# Confirmation CMD - Fixed the theme variable here
+#  INFO: Confirmation popup ---
 confirm_cmd() {
     rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 350px;}' \
         -theme-str 'mainbox {children: [ "message", "listview" ];}' \
@@ -39,12 +37,12 @@ confirm_cmd() {
         -theme "${style}"
 }
 
-# Pass variables to rofi dmenu
+#  INFO: Pass variables to rofi ---
 run_rofi() {
     echo -e "$shutdown\n$reboot\n$suspend\n$lock\n$logout" | rofi_cmd
 }
 
-# Execute Command
+#  INFO: Exec cmds ---
 run_cmd() {
     selected="$(echo -e "$yes\n$no" | confirm_cmd)"
     if [[ "$selected" == "$yes" ]]; then
@@ -59,7 +57,7 @@ run_cmd() {
     fi
 }
 
-# Main Actions
+#  INFO: Main actions ---
 chosen="$(run_rofi)"
 
 case ${chosen} in
@@ -70,7 +68,6 @@ $reboot)
     run_cmd --reboot
     ;;
 $lock)
-    # Lock doesn't need confirmation usually
     hyprlock
     ;;
 $suspend)

@@ -4,17 +4,14 @@
 #--  HACK: Clipboard
 #----------------------------------------------------------
 
-# Hyprland rules ---
-hyprctl keyword layerrule "animation slide bottom, rofi"
-
-# Style ---
+#  INFO: Styling ---
 STYLE="$HOME/.config/rofi/clipboard/clipboard.rasi"
 
-# Keybinds ---
+#  INFO: Keybinds ---
 DELETE_SELECTED_KEY=Ctrl+Delete
 CLEAR_ALL_KEY=Ctrl+Shift+Delete
 
-# Rofi menu ---
+#  INFO: Rofi menu ---
 selection=$(cliphist list |
     rofi -dmenu \
         -p "📋" \
@@ -25,7 +22,7 @@ selection=$(cliphist list |
 
 exit_code=$?
 
-# Handle Actions ---
+#  INFO: Handle Actions ---
 if [ -n "$selection" ]; then
     case $exit_code in
     0)
@@ -48,9 +45,3 @@ if [ -n "$selection" ]; then
         ;;
     esac
 fi
-
-# Resetting layer rules ---
-hyprctl keyword layerrule "unset ,rofi"
-hyprctl keyword layerrule "blur ,rofi"
-hyprctl keyword layerrule "ignorezero ,rofi"
-hyprctl keyword layerrule "ignorealpha 0.5,rofi"
