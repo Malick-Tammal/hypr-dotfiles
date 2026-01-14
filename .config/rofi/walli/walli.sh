@@ -7,7 +7,7 @@
 WALLS_DIR="$HOME/Pictures/Wallpapers"
 CACHE_DIR="$HOME/.cache/wallpaper_thumbs"
 STYLE="$HOME/.config/rofi/walli/walli.rasi"
-ANIM_TYPE="random" #  TIP: Options => simple | fade | left | right | top | bottom | wipe | grow | center | outer | random | wave
+ANIM_TYPE="wave" #  TIP: Options => simple | fade | left | right | top | bottom | wipe | grow | center | outer | random | wave
 
 #  INFO: Cache ---
 mkdir -p "$CACHE_DIR"
@@ -53,6 +53,9 @@ if [ -n "$SELECTED_NAME" ]; then
 
         # Cache it for others
         cp $FULL_PATH "$HOME/.cache/current-wallpaper.png" &
+
+        # Copy for sddm
+        cp $FULL_PATH "/usr/share/sddm/themes/sddm-modern/wallpaper.png" &
 
         # Notify user
         notify-send -a "Walli" "Walli" "$SELECTED_NAME" &
