@@ -1,15 +1,13 @@
 #!/usr/bin/env bash
 
 #----------------------------------------------------------
-#--  HACK: Emoji picker
+#--  HACK: Lanucher "App launcher"
 #----------------------------------------------------------
 
-#  INFO: Styling ---
-STYLE="$HOME/.config/rofi/emoji/emoji.rasi"
+#  INFO: Styling
+STYLE="$HOME/.config/rofi/launcher/style.rasi"
 
 #  INFO: Rofi menu ---
 rofi \
-    -modi emoji \
-    -show emoji \
-    -display-emoji "⚡" \
+    -show drun \
     -theme $STYLE

@@ -19,7 +19,7 @@
     // --  INFO: Power
     "custom/power": {
         "format": "⏻",
-        "on-click": "~/.config/rofi/powermenu/powermenu.sh",
+        "on-click": "~/.config/rofi/powermenu/script.sh",
         "tooltip-format": "Power"
     },
     // --  INFO: Battery
@@ -34,18 +34,6 @@
         "rotate": 0,
         "format-charging": "{icon} {capacity}% <span></span>",
         "format-plugged": "{icon} {capacity}% <span></span>",
-        // "format-icons": [
-        // 	"󰝦",
-        // 	"󰪞",
-        // 	"󰪟",
-        // 	"󰪠",
-        // 	"󰪡",
-        // 	"󰪢",
-        // 	"󰪣",
-        // 	"󰪤",
-        // 	"󰪥"
-        // ],
-        //  "format-icons": ["","","","","","","",""],  
         "format-icons": [
             "󰂎",
             "󰁺",
@@ -59,7 +47,8 @@
             "󰂂",
             "󰁹"
         ],
-        "on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
+        "on-click-right": "pkill waybar & hyprctl dispatch exec waybar",
+        "on-click": "~/.config/rofi/powerprofiles/script.sh"
     },
     // --  INFO: Network
     "network": {

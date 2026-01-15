@@ -1,0 +1,80 @@
+//---------------------------------------------------------
+//--  HACK: Power profiles
+//---------------------------------------------------------
+
+//  INFO: Importing shared colors ---
+@import "~/.shared/rofi/colors.rasi"
+@import "~/.shared/rofi/fonts.rasi"
+
+//  INFO: Configuration ---
+configuration {
+    show-icons:             false;
+
+    me-select-entry:        "";
+    me-accept-entry:        "MousePrimary";
+
+    kb-mode-complete:       "";
+    kb-remove-char-back:    "BackSpace";
+    kb-remove-to-eol:       "";
+
+    kb-row-up:              "k,Up";
+    kb-row-down:            "j,Down";
+    kb-accept-entry:        "l,Return";
+}
+
+* {
+	background-color:       @BG;
+    font:                   @font1;
+}
+
+//  INFO: Main Window  ---
+window {
+    width:                  8em;
+    border:                 1px;
+    border-color:           @BOR;
+    border-radius:          8px;
+    location:               northeast;
+    anchor:                 northeast;
+    x-offset:               -25px;
+    y-offset:               10px;
+    background-color:       @BG;
+}
+
+//  INFO: Main Box ---
+mainbox {
+	children:               ["listview"];
+	background-color:       transparent;
+}
+
+//  INFO: Listview ---
+listview {
+    columns:                1;
+    lines:                  3;
+    cycle:                  false;
+    scrollbar:              false;
+    layout:                 vertical;
+    background-color:       transparent;
+    spacing:                10px;
+    padding:                5px;
+}
+
+//  INFO: Elements ---
+element {
+	background-color:       transparent;
+    text-color:             @FG;
+}
+
+element-text {
+	background-color:       transparent;
+    text-color:             @FG;
+    horizontal-align:       0.5;
+    padding:                5px 0;
+    border-radius:          6px;
+    cursor:                 pointer;
+}
+
+element-text selected {
+    background-color:       @SEL-BG;
+    text-color:             @DARK1;
+}
+

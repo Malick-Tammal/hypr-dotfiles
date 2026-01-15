@@ -5,7 +5,7 @@
 #----------------------------------------------------------
 
 #  INFO: Styling ---
-STYLE="$HOME/.config/rofi/calc/calc.rasi"
+STYLE="$HOME/.config/rofi/calc/style.rasi"
 
 #  INFO: Rofi menu ---
 rofi -show calc \

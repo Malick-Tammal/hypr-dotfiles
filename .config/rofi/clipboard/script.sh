@@ -5,7 +5,7 @@
 #----------------------------------------------------------
 
 #  INFO: Styling ---
-STYLE="$HOME/.config/rofi/clipboard/clipboard.rasi"
+STYLE="$HOME/.config/rofi/clipboard/style.rasi"
 
 #  INFO: Keybinds ---
 DELETE_SELECTED_KEY=Ctrl+Delete
@@ -28,7 +28,7 @@ if [ -n "$selection" ]; then
     0)
         echo "$selection" | cliphist decode | wl-copy
         sleep 0.1
-        wtype -M ctrl -k v -m ctrl
+        wtype -M ctrl -M shift -k v -m shift -m ctrl
         ;;
     10)
         echo "$selection" | cliphist delete

@@ -4,7 +4,7 @@
 #----------------------------------------------------------
 
 #  INFO: Styling ---
-style="$HOME/.config/rofi/powermenu/powermenu.rasi"
+style="$HOME/.config/rofi/powermenu/style.rasi"
 
 #  INFO: Uptime --- uptime="$(uptime -p | sed -e 's/up //g')"
 #  INFO: Icons ---
