@@ -95,7 +95,7 @@
             ]
         },
         "on-click": "pavucontrol",
-        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        "on-click-right": "~/.config/hypr/scripts/swayosd.sh --mute"
     },
     //  INFO : Workspaces
     "hyprland/workspaces": {

@@ -5,7 +5,7 @@
 #----------------------------------------------------------
 
 #  INFO: Sound file
-SOUND="/usr/share/sounds/freedesktop/stereo/message.oga"
+SOUND="/usr/share/sounds/freedesktop/stereo/bell.oga"
 
 #  INFO: Listen to the DBus for notification requests
 dbus-monitor "interface='org.freedesktop.Notifications', member='Notify'" 2>/dev/null |
@@ -13,7 +13,10 @@ dbus-monitor "interface='org.freedesktop.Notifications', member='Notify'" 2>/dev
     while read -r line; do
 
         #  INFO: Play sound in background
-        if [ -f "$SOUND" ]; then
-            paplay "$SOUND" &
+        # Only play if the silence file does NOT exist
+        if [ ! -f "/tmp/silence_notification_sound" ]; then
+            if [ -f "$SOUND" ]; then
+                paplay "$SOUND" &
+            fi
         fi
     done
