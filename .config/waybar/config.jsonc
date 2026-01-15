@@ -67,7 +67,7 @@
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "Disconnected",
         "tooltip-format-disconnected": "There is no connection",
-        "on-click": "~/.config/hypr/scripts/network-toggle.sh",
+        "on-click": "~/.config/hypr/scripts/network_toggle.sh",
         "on-click-right": "nm-connection-editor",
         // TIP: bind right mouse click to toggle wifi
         // "on-click-right": "rfkill toggle wifi",
