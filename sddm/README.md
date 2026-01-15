@@ -2,6 +2,10 @@
 
 A clean sddm theme to match the theme of hyprland with dynamic wallpaper
 
+## Preview
+
+![Screenshot](./Preview/modern.png)
+
 ## Installation
 
 Clone main repo
