@@ -9,9 +9,7 @@ LOGFILE="$HOME/.cache/colorpicker_history.txt"
 COLOR_FORMAT="hex" #  TIP: hex or rgb
 AUTO_COPY=true
 AUTO_PASTE=false
-SOUND=true
-SOUND_FILE="/usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
-# ---------------------
+# ------------------------
 
 #  INFO: Getting the color
 COLOR=$(hyprpicker)
@@ -44,13 +42,6 @@ echo "[$(date +'%Y-%m-%d %H:%M')] => $FINAL_COLOR" >>"$LOGFILE"
 IMAGE="/tmp/color_preview.png"
 if command -v magick &>/dev/null; then
     magick -size 64x64 xc:none -fill "$FINAL_COLOR" -draw "roundrectangle 0,0 63,63 8,8" "$IMAGE"
-fi
-
-#  INFO: Play Sound
-if "$SOUND"; then
-    if command -v paplay &>/dev/null && [ -f "$SOUND_FILE" ]; then
-        paplay "$SOUND_FILE" &
-    fi
 fi
 
 #  INFO: Generating notification

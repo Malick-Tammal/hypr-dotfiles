@@ -87,7 +87,6 @@ mpv
 mtools
 nano
 nautilus-admin-gtk4
-nautilus-open-any-terminal
 nautilus-typeahead
 ncdu
 nemo
@@ -179,6 +178,7 @@ whitesur-icon-theme
 wl-clipboard
 woff2-font-awesome
 words
+wtype
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdotool
@@ -188,4 +188,5 @@ yazi
 zed
 zen-browser-bin
 zoxide
+zram-generator
 zsh

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#----------------------------------------------------------
+#--  HACK: GTK theming
+#----------------------------------------------------------
+
 #  INFO: CONFIGURATION ---
 THEME="Colloid-Yellow-Dark-Gruvbox" # Set GTK theme
 FONT="SF Pro Regular 11"            # Set Font
@@ -8,6 +12,7 @@ CURSOR_SIZE=2                       # Set Cursor size
 BUTTON_LAYOUT="appmenu:"            # Set Header bar menu  TIP: Show all of them : "appmenu:minimize,maximize,close"
 ICONS="Colloid-Orange-Dark"         # Set icon theme
 TERMINAL="kitty"                    # Set default terminal
+---------------------------
 
 #  INFO: APPLY GTK SETTINGS ---
 gsettings set org.gnome.desktop.interface gtk-theme "$THEME"
