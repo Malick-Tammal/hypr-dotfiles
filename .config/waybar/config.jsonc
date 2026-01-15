@@ -7,8 +7,7 @@
         "hyprland/window"
     ],
     "modules-center": [
-        "hyprland/workspaces",
-        "custom/power-profiles"
+        "hyprland/workspaces"
     ],
     "modules-right": [
         "tray",
@@ -182,12 +181,7 @@
         "scroll-step": 1,
         "min-length": 2
     },
-    "custom/power-profiles": {
-        "format": "",
-        "tooltip-format": "Power profiles",
-        "tooltip": true,
-    },
     "tray": {
-        "icon-size": 16,
+        "icon-size": 16
     }
 }
