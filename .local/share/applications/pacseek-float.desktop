@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Package installer 
+Exec=kitty --class appgrid-pacseek --title "Package installer" -e pacseek
+Terminal=false
+Type=Application
+Icon=system-software-install
+Categories=System;
+StartupWMClass=pacseek-float

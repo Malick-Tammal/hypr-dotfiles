@@ -1,8 +1,11 @@
-# Ignore the README file
+# Ignore the md files
 README.md
+touchpad-fix.md
 
-# Ignore the git folder
+# Ignore git
 \.git
+.gitignore
+.gitmodules
 
 # Ignore your backup file (Contextual Example!)
 hyprland-backup-stable.*\.tar\.gz
@@ -12,3 +15,9 @@ install\.sh
 
 # Ignore keys
 keys.zsh
+
+# Ignore packages
+packages.txt
+
+# Ignore sddm
+sddm
