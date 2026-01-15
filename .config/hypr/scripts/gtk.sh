@@ -16,6 +16,7 @@ gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR"
 gsettings set org.gnome.desktop.interface cursor-size $CURSOR_SIZE
 gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 gsettings set org.gnome.desktop.wm.preferences button-layout "$BUTTON_LAYOUT"
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty
 
 #  INFO: FLATPAK FIXES ---
 if command -v flatpak &>/dev/null; then
