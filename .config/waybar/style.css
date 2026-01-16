@@ -184,3 +184,11 @@ tooltip label {
     color: @FG;
     border: 1px solid @BOR;
 }
+
+#bluetooth {
+    padding: 0 13px 0 10px;
+    background-color: @YELLOW;
+    border-radius: 3px;
+    color: @DARK;
+    margin: 0px 5px 0px 0px;
+}

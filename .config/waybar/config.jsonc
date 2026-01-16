@@ -11,6 +11,7 @@
     ],
     "modules-right": [
         "tray",
+        "bluetooth",
         "pulseaudio",
         "network",
         "battery",
@@ -156,6 +157,7 @@
         "format": "",
         "on-click": "~/.config/rofi/scripts/launcher/launcher.sh"
     },
+    // --  INFO: Display backlight
     "backlight": {
         "device": "intel_backlight",
         "rotate": 0,
@@ -170,7 +172,19 @@
         "scroll-step": 1,
         "min-length": 2
     },
+    // --  INFO: Tray
     "tray": {
         "icon-size": 16
+    },
+    // --  INFO: Bluetooth
+    "bluetooth": {
+        "format": "  {status}",
+        "format-disabled": "",
+        "format-connected": "  {device_alias}",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "overskride"
     }
 }
