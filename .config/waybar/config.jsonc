@@ -3,7 +3,8 @@
     "height": 30,
     "modules-left": [
         "custom/notifications",
-        "clock",
+        "clock#hours",
+        "clock#minutes",
         "hyprland/window"
     ],
     "modules-center": [
@@ -105,11 +106,12 @@
         "warp-on-scroll": false,
         "format": "{icon}",
         "format-icons": {
-            "1": "󰈹",
-            "2": "",
-            "3": "",
-            "4": "󰉋",
-            "5": "󰈔",
+            // "1": "",
+            // "2": "",
+            // "3": "",
+            // "4": "󰉋",
+            // "5": "󰈔",
+            // "6": "󰈔",
             "active": "󰫢"
             // "active": ""
         },
@@ -118,7 +120,9 @@
             "2": [],
             "3": [],
             "4": [],
-            "5": []
+            "5": [],
+            "6": [],
+            "7": []
         }
     },
     // --  INFO: Active app
@@ -128,22 +132,25 @@
         "icon-size": 17,
         "separate-outputs": true,
         "rewrite": {
-            "nv": "  - neovim"
+            "nv": "  - neovim",
+            "(^\\S+ \\S+ \\S+ \\S+ \\S+ \\S+).*[-|—] (.*)": "$1... - $2",
+            "(^\\S+ \\S+ \\S+ \\S+ \\S+ \\S+).*": "$1..."
         }
     },
     // --  INFO: Clock
-    "clock": {
-        "format": "{:%H:%M %p, %d %b}",
+    "clock#hours": {
+        "format": "{:%H} ",
+        "interval": 1,
+        "tooltip": false
+    },
+    "clock#minutes": {
+        "format": ": {:%M}",
         "interval": 1,
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "format": {
-                "today": "<span color='#fAfBfC'><b>{}</b></span>"
+                "today": "<span color='#FFD866'><b>{}</b></span>"
             }
-        },
-        "actions": {
-            "on-click-right": "shift_down",
-            "on-click": "shift_up"
         }
     },
     // --  INFO: Notifications

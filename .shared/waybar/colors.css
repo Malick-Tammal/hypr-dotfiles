@@ -1,3 +1,4 @@
+/*  INFO: Normal colors */
 @define-color GREEN #A9DC76;
 @define-color RED #FF6188;
 @define-color ORANGE #fc9867;
@@ -8,6 +9,18 @@
 @define-color DARKER #1D1E19;
 @define-color WHITE #FDFFF1;
 
+/*  INFO: Hovered colors */
+@define-color HOV-GREEN alpha(@GREEN, 0.85);
+@define-color HOV-RED alpha(@RED, 0.85);
+@define-color HOV-ORANGE alpha(@ORANGE, 0.85);
+@define-color HOV-YELLOW alpha(@YELLOW, 0.85);
+@define-color HOV-PURPLE alpha(@PURPLE, 0.85);
+@define-color HOV-BLUE alpha(@BLUE, 0.85);
+@define-color HOV-DARK alpha(@DARK, 0.85);
+@define-color HOV-DARKER alpha(@DARKER, 0.85);
+@define-color HOV-WHITE alpha(@WHITE, 0.85);
+
+/*  INFO: Transparent colors */
 @define-color DARK-TRA alpha(@DARK, 0.8);
 @define-color DARKER-TRA alpha(@DARKER, 0.8);
 
