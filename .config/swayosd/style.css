@@ -1,37 +1,4 @@
-/* :root { */
-/*     --GREEN: #A9DC76; */
-/*     --RED: #FF6188; */
-/*     --ORANGE: #fc9867; */
-/*     --YELLOW: #FFD866; */
-/*     --PURPLE: #AB9DF2; */
-/*     --BLUE: #78DCE8; */
-/**/
-/*     --DARK: #1D1E19; */
-/*     --DARK1: #221F22; */
-/*     --DARK2: #2D2A2E; */
-/*     --DARK3: #403E41; */
-/*     --DARK4: #727072; */
-/*     --DARK5: #949491; */
-/**/
-/*     --WHITE: #FDFFF1; */
-/*     --GRAY: #dadada; */
-/**/
-/*     --DARK-TRA: #1D1E19B3; */
-/*     --DARK-TRA1: #221F22B3; */
-/*     --DARK-TRA2: #2D2A2EB3; */
-/*     --DARK-TRA3: #403E41B3; */
-/*     --DARK-TRA4: #727072B3; */
-/*     --DARK-TRA5: #949491B3; */
-/**/
-/*     --bg: var(--DARK1); */
-/*     --bg-tra: var(--DARK-TRA); */
-/*     --bor: var(--YELLOW); */
-/*     --fg: var(--WHITE); */
-/*     --fg-alt: var(--GRAY); */
-/* } */
-
-
-@import url("/home/malick-tammal/.shared/swayosd/colors.css");
+@import url("/home/malick-tammal/.shared/themes/monokai/swayosd/main.css");
 
 * {
     font-family: "SF Pro";

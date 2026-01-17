@@ -1,8 +1,0 @@
-/*  INFO: Normal colors */
-
-:root {
-    --bg: var(--DARK1);
-    --bor: var(--YELLOW);
-    --fg: var(--WHITE);
-    --fg-alt: var(--GRAY);
-}

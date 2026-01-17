@@ -1,5 +1,9 @@
+//---------------------------------------------------------
+//--  HACK: Colors
+//---------------------------------------------------------
+
 * {
-    //  TIP: Main colors
+    //  INFO: Main colors
     GREEN  : #A9DC76;
     RED    : #FF6188;
     ORANGE : #fc9867;
@@ -17,7 +21,7 @@
 
     WHITE : #FDFFF1;
 
-    //  TIP: Transparent colors
+    //  INFO: Transparent colors
     DARK-TRA  : #1D1E19E6;
     DARK-TRA1 : #221F22E6;
     DARK-TRA2 : #2D2A2EE6;
@@ -25,8 +29,3 @@
     DARK-TRA4 : #727072E6;
     DARK-TRA5 : #949491E6;
 }
-
-//  INFO: Type (transparent / normal)
-
-// @import "./normal.rasi"
-@import "./transparent.rasi"

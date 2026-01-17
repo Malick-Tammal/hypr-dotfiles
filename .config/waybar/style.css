@@ -1,4 +1,5 @@
-@import "../../.shared/waybar/colors.css";
+/* @import "../../.shared/themes/monokai/waybar/main.css"; */
+@import "/home/malick-tammal/.shared/themes/monokai/waybar/main.css";
 
 * {
     font-family: "SF Pro", "Liga SFMonoNerdFont";
@@ -120,7 +121,7 @@
 
 /*  INFO: Clock */
 #clock.hours,
-#clock.minutes{
+#clock.minutes {
     font-size: 14px;
     font-weight: 700;
     color: @FG;

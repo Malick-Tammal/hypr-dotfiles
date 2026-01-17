@@ -3,8 +3,7 @@
 //---------------------------------------------------------
 
 // Importing shared colors ---
-@import "~/.shared/rofi/colors.rasi"
-@import "~/.shared/rofi/fonts.rasi"
+@import                         "~/.shared/themes/monokai/rofi/main.rasi"
 
 // Configuration ---
 configuration {

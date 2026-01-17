@@ -1,3 +1,7 @@
+/*----------------------------------------------------------*/
+/*--  HACK: Colors --*/
+/*----------------------------------------------------------*/
+
 /*  INFO: Normal colors */
 @define-color GREEN #A9DC76;
 @define-color RED #FF6188;
@@ -23,8 +27,3 @@
 /*  INFO: Transparent colors */
 @define-color DARK-TRA alpha(@DARK, 0.8);
 @define-color DARKER-TRA alpha(@DARKER, 0.8);
-
-/*  INFO: Type (transparent / normal) */
-
-/* @import "./normal.css"; */
-@import "./transparent.css";

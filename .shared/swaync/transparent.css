@@ -1,8 +1,0 @@
-/*  INFO: Transparent colors */
-
-:root {
-    --bg: var(--DARK-TRA);
-    --bor: var(--YELLOW);
-    --fg: var(--WHITE);
-    --fg-alt: var(--GRAY);
-}

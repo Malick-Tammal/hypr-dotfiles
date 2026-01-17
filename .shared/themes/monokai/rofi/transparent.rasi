@@ -1,0 +1,12 @@
+//---------------------------------------------------------
+//--  HACK: Transparent colors
+//---------------------------------------------------------
+
+* {
+    BG: @DARK-TRA;
+	BG-ALT: @DARK-TRA1;
+    FG: @WHITE;
+    SEL: @BLUE;
+	BOR: @YELLOW; 
+	SEL-BG: @YELLOW;
+}

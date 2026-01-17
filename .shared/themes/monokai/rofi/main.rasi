@@ -1,0 +1,14 @@
+//---------------------------------------------------------
+//--  HACK: Main
+//---------------------------------------------------------
+
+//  INFO: Colors
+@import "./colors.rasi"
+
+//  INFO: Fonts
+@import "./fonts.rasi"
+
+//  INFO: Type (transparent / normal)
+
+@import "./normal.rasi"
+// @import "./transparent.rasi"

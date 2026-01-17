@@ -1,4 +1,6 @@
-/*  INFO: Normal colors */
+/*----------------------------------------------------------*/
+/*--  HACK: Transparent --*/
+/*----------------------------------------------------------*/
 
 @define-color BG @DARKER-TRA;
 @define-color BG-ALT @DARK-TRA;
