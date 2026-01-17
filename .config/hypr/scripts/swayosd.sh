@@ -4,7 +4,7 @@
 #--  HACK: Swayosd + sounds
 #----------------------------------------------------------
 
-# INFO: CONFIGURATION ---
+#  INFO: CONFIGURATION ---
 VOL_SOUND="/usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
 MUTE_SOUND="/usr/share/sounds/freedesktop/stereo/device-removed.oga"
 # -----------------------
