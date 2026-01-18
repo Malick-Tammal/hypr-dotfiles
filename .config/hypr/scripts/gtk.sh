@@ -12,7 +12,7 @@ CURSOR_SIZE=2                       # Set Cursor size
 BUTTON_LAYOUT="appmenu:"            # Set Header bar menu  TIP: Show all of them : "appmenu:minimize,maximize,close"
 ICONS="Colloid-Orange-Dark"         # Set icon theme
 TERMINAL="kitty"                    # Set default terminal
----------------------------
+#---------------------------
 
 #  INFO: APPLY GTK SETTINGS ---
 gsettings set org.gnome.desktop.interface gtk-theme "$THEME"
@@ -22,7 +22,8 @@ gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR"
 gsettings set org.gnome.desktop.interface cursor-size $CURSOR_SIZE
 gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 gsettings set org.gnome.desktop.wm.preferences button-layout "$BUTTON_LAYOUT"
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal "$TERMINAL"
+gsettings set org.gnome.desktop.default-applications.terminal exec "$TERMINAL"
+gsettings set org.gnome.desktop.default-applications.terminal exec-arg "-e"
 
 #  INFO: FLATPAK FIXES ---
 if command -v flatpak &>/dev/null; then
@@ -51,7 +52,7 @@ gtk-application-prefer-dark-theme=1
 EOF
 
 #  INFO: Gtk 4.0
-cat >"$HOME/.config/gtk-3.0/settings.ini" <<EOF
+cat >"$HOME/.config/gtk-4.0/settings.ini" <<EOF
 [Settings]
 gtk-theme-name=$THEME
 gtk-font-name=$FONT
