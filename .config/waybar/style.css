@@ -6,6 +6,7 @@
     font-weight: 600;
     background: transparent;
     transition: all 100ms ease;
+    margin-bottom: 1px;
 }
 
 /*  INFO: Modules */
@@ -28,7 +29,7 @@
     background-color: @BG;
     border: 1px solid @BOR;
     border-radius: 19px;
-    margin: 10px 0 0 0;
+    margin: 10px 0px 0 0;
     padding: 0 2px;
     font-size: 12px;
 }
@@ -82,6 +83,11 @@
 #battery.plugged,
 #battery.charging {
     background: @GREEN;
+}
+
+#battery.plugged:hover,
+#battery.charging:hover {
+    background: @HOV-GREEN;
 }
 
 #battery:hover {
@@ -199,12 +205,12 @@ tooltip label {
 /*  INFO: Bluetooth */
 #bluetooth {
     padding: 0 13px 0 10px;
-    background: @YELLOW;
+    background: @GREEN;
     border-radius: 3px;
     color: @DARK;
     margin: 0px 5px 0px 0px;
 }
 
 #bluetooth:hover {
-    background: @HOV-YELLOW;
+    background: @HOV-GREEN;
 }

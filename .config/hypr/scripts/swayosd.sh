@@ -35,11 +35,11 @@ case "$1" in
     play_sound "$MUTE_SOUND"
     ;;
 --display-inc)
-    swayosd-client --output-volume raise --max-volume 100
+    swayosd-client --brightness raise
     play_sound "$VOL_SOUND"
     ;;
 --display-dec)
-    swayosd-client --output-volume lower --max-volume 100
+    swayosd-client --brightness lower
     play_sound "$VOL_SOUND"
     ;;
 esac
