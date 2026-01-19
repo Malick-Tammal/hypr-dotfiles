@@ -9,7 +9,6 @@
 configuration {
 	modi:                        "drun";
     show-icons:                  true;
-    icon-theme:                  "Papirus";
     display-drun:                " ";
 	drun-display-format:         "{name}";
 
