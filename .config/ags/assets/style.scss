@@ -1,0 +1,227 @@
+@use "color" as *;
+
+//  INFO: Reset styles
+button {
+  outline: none;
+  margin: 0;
+  border: none;
+  min-width: 0;
+  min-height: 0;
+}
+
+//  INFO: Top bar
+window.bar {
+  background: transparent;
+  margin: 10px 10px 0.5px 10px;
+  padding: 0;
+  font-family: "SF Pro", "Liga SFMonoNerdFont";
+  font-weight: 600;
+  font-size: 11px;
+
+  .left,
+  .right,
+  .workspaces {
+    background: var(--bg);
+    border: 1px solid var(--bor);
+    border-radius: 6px;
+    padding: 5px;
+
+    button {
+      padding: 0px 12px;
+      border-radius: 3px;
+      color: var(--bg);
+    }
+  }
+
+  // TIP: Center
+
+  // Workspaces
+  .workspaces {
+    padding: 10px;
+    border-radius: 2000px;
+  }
+
+  .workspaces button {
+    border-radius: 2000px;
+    padding: 2px 0px;
+    min-width: 35px;
+    color: var(--fg-alt);
+    background: var(--DARK3);
+
+    transition:
+      min-width 200ms cubic-bezier(0.68, -0.55, 0.27, 1.55),
+      background 200ms ease-in-out,
+      box-shadow 350ms ease-in-out,
+      color 100ms ease-in-out;
+  }
+
+  .workspace-btn.occupied {
+    color: var(--fg);
+    font-weight: bold;
+  }
+
+  .workspace-btn.focused {
+    background: var(--GREEN);
+    color: var(--bg);
+    box-shadow: 0px 0px 0px 4px rgba(168, 218, 117, 0.5);
+    min-width: 60px;
+  }
+
+
+  //  TIP: Right
+
+  // Power button
+  .power-btn {
+    background: var(--RED);
+    border-radius: 3px;
+  }
+
+  // Wifi button
+  .wifi-btn {
+    background: var(--ORANGE);
+    border-radius: 3px;
+    margin-right: 5px;
+
+    image {
+      -gtk-icon-size: 15px;
+      color: var(--DARK);
+    }
+  }
+
+  //  TIP: Left
+
+  // Notification button
+  .notification {
+    background: var(--ORANGE);
+    border-radius: 3px;
+  }
+
+  // Clock
+  .clock {
+    label {
+      font-size: 15px;
+      font-weight: 900;
+      color: var(--fg);
+    }
+
+    .hours {
+      color: var(--YELLOW);
+    }
+
+    .minutes {
+      color: var(--fg);
+    }
+
+    .time-format {
+      font-size: 10px;
+      color: var(--fg-alt);
+    }
+  }
+}
+
+//  INFO: Popups
+
+// Wifi popup
+.wifi-menu {
+  background: var(--bg);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--bor);
+
+  .header {
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 700;
+
+    switch {
+      padding: 0;
+      margin: 0;
+
+      slider {
+        margin: 2px;
+        min-width: 5px;
+        min-height: 5px;
+      }
+    }
+  }
+
+  .body {
+    margin-top: 10px;
+    font-size: 11px;
+    font-weight: 500;
+
+    .wifi {
+      padding: 10px 20px;
+      margin: 5px 0px;
+
+      &.connected {
+        background: var(--YELLOW);
+        color: var(--DARK);
+      }
+    }
+  }
+}
+
+// Calendar popup
+.calendar-popup {
+  background: var(--bg);
+  border: 1px solid var(--bor);
+  border-radius: 8px;
+  box-shadow: none;
+  font-size: 12px;
+  font-family: "SF Pro", "Liga SFMonoNerdFont";
+
+  header {
+    padding: 10px;
+    border-bottom: 1px solid var(--bor);
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--fg);
+
+    button {
+      color: var(--fg-alt);
+      background: transparent;
+      box-shadow: none;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  grid {
+    padding: 5px;
+
+    label {
+      &.day-name {
+        color: var(--GREEN);
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      &.today {
+        background: var(--YELLOW);
+        color: var(--DARK);
+        font-weight: bold;
+        border-radius: 6px;
+        padding: 2px 4px;
+      }
+
+      &:selected {
+        background: var(--YELLOW);
+        border-radius: 6px;
+        padding: 2px 4px;
+
+        &:hover {
+          background: var(--ORANGE);
+        }
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 6px;
+      }
+    }
+  }
+}
