@@ -1,3 +1,4 @@
+ags-hyprpanel-git
 alacritty
 android-tools
 android-udev
@@ -30,6 +31,7 @@ eog
 extension-manager
 eza
 fastfetch
+fd
 figma-linux
 firefox
 fzf
@@ -99,6 +101,7 @@ nmap
 nmgui
 noto-fonts-emoji
 ntfs-3g
+nwg-dock-hyprland
 nwg-look
 obs-studio
 os-prober
@@ -108,6 +111,7 @@ otf-font-awesome-4
 otf-sfmono-patched
 overskride
 pacseek
+papirus-icon-theme
 pavucontrol
 pipewire
 pipewire-alsa
