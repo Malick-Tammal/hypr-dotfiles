@@ -20,11 +20,11 @@ play_sound() {
 case "$1" in
 --audio-inc)
     swayosd-client --output-volume raise --max-volume 100
-    play_sound "$VOL_SOUND"
+    # play_sound "$VOL_SOUND"
     ;;
 --audio-dec)
     swayosd-client --output-volume lower --max-volume 100
-    play_sound "$VOL_SOUND"
+    # play_sound "$VOL_SOUND"
     ;;
 --mute)
     swayosd-client --output-volume mute-toggle
@@ -35,11 +35,11 @@ case "$1" in
     play_sound "$MUTE_SOUND"
     ;;
 --display-inc)
-    swayosd-client --brightness raise
-    play_sound "$VOL_SOUND"
+    swayosd-client --brightness +10
+    # play_sound "$VOL_SOUND"
     ;;
 --display-dec)
-    swayosd-client --brightness lower
-    play_sound "$VOL_SOUND"
+    swayosd-client --brightness -10
+    # play_sound "$VOL_SOUND"
     ;;
 esac

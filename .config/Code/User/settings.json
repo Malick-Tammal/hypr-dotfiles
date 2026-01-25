@@ -1,0 +1,63 @@
+{
+  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace'",
+  "editor.fontSize": 15,
+  "editor.fontWeight": "500",
+  "window.menuBarVisibility": "hidden",
+  "workbench.startupEditor": "none",
+  "window.zoomLevel": 0.5,
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+
+  // Cursor
+  "editor.cursorBlinking": "expand",
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // Scrolling
+  "editor.smoothScrolling": true,
+  "terminal.integrated.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+
+  // UI
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "window.titleBarStyle": "native",
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.glyphMargin": false,
+  "workbench.tree.indent": 10,
+  "workbench.tree.renderIndentGuides": "always",
+
+  // Neovim
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1,
+  },
+  "vscode-neovim.compositeTimeout": 600,
+
+  // Configs
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "vscode-neovim.neovimInitVimPaths.linux": "/home/malick-tammal/.config/nvim/init.lua",
+  "vscode-neovim.neovimClean": false,
+  "vscode-neovim.neovimInitVimPaths.win32": "C:\\Users\\YOUR_WINDOWS_USERNAME\\AppData\\Local\\nvim\\init.lua",
+  "vscode-neovim.neovimExecutablePaths.win32": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
+
+  // Keybinds
+  "vscode-neovim.compositeKeys": {
+    "jj": {
+      "command": "vscode-neovim.escape",
+    },
+    "JJ": {
+      "command": "vscode-neovim.escape",
+    },
+  },
+
+  // Format
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua",
+  },
+  "console-ninja.featureSet": "Community",
+}

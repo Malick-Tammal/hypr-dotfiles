@@ -5,8 +5,9 @@ import Clock from "./Clock";
 import WifiBtn from "./buttons/WifiBtn";
 import PowerBtn from "./buttons/PowerBtn";
 import NotificationBtn from "./buttons/NotificationBtn";
+import { createBinding, For } from "ags"
 
-export function Bar({ gdkmonitor: monitor }: { gdkmonitor: Gdk.Monitor }) {
+function Bar({ gdkmonitor: monitor }: { gdkmonitor: Gdk.Monitor }) {
 
     const { TOP, LEFT, RIGHT } = Astal.WindowAnchor
 
@@ -52,5 +53,19 @@ export function Bar({ gdkmonitor: monitor }: { gdkmonitor: Gdk.Monitor }) {
                 </box>
             </centerbox>
         </window >
+    );
+}
+
+function MonitorSetup({ monitor }: { monitor: Gdk.Monitor }) {
+    const bar = <Bar gdkmonitor={monitor} />;
+    return bar;
+}
+
+export default function() {
+    const monitors = createBinding(app, "monitors");
+    return (
+        <For each={monitors} cleanup={(win) => (win as Gtk.Window).destroy()}>
+            {(monitor) => <MonitorSetup monitor={monitor} />}
+        </For>
     );
 }

@@ -1,5 +1,6 @@
 import { createState, createBinding, createEffect, For, With } from "ags"
 import { Astal, Gtk, Gdk } from "ags/gtk4"
+import app from "ags/gtk4/app"
 import { execAsync } from "ags/process"
 import AstalNetwork from "gi://AstalNetwork?version=0.1"
 import GLib from "gi://GLib?version=2.0"
@@ -227,5 +228,6 @@ function Wifi({ gdkmonitor: monitor }: { gdkmonitor: Gdk.Monitor }) {
     return win
 
 }
+
 
 export default Wifi
