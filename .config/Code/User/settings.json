@@ -56,8 +56,8 @@
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.linkedEditing": true,
   "[lua]": {
     "editor.defaultFormatter": "sumneko.lua",
   },
-  "console-ninja.featureSet": "Community",
 }
