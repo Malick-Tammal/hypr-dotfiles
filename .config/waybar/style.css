@@ -28,18 +28,18 @@
     border: 1px solid @BOR;
     border-radius: 19px;
     margin: 10px 0 1px 0;
-    padding: 0 2px;
+    padding: 0px 2px;
     font-size: 12px;
 }
 
 #workspaces button {
     color: #C0BFBF;
     background: @BG-ALT;
-    border-radius: 8px;
-    padding: 2px 5px;
-    margin: 10px 8px;
+    border-radius: 15px;
+    padding: 1px 5px;
+    margin: 10px 7px;
     min-height: 0px;
-    transition: all 150ms ease-in;
+    transition: min-width 200ms cubic-bezier(.42,.97,.52,1.49);
 }
 
 #workspaces button.empty {
@@ -49,7 +49,7 @@
 #workspaces button.active {
     color: @DARK;
     background: @GREEN;
-    min-width: 50px;
+    min-width: 55px;
     box-shadow: 0px 0px 0px 4px rgba(168, 218, 117, 0.5);
 }
 
@@ -110,7 +110,6 @@
     background: @BLUE;
     border-radius: 3px;
     color: @DARK;
-
     margin: 0px 5px 0px 0px;
 }
 
@@ -125,10 +124,13 @@
 
 /*  INFO: Clock */
 #clock.hours,
-#clock.minutes {
-    font-size: 14px;
-    font-weight: 700;
+#clock.minutes,
+#clock.separator{
+    font-size: 18px;
+    font-weight: 800;
+    font-family: "SF Pro Display";
     color: @FG;
+    letter-spacing: -1px;
 }
 
 #clock.hours {
@@ -137,6 +139,9 @@
 
 #clock.minutes {
     color: @YELLOW;
+}
+#clock.separator {
+    margin: 0 2px
 }
 
 /*  INFO: Notification */

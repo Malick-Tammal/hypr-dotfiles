@@ -4,6 +4,7 @@
     "modules-left": [
         "custom/notifications",
         "clock#hours",
+        "clock#separator",
         "clock#minutes",
         "hyprland/window"
     ],
@@ -143,8 +144,12 @@
         "interval": 1,
         "tooltip": false
     },
+    "clock#separator": {
+        "format": ":",
+        "tooltip": false
+    },
     "clock#minutes": {
-        "format": ": {:%M}",
+        "format": "{:%M}",
         "interval": 1,
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
