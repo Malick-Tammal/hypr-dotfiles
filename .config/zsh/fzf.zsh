@@ -18,6 +18,7 @@ export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 zstyle ':fzf-tab:*' fzf-flags ${(z)FZF_DEFAULT_OPTS} --prompt="$prompt_symbol"
 
 zstyle ':completion:*' menu no
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':fzf-tab:complete:*' fzf-preview \
   'if [ -d $realpath ]; then
      tree -C $realpath | head -200

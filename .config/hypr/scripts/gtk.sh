@@ -5,13 +5,13 @@
 #----------------------------------------------------------
 
 #  INFO: CONFIGURATION ---
-THEME="Colloid-Yellow-Dark-Gruvbox" # Set GTK theme
-FONT="SF Pro Regular 11"            # Set Font
-CURSOR="Moga-Cursor"                # Set Cursor theme
-CURSOR_SIZE=2                       # Set Cursor size
-BUTTON_LAYOUT="appmenu:"            # Set Header bar menu  TIP: Show all of them : "appmenu:minimize,maximize,close"
-ICONS="Colloid-Orange-Dark"         # Set icon theme
-TERMINAL="kitty"                    # Set default terminal
+THEME="Colloid-Monokai"     # Set GTK theme
+FONT="SF Pro Regular 11"    # Set Font
+CURSOR="Moga-Cursor"        # Set Cursor theme
+CURSOR_SIZE=24              # Set Cursor size
+BUTTON_LAYOUT="appmenu:"    # Set Header bar menu  TIP: Show all of them : "appmenu:minimize,maximize,close"
+ICONS="Colloid-Orange-Dark" # Set icon theme
+TERMINAL="kitty"            # Set default terminal
 #---------------------------
 
 #  INFO: APPLY GTK SETTINGS ---
@@ -31,6 +31,9 @@ if command -v flatpak &>/dev/null; then
     flatpak override --user --filesystem="$HOME/.icons"
     flatpak override --user --filesystem="$HOME/.local/share/themes"
     flatpak override --user --filesystem="$HOME/.local/share/icons"
+    flatpak override --user --filesystem="$HOME/dotfiles/.themes"
+    flatpak override --user --filesystem=xdg-config/gtk-3.0
+    flatpak override --user --filesystem=xdg-config/gtk-4.0
     flatpak override --user --env=GTK_THEME="$THEME"
 fi
 

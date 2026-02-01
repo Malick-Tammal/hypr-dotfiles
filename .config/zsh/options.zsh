@@ -10,6 +10,6 @@ setopt hist_reduce_blanks
 bindkey '^k' history-search-backward
 bindkey '^j' history-search-forward
 
-# 1. Force a clean initial path
+# Force a clean initial path
 export PWD=$(pwd)
 unsetopt PROMPT_SP

@@ -1,4 +1,4 @@
-ags-hyprpanel-git
+adw-gtk-theme
 alacritty
 android-tools
 android-udev
@@ -9,6 +9,7 @@ base-devel
 bat
 bazaar
 bettercap
+bitwarden
 bluez
 bluez-utils
 brightnessctl
@@ -21,6 +22,7 @@ cmake
 cmatrix
 colloid-icon-theme-git
 cpio
+discord
 dolphin
 dosfstools
 downgrade
@@ -42,6 +44,7 @@ git-filter-repo
 github-cli
 glycin-gtk4
 gnome-disk-utility
+gnome-keyring
 grimblast-git
 grub
 gvfs
@@ -84,6 +87,7 @@ luarocks
 make
 malcontent
 man-db
+mesa-utils
 meson
 mpv
 mtools
@@ -101,7 +105,6 @@ nmap
 nmgui
 noto-fonts-emoji
 ntfs-3g
-nwg-dock-hyprland
 nwg-look
 obs-studio
 os-prober
@@ -111,6 +114,7 @@ otf-font-awesome-4
 otf-sfmono-patched
 overskride
 pacseek
+pamixer
 papirus-icon-theme
 pavucontrol
 pipewire
@@ -120,13 +124,14 @@ pnpm
 polkit-gnome
 power-profiles-daemon
 python-dbus
+python-pywal
 python-qrcode
 python-setuptools
 qqc2-breeze-style
 qt5ct-kde
 qt6-virtualkeyboard
 qt6ct-kde
-quickshell
+quickshell-git
 reflector
 ripgrep
 rofi
@@ -136,6 +141,7 @@ rust
 sassc
 satty
 sddm
+seahorse
 sl
 socat
 sof-firmware
@@ -152,6 +158,7 @@ taplo-cli
 tela-icon-theme
 thermald
 thunar
+timeshift
 tinysparql
 tlp
 tmux
@@ -160,17 +167,16 @@ trash-cli
 tree
 tree-sitter-cli
 ttf-icomoon-feather
-ttf-jetbrains-mono
-ttf-jetbrains-mono-nerd
 ttf-material-design-icons-desktop-git
-ttf-tajawal
 typescript
 udiskie
 udisks2
 ufw
 unixodbc
+usbimager
 valent-git
 vim
+visual-studio-code-bin
 vlc
 vlc-plugin-ffmpeg
 vlc-plugins-all

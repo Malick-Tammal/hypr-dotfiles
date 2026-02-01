@@ -6,11 +6,12 @@ zinit light starship/starship
 
 #  INFO: Zinit plugins
 zinit ice wait"0" lucid; zinit light zsh-users/zsh-syntax-highlighting
-zinit ice wait"0" lucid; zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-autosuggestions
 zinit ice wait"0" lucid; zinit light zsh-users/zsh-completions
 zinit ice wait"0" lucid; zinit light MichaelAquilina/zsh-you-should-use
-zinit ice wait"0" lucid; zinit light mroth/evalcache
-zinit snippet OMZP::git
+# zinit ice wait"0" lucid; zinit light mroth/evalcache
+zinit ice wait"0" lucid; zinit snippet OMZP::git
+zinit ice wait"0" lucid; zinit snippet OMZP::sudo
 
 # fzf-tab
 zinit ice wait"0" lucid atinit'

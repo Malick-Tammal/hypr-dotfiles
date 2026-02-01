@@ -1,0 +1,19 @@
+{
+    "Transparent": true,
+    "Accent": "FF6188",
+    "Title": "FC9867",
+    "MainTitle": "ff6188",
+    "SearchBar": "272822",
+    "PackagelistSourceRepository": "00b000",
+    "PackagelistSourceAUR": "1793d1",
+    "PackagelistHeader": "FFD866",
+    "SettingsFieldBackground": "0564a0",
+    "SettingsFieldText": "CBCBCB",
+    "SettingsFieldLabel": "CBCBCB",
+    "SettingsDropdownNotSelected": "1793d1",
+    "SelectedElement": "ff6188",
+    "HelpKey": "ab9df2",
+    "HelpDescription": "939293",
+    "StylePKGBUILD": "monokai",
+    "Comments": "Examples for StylePKGBUILD can be found here: https://xyproto.github.io/splash/docs/all.html"
+}

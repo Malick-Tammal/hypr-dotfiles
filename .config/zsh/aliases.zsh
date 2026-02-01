@@ -9,7 +9,7 @@ alias r="yay -Rns"
 alias update="yay -Syu"
 alias list="yay -Q"
 
-# INFO: Brew (macos / linux)
+# INFO: Brew (macos / linux) ---
 # alias bi="brew install"
 # alias bic="brew install --cask"
 # alias br="brew uninstall"
@@ -28,18 +28,16 @@ alias vbsh="nvim ~/.bashrc"
 alias cbsh="code ~/.bashrc"
 
 
-# INFO: EDIT ALIASES
+#  INFO: EDIT ALIASES ---
 alias vals="nvim ~/.config/zsh/aliases.zsh"
 alias bals="bat ~/.config/zsh/aliases.zsh"
 alias cals="code ~/.config/zsh/aliases.zsh"
 
-# INFO: HYPRLAND
+#  INFO: HYPRLAND ---
 alias nvhypr="nvim ~/.config/hypr/hyprland.conf"
 alias chypr="code ~/.config/hypr/hyprland.conf"
 
-# INFO: TERMINAL
-
-# INFO: TERMINAL
+#  INFO: TERMINAL ---
 alias neo="neofetch"
 alias fast="fastfetch"
 alias c="clear"
@@ -49,7 +47,7 @@ alias md="mkdir -p"
 alias t="touch" 
 alias rm="trash-put"                                    #-- Safe rm
 
-#  INFO: Eza
+#  INFO: Eza ---
 alias ls="eza --color=always --icons=always"
 alias la="eza --color=always --icons=always -a"
 alias lsa="eza --color=always --icons=always -la"
@@ -60,16 +58,16 @@ alias lsc="ls --color=never --icons=never"
 # alias lsa="lsd -a"
 # alias lsla="lsd -la"
 
-#  INFO: Move
+#  INFO: Move ---
 alias cd="z"
 alias ..="cd .."
 alias ...="cd ../.."
 
-#  INFO: Nvim
+#  INFO: Nvim ---
 alias nv="nvim"
 alias nvh="nv ."
 
-#  INFO: Node
+#  INFO: Node ---
 alias npmi="npm i"
 alias npmig="npm i -g"
 alias npmiy="npm init -y"
@@ -82,30 +80,31 @@ alias npmrb="npm run build"
 alias npmrde="npm run deploy"
 alias npmcv="npm create vite@latest"
 
-#  INFO: Git
+#  INFO: Git ---
 alias gcmm="git commit -m"
 alias lg="lazygit"
 
-#  INFO: Bench zsh
+#  INFO: Bench zsh ---
 alias bench="time zsh -i -c exit"
 
-#  INFO: Matrix effect
+#  INFO: Matrix effect ---
 alias matrix="cmatrix"
 
-#  INFO: Copy current dir path
+#  INFO: Copy current dir path ---
 alias cdp="pwd | tr -d '\n' | wl-copy"
 
-#  INFO: Tmux
+#  INFO: Tmux ---
 alias tn="tmux new-session -s"
 alias tl="tmux ls"
 alias tan="tmux attach -t"
 alias ta="tmux attach"
 alias tk="tmux kill-session -t"
 
-#  INFO: Reload touchpad drivers
+#  INFO: Reload touchpad drivers ---
 alias fix-touchpad="sudo modprobe -r i2c_hid_acpi && sudo modprobe i2c_hid_acpi"
 
-#  INFO: Yazi
+#  INFO: Yazi ---
 alias y="yazi"
 
+#  INFO: System ---
 alias check-portals="systemctl --user status xdg-desktop-portal xdg-desktop-portal-hyprland"
