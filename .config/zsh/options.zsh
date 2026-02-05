@@ -13,3 +13,6 @@ bindkey '^j' history-search-forward
 # Force a clean initial path
 export PWD=$(pwd)
 unsetopt PROMPT_SP
+
+setopt correct
+setopt auto_cd

@@ -1,3 +1,4 @@
+7zip
 adw-gtk-theme
 alacritty
 android-tools
@@ -102,10 +103,12 @@ mpv-uosc-git
 mtools
 nano
 nautilus
+nautilus-open-any-terminal
 ncdu
 nemo
 neovim
 nerd-fonts-sf-mono-ligatures
+nethogs
 netscanner
 network-manager-applet
 nitch
@@ -168,6 +171,10 @@ swayosd
 swww
 taplo-cli
 tela-icon-theme
+tesseract
+tesseract-data-ara
+tesseract-data-eng
+tesseract-data-fra
 thermald
 thunar
 timeshift
