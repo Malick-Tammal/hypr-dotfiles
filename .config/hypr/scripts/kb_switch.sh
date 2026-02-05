@@ -28,7 +28,7 @@ FULL_LAYOUT=$(hyprctl devices -j | jq -r '.keyboards[] | select(.main == true) |
 #  INFO: SwayOSD Display
 # Check if the swayosd-server is running before sending the command
 if pgrep -x "swayosd-server" >/dev/null; then
-    swayosd-client --custom-message "$FULL_LAYOUT" --custom-icon "input-keyboard"
+    swayosd-client --custom-message "$FULL_LAYOUT" --custom-icon "input-keyboard-virtual-show"
     play_sound "$SOUND_FILE"
 else
     # Fallback to a standard notification if the OSD server is down
