@@ -17,7 +17,7 @@ git clone https://github.com/Malick-Tammal/hypr-dotfiles.git
 Copy sddm folder content to sddm themes folder
 
 ```bash
-sudo mkdir -p /usr/share/sddm/themes/sddm-modern && sudo cp -r sddm/* /usr/share/sddm/themes/sddm-modern
+sudo mkdir -p /usr/share/sddm/themes/sddm-modern && sudo cp -r extra/sddm/* /usr/share/sddm/themes/sddm-modern
 ```
 
 Add this to sddm config file

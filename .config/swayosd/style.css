@@ -8,11 +8,11 @@
     transition: all 200ms ease-in-out;
 }
 
-window {
+window#osd {
     border-radius: 8px;
     border: 1px solid var(--bor);
     background: var(--bg);
-    margin-top: 60px;
+    margin-bottom: 680px;
 }
 
 #container {
@@ -57,11 +57,11 @@ segment.active {
     background: var(--fg);
 }
 
-
 segment {
     margin-left: 8px;
 
-    &:first-child {
-        margin-left: 0;
-    }
+}
+
+segment:first-child {
+    margin-left: 0;
 }

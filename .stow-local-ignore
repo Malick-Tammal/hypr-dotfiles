@@ -19,5 +19,6 @@ keys.zsh
 # Ignore packages
 packages.txt
 
-# Ignore sddm
-sddm
+# Ignore other folders
+extra
+fixes
