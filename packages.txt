@@ -38,6 +38,7 @@ extension-manager
 eza
 fastfetch
 fd
+ffmpegthumbnailer
 figma-linux
 firefox
 fzf
@@ -51,6 +52,9 @@ gnome-disk-utility
 gnome-keyring
 grimblast-git
 grub
+gst-libav
+gst-plugins-bad
+gst-plugins-ugly
 gvfs
 htop
 hyprcursor-git
@@ -181,6 +185,7 @@ timeshift
 tinysparql
 tlp
 tmux
+translate-shell
 transmission-qt
 trash-cli
 tree
@@ -204,6 +209,7 @@ vlc-plugins-all
 vscodium
 vulkan-intel
 waybar
+wev
 wget
 whitesur-icon-theme
 wl-clipboard
