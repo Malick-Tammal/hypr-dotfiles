@@ -16,3 +16,6 @@ unsetopt PROMPT_SP
 
 setopt correct
 setopt auto_cd
+
+# Disable stopping the shell with Ctrl+D
+setopt IGNORE_EOF
