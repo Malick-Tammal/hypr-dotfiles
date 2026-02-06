@@ -5,7 +5,7 @@
 
 #  INFO: Configuration ---
 WALLS_DIR="$HOME/Pictures/Wallpapers/"
-CACHE_DIR="$HOME/.cache/wallpaper_thumbs"
+CACHE_DIR="$HOME/.cache/walli_thumbs"
 STYLE="$HOME/.config/rofi/walli/style.rasi"
 ANIM_TYPE="wave" #  TIP: Options => simple | fade | left | right | top | bottom | wipe | grow | center | outer | random | wave
 
