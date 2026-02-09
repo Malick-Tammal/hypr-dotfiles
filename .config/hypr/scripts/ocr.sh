@@ -22,9 +22,9 @@ CLEAN_TEXT=$(echo "$TEXT" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
 #  INFO: Output
 if [ -n "$CLEAN_TEXT" ]; then
     echo "$CLEAN_TEXT" | wl-copy
-    notify-send -u low -i tv "OCR" "$(echo "$CLEAN_TEXT" | head -c 100)..."
+    notify-send -u low -i tv "OCR" "$(echo "$CLEAN_TEXT" | head -c 100)..." -a "OCR"
 else
-    notify-send -u low -i tv "OCR" "No text detected."
+    notify-send -u low -i tv "OCR" "No text detected." -a "OCR"
 fi
 
 #  INFO: Cleanup

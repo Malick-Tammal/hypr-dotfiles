@@ -12,12 +12,12 @@ STATUS_FILE="/run/user/$(id -u)/touchpad.status"
 
 if [ -f "$STATUS_FILE" ]; then
     # Toggle ON
-    notify-send -u low -i input-touchpad-on "Touchpad" "Enabled"
+    notify-send -u low -i input-touchpad-on "Touchpad" "Enabled" -a "Hyprland"
     hyprctl keyword "device[$DEVICE]:enabled" true
     rm "$STATUS_FILE"
 else
     # Toggle OFF
-    notify-send -u low -i input-touchpad-off "Touchpad" "Disabled"
+    notify-send -u low -i input-touchpad-off "Touchpad" "Disabled" -a "Hyprland"
     hyprctl keyword "device[$DEVICE]:enabled" false
     touch "$STATUS_FILE"
 fi

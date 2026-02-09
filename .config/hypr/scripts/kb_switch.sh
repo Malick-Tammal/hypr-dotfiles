@@ -32,6 +32,6 @@ if pgrep -x "swayosd-server" >/dev/null; then
     play_sound "$SOUND_FILE"
 else
     # Fallback to a standard notification if the OSD server is down
-    notify-send "Keyboard Layout" "$FULL_LAYOUT" -i input-keyboard
+    notify-send "Keyboard Layout" "$FULL_LAYOUT" -i input-keyboard -a "Hyprland"
     play_sound "$SOUND_FILE"
 fi
