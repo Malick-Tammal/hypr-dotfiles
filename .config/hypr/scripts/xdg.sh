@@ -40,4 +40,4 @@ systemctl --user start xdg-desktop-portal-gtk
 
 sleep 1
 
-notify-send "System" "XDG Portals Reloaded"
+notify-send "System" "XDG Portals Reloaded" -a "Hyprland"

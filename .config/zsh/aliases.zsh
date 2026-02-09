@@ -42,16 +42,18 @@ alias neo="neofetch"
 alias fast="fastfetch"
 alias c="clear"
 alias rmrf="rm -rf"
-alias realrm="/bin/rm -iv"                              #-- Regular rm
 alias md="mkdir -p"
-alias t="touch" 
-alias rm="trash-put"                                    #-- Safe rm
+alias t="touch"
+tp() {
+    trash-put "$@"
+}
 
 #  INFO: Eza ---
 alias ls="eza --color=always --icons=always"
 alias la="eza --color=always --icons=always -a"
 alias lsa="eza --color=always --icons=always -la"
 alias lsc="ls --color=never --icons=never"
+alias tree="eza --color=always --icons=always --tree --all"
 
 # Lsd
 # alias ls="lsd"

@@ -1,7 +1,7 @@
 #  INFO: Starship
 zinit ice as"command" from"gh-r" \
-          atclone"./starship init zsh > init.zsh" \
-          atpull"%atclone" src"init.zsh"
+    atclone"./starship init zsh > init.zsh" \
+    atpull"%atclone" src"init.zsh"
 zinit light starship/starship
 
 #  INFO: Zinit plugins

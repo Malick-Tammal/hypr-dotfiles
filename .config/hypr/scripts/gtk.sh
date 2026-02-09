@@ -69,4 +69,4 @@ ln -sf ~/.themes/"$THEME"/gtk-4.0/gtk.css ~/.config/gtk-4.0/gtk.css
 ln -sf ~/.themes/"$THEME"/gtk-4.0/gtk-dark.css ~/.config/gtk-4.0/gtk-dark.css
 ln -sf ~/.themes/"$THEME"/gtk-4.0/assets ~/.config/gtk-4.0/assets
 
-notify-send "Theme" "GTK Styles Applied"
+notify-send "Theme" "GTK Styles Applied" -a "Hyprland"

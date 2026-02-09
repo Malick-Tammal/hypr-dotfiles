@@ -48,18 +48,18 @@ case ${SELECTED} in
 "Performance")
     echo "Setting Performance plan"
     powerprofilesctl set performance
-    notify-send "⚡  Performance" "Switched to High Performance"
+    notify-send "⚡  Performance" "Switched to High Performance" -a "Hyprland"
     ;;
 
 "Balanced")
     echo "Setting Balanced plan"
     powerprofilesctl set balanced
-    notify-send "⚖️  Balanced" "Switched to Balanced Mode"
+    notify-send "⚖️  Balanced" "Switched to Balanced Mode" -a "Hyprland"
     ;;
 
 "Power Saver")
     echo "Setting Powersaver plan"
     powerprofilesctl set power-saver
-    notify-send "🪫 Power Saver" "Switched to Power Saver Mode"
+    notify-send "🪫 Power Saver" "Switched to Power Saver Mode" -a "Hyprland"
     ;;
 esac
