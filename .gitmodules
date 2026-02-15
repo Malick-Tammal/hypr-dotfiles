@@ -1,3 +1,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = https://github.com/Malick-Tammal/monokai-neovim
+[submodule ".config/quickshell"]
+	path = .config/quickshell
+	url = https://github.com/Malick-Tammal/monokai-shell
