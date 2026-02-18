@@ -4,3 +4,6 @@
 [submodule ".config/quickshell"]
 	path = .config/quickshell
 	url = https://github.com/Malick-Tammal/monokai-shell
+[submodule ".config/waybar"]
+	path = .config/waybar
+	url = https://github.com/Malick-Tammal/monokia-waybar
