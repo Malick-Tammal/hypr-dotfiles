@@ -39,7 +39,7 @@ trough {
 
 /* notifications */
 .floating-notifications {
-  margin-top: 5px;
+  margin-top: 10px;
   padding: 0;
 }
 
@@ -49,7 +49,7 @@ trough {
   color: var(--fg);
   border: 1px solid var(--bor);
   padding: 0;
-  margin: 0px 5px 5px 0px;
+  margin: 0px 0px 5px 10px;
 }
 
 .notification-background .notification {
@@ -72,7 +72,7 @@ trough {
 /* Target the image within your specific overlay structure */
 .notification .notification-content overlay .image {
   -gtk-icon-size: 32px;
-  margin: 0 5px 0px 15px;
+  margin: 0 10px 0px 15px;
 }
 
 /* Force the icon to disappear and release space when empty */
@@ -168,7 +168,7 @@ trough {
   background-color: var(--bg);
   color: var(--fg);
   border: 1px solid var(--bor);
-  margin: 5px;
+  margin: 10px;
   padding: 10px;
 }
 
