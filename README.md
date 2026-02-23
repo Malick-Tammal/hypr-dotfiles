@@ -1,2 +1,1 @@
 # HYPRLAND DOTFILES
-i
