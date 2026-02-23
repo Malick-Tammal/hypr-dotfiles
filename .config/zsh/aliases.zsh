@@ -110,3 +110,4 @@ alias y="yazi"
 
 #  INFO: System ---
 alias check-portals="systemctl --user status xdg-desktop-portal xdg-desktop-portal-hyprland"
+alias fix-rack="sudo ntfsfix -d /dev/sdb1"
