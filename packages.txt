@@ -9,6 +9,7 @@ bat
 bazaar
 beautysh
 bettercap
+bibata-cursor-git
 bitwarden
 blueman
 bluetui
@@ -28,7 +29,6 @@ cpio
 discord
 dmidecode
 dnsmasq
-dolphin
 dosfstools
 downgrade
 dragon-drop-git
@@ -117,7 +117,6 @@ ncdu
 nemo
 neovide
 neovim
-nerd-fonts-sf-mono-ligatures
 nethogs
 netscanner
 network-manager-applet
@@ -132,9 +131,6 @@ obsidian
 opencode
 os-prober
 otf-apple-sf-pro
-otf-font-awesome
-otf-font-awesome-4
-otf-sfmono-patched
 overskride
 pacseek
 pamixer
@@ -226,7 +222,6 @@ wget
 whitesur-icon-theme
 windscribe-v2-bin
 wl-clipboard
-woff2-font-awesome
 words
 wtype
 xdg-desktop-portal-gtk
