@@ -5,13 +5,13 @@
 #----------------------------------------------------------
 
 #  INFO: CONFIGURATION ---
-THEME="Colloid-Monokai"     # Set GTK theme
-FONT="SF Pro Regular 11"    # Set Font
-CURSOR="Moga-Cursor"        # Set Cursor theme
-CURSOR_SIZE=24              # Set Cursor size
-BUTTON_LAYOUT="appmenu:"    # Set Header bar menu  TIP: Show all of them : "appmenu:minimize,maximize,close"
-ICONS="Colloid-Orange-Dark" # Set icon theme
-TERMINAL="kitty"            # Set default terminal
+THEME="Colloid-Monokai"        # Set GTK theme
+FONT="SF Pro Regular 11"       # Set Font
+CURSOR="Bibata-Modern-Classic" # Set Cursor theme
+CURSOR_SIZE=20                 # Set Cursor size
+BUTTON_LAYOUT="appmenu:"       # Set Header bar menu  TIP: Show all of them : "appmenu:minimize,maximize,close"
+ICONS="Colloid-Orange-Dark"    # Set icon theme
+TERMINAL="kitty"               # Set default terminal
 #---------------------------
 
 #  INFO: APPLY GTK SETTINGS ---
