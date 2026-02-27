@@ -1,0 +1,4 @@
+set smoothscroll true
+set hintchars hjklasdfgyuiopqwertnmzxcvb
+set nnavigateshared true
+unbind <C-f>
