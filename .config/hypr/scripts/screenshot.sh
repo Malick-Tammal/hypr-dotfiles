@@ -88,14 +88,18 @@ case "$1" in
         notify_user "$FILE"
     fi
     ;;
+
 --window)
-    #  TIP: Windows selection screenshot
+    #  TIP: Windows selection screenshot (Current workspace only, ignores scratchpads)
     if $SOUND; then
         # Create the lock file to silence the global notification script
         touch /tmp/silence_notification_sound
 
-        # Pipe all open window positions to slurp
-        GEOM=$(hyprctl clients -j | jq -r '.[] | "\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"' | slurp)
+        # Get the currently active workspace ID
+        ACTIVE_WS=$(hyprctl activeworkspace -j | jq '.id')
+
+        # Pipe only visible windows from the CURRENT workspace to slurp
+        GEOM=$(hyprctl clients -j | jq -r --argjson active_ws "$ACTIVE_WS" '.[] | select(.workspace.id == $active_ws and .hidden == false) | "\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"' | slurp)
 
         if [ -z "$GEOM" ]; then
             notify_error
@@ -110,8 +114,11 @@ case "$1" in
         sleep 0.5
         rm /tmp/silence_notification_sound
     else
-        # This pipes all open window positions to slurp, allowing you to click one
-        GEOM=$(hyprctl clients -j | jq -r '.[] | "\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"' | slurp)
+        # Get the currently active workspace ID
+        ACTIVE_WS=$(hyprctl activeworkspace -j | jq '.id')
+
+        # Pipe only visible windows from the CURRENT workspace to slurp
+        GEOM=$(hyprctl clients -j | jq -r --argjson active_ws "$ACTIVE_WS" '.[] | select(.workspace.id == $active_ws and .hidden == false) | "\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"' | slurp)
 
         if [ -z "$GEOM" ]; then
             notify_error
@@ -122,8 +129,8 @@ case "$1" in
         cat "$FILE" | wl-copy
         notify_user "$FILE"
     fi
-
     ;;
+
 --edit)
     #  TIP: Area screenshot with satty editing app
     if $SOUND; then

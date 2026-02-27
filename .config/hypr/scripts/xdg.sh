@@ -23,9 +23,13 @@ sleep 1
 export SSH_AUTH_SOCK="/run/user/$(id -u)/keyring/ssh"
 export GNOME_KEYRING_CONTROL="/run/user/$(id -u)/keyring"
 
+# #  INFO: Update environment ---
+# dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SSH_AUTH_SOCK GNOME_KEYRING_CONTROL
+# systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SSH_AUTH_SOCK GNOME_KEYRING_CONTROL
+
 #  INFO: Update environment ---
-dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SSH_AUTH_SOCK GNOME_KEYRING_CONTROL
-systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP SSH_AUTH_SOCK GNOME_KEYRING_CONTROL
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE SSH_AUTH_SOCK GNOME_KEYRING_CONTROL
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE SSH_AUTH_SOCK GNOME_KEYRING_CONTROL
 
 sleep 1
 

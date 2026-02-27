@@ -3,6 +3,7 @@ adw-gtk-theme
 android-tools
 android-udev
 aylurs-gtk-shell-git
+balena-etcher
 base
 base-devel
 bat
@@ -15,6 +16,7 @@ blueman
 bluetui
 bluez
 bluez-utils
+bridge-utils
 brightnessctl
 btop
 chafa
@@ -29,6 +31,8 @@ cpio
 discord
 dmidecode
 dnsmasq
+docker
+docker-compose
 dosfstools
 downgrade
 dragon-drop-git
@@ -83,10 +87,12 @@ intel-media-driver
 intel-ucode
 iptables-nft
 kdeconnect
+kdiskmark
 kitty
 kvantum
 kvantum-qt5
 lazygit
+lib32-vulkan-intel
 libastal-gjs-git
 libastal-hyprland-git
 libastal-meta
@@ -176,7 +182,6 @@ steam
 stow
 stylua
 sudo
-sushi
 swaync
 swaync-widgets-git
 swayosd
@@ -193,7 +198,6 @@ timeshift
 tinysparql
 tmux
 translate-shell
-transmission-qt
 trash-cli
 tree-sitter-cli
 ttf-icomoon-feather
@@ -204,8 +208,8 @@ udiskie
 udisks2
 ufw
 unixodbc
-usbimager
 valent-git
+ventoy-bin
 vesktop
 vim
 virt-manager
@@ -216,12 +220,15 @@ vlc-plugins-all
 vscodium
 vulkan-intel
 waybar
+wayland-idle-inhibitor-git
 wev
 wezterm
 wget
 whitesur-icon-theme
+winboat-bin
 windscribe-v2-bin
 wl-clipboard
+woeusb-ng
 words
 wtype
 xdg-desktop-portal-gtk

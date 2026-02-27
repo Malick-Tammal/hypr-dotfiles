@@ -1,27 +1,23 @@
+#!/bin/bash
+
 #----------------------------------------------------------
-#--  HACK: Battery monitor
+#--  HACK: Battery monitor (Udev Event Driven)
 #----------------------------------------------------------
 
 #  INFO: CONFIGURATION ---
-# Battery monitor
 LOW_LEVEL=20
 CRITICAL_LEVEL=10
 ICON_LOW="/usr/share/icons/Colloid-Yellow-Dark/status/symbolic/battery-level-20-symbolic.svg"
 ICON_CRITICAL="/usr/share/icons/Colloid-Yellow-Dark/status/symbolic/battery-level-10-symbolic.svg"
-
-# Charger monitor
-SOUND=true
-SOUND_PLUG="/usr/share/sounds/freedesktop/stereo/window-question.oga"
-SOUND_UNPLUG="/usr/share/sounds/freedesktop/stereo/window-attention.oga"
 # ------------------------
 
 #  INFO: Prevent spamming
 notified_low=false
 notified_critical=false
 
-while true; do
-    status=$(cat /sys/class/power_supply/BAT0/status)
-    capacity=$(cat /sys/class/power_supply/BAT0/capacity)
+check_battery() {
+    local status=$(cat /sys/class/power_supply/BAT0/status)
+    local capacity=$(cat /sys/class/power_supply/BAT0/capacity)
 
     if [ "$status" = "Discharging" ]; then
 
@@ -39,6 +35,12 @@ while true; do
         notified_low=false
         notified_critical=false
     fi
+}
 
-    sleep 60
+#  INFO: Run an initial check on startup
+check_battery
+
+#  INFO: Event Listener
+udevadm monitor --subsystem-match=power_supply | grep --line-buffered "change" | while read -r; do
+    check_battery
 done

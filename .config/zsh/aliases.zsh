@@ -27,7 +27,6 @@ alias cbash="source ~/.bashrc"
 alias vbsh="nvim ~/.bashrc"
 alias cbsh="code ~/.bashrc"
 
-
 #  INFO: EDIT ALIASES ---
 alias vals="nvim ~/.config/zsh/aliases.zsh"
 alias bals="bat ~/.config/zsh/aliases.zsh"

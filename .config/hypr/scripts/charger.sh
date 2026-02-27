@@ -1,5 +1,7 @@
+#!/bin/bash
+
 #----------------------------------------------------------
-#--  HACK: Charger monitor
+#--  HACK: Charger monitor (Udev Event Driven)
 #----------------------------------------------------------
 
 #  INFO: CONFIGURATION ---
@@ -19,31 +21,30 @@ done
 
 #  INFO: Error handler ---
 if [ -z "$AC_FILE" ]; then
-    notify-send "Error" "Could not find AC Adapter."
+    notify-send "Error" "Could not find AC Adapter." -a "Hyprland"
     exit 1
 fi
 
 last_state=$(cat "$AC_FILE")
 
-#  INFO: Main logic
-while true; do
-    current_state=$(cat "$AC_FILE")
+#  INFO: Main logic function
+check_charger() {
+    local current_state=$(cat "$AC_FILE")
 
     if [ "$current_state" != "$last_state" ]; then
         if "$SOUND"; then
-
             touch /tmp/silence_notification_sound
 
             if [ "$current_state" == "1" ]; then
-                paplay "$SOUND_PLUG"
+                paplay "$SOUND_PLUG" &
                 notify-send -a "Power" "Power" "Charger Connected" -a "Hyprland"
             else
-                paplay "$SOUND_UNPLUG"
+                paplay "$SOUND_UNPLUG" &
                 notify-send -a "Power" "Power" "Charger Disconnected" -a "Hyprland"
             fi
 
             sleep 0.5
-            rm /tmp/silence_notification_sound
+            rm -f /tmp/silence_notification_sound
         else
             if [ "$current_state" == "1" ]; then
                 notify-send -a "Power" "Power" "Charger Connected" -a "Hyprland"
@@ -54,4 +55,9 @@ while true; do
 
         last_state=$current_state
     fi
+}
+
+#  INFO: Event Listener
+udevadm monitor --subsystem-match=power_supply | grep --line-buffered "change" | while read -r; do
+    check_charger
 done
