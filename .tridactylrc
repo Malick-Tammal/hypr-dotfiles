@@ -4,3 +4,4 @@ set nnavigateshared true
 unbind <C-f>
 unbind <d>
 unbind <m>
+unbind <Esc>
