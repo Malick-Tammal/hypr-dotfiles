@@ -18,6 +18,7 @@ keys.zsh
 
 # Ignore packages
 packages.txt
+aur_packages.txt
 
 # Ignore other folders
 extra

@@ -160,13 +160,13 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 /* Toolbar  */
 #tracking-protection-icon-container,
 #urlbar-zoom-button,
-#star-button-box,
+/* #star-button-box, */
 #pageActionButton,
 #pageActionSeparator,
-#tabs-newtab-button,
-#back-button,
+/* #tabs-newtab-button, */
+/* #back-button, */
 /* #PanelUI-button, */
-#forward-button,
+/* #forward-button, */
 .tab-secondary-label {
   display: none !important;
 }

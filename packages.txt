@@ -37,6 +37,7 @@ dragon-drop-git
 efibootmgr
 entr
 eog
+evince
 exfat-utils
 extension-manager
 eza
@@ -166,6 +167,7 @@ seahorse
 sl
 socat
 sof-firmware
+sshfs
 starship
 steam
 stow
