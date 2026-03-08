@@ -4,6 +4,11 @@
 #--  HACK: Color picker
 #----------------------------------------------------------
 
+#  INFO: Prevent spam
+if pgrep -x "hyprpicker" >/dev/null; then
+    exit 0
+fi
+
 #  INFO: CONFIGURATION ---
 LOGFILE="$HOME/.cache/colorpicker_history.txt"
 COLOR_FORMAT="hex" #  TIP: hex or rgb

@@ -4,6 +4,11 @@
 #--  HACK: Screenshot
 #----------------------------------------------------------
 
+#  INFO: Prevent spam
+if pgrep -x "slurp" >/dev/null; then
+    exit 0
+fi
+
 #  INFO: CONFIGURATION ---
 DIR="$HOME/Pictures/Screenshots"
 NAME="Screenshot_$(date +'%Y%m%d_%H%M%S').png"
@@ -17,12 +22,22 @@ mkdir -p "$DIR"
 
 #  INFO: Notification ---
 
-# Send a notification with the thumbnail of the screenshot
 notify_user() {
-    notify-send "Screenshot Captured" "Saved to $1" -i "$1" -a "Hyprland"
+    if $SOUND; then
+        touch /tmp/silence_notification_sound
+
+        notify-send "Screenshot Captured" "Saved to $1" -i "$1" -a "Hyprland"
+        paplay "$SOUND_FILE" &
+
+        (
+            sleep 0.5
+            rm -f /tmp/silence_notification_sound
+        ) &
+    else
+        notify-send "Screenshot Captured" "Saved to $1" -i "$1" -a "Hyprland"
+    fi
 }
 
-# Send a notification with cancel message
 notify_error() {
     notify-send "Screenshot Cancelled" "No selection made" -u low -a "Hyprland"
 }
@@ -31,138 +46,64 @@ notify_error() {
 case "$1" in
 --full)
     #  TIP: Fullscreen screenshot
-    if $SOUND; then
-        # Create the lock file to silence the global notification script
-        touch /tmp/silence_notification_sound
-
-        grim "$FILE"
-        cat "$FILE" | wl-copy
-
-        notify_user "$FILE"
-        paplay "$SOUND_FILE"
-
-        sleep 0.5
-        rm /tmp/silence_notification_sound
-    else
-        grim "$FILE"
-        cat "$FILE" | wl-copy
-
-        notify_user "$FILE"
-    fi
+    grim "$FILE"
+    wl-copy <"$FILE"
+    notify_user "$FILE"
     ;;
 
 --area)
     #  TIP: Area screenshot
-    if $SOUND; then
-        # Create the lock file to silence the global notification script
-        touch /tmp/silence_notification_sound
+    GEOM=$(slurp)
 
-        # Select a region
-        GEOM=$(slurp)
-
-        # Check if user cancelled (empty geometry)
-        if [ -z "$GEOM" ]; then
-            notify_error
-            exit 1
-        fi
-
-        grim -g "$GEOM" "$FILE"
-        cat "$FILE" | wl-copy
-        notify_user "$FILE"
-        paplay "$SOUND_FILE"
-
-        sleep 0.5
-        rm /tmp/silence_notification_sound
-    else
-        # Select a region
-        GEOM=$(slurp)
-
-        # Check if user cancelled (empty geometry)
-        if [ -z "$GEOM" ]; then
-            notify_error
-            exit 1
-        fi
-
-        grim -g "$GEOM" "$FILE"
-        cat "$FILE" | wl-copy
-        notify_user "$FILE"
+    if [ -z "$GEOM" ]; then
+        notify_error
+        exit 1
     fi
+
+    grim -g "$GEOM" "$FILE"
+    wl-copy <"$FILE"
+    notify_user "$FILE"
     ;;
 
 --window)
     #  TIP: Windows selection screenshot (Current workspace only, ignores scratchpads)
-    if $SOUND; then
-        # Create the lock file to silence the global notification script
-        touch /tmp/silence_notification_sound
+    ACTIVE_WS=$(hyprctl activeworkspace -j | jq '.id')
 
-        # Get the currently active workspace ID
-        ACTIVE_WS=$(hyprctl activeworkspace -j | jq '.id')
+    GEOM=$(hyprctl clients -j | jq -r --argjson active_ws "$ACTIVE_WS" '.[] | select(.workspace.id == $active_ws and .hidden == false) | "\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"' | slurp)
 
-        # Pipe only visible windows from the CURRENT workspace to slurp
-        GEOM=$(hyprctl clients -j | jq -r --argjson active_ws "$ACTIVE_WS" '.[] | select(.workspace.id == $active_ws and .hidden == false) | "\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"' | slurp)
-
-        if [ -z "$GEOM" ]; then
-            notify_error
-            exit 1
-        fi
-
-        grim -g "$GEOM" "$FILE"
-        cat "$FILE" | wl-copy
-        notify_user "$FILE"
-        paplay "$SOUND_FILE"
-
-        sleep 0.5
-        rm /tmp/silence_notification_sound
-    else
-        # Get the currently active workspace ID
-        ACTIVE_WS=$(hyprctl activeworkspace -j | jq '.id')
-
-        # Pipe only visible windows from the CURRENT workspace to slurp
-        GEOM=$(hyprctl clients -j | jq -r --argjson active_ws "$ACTIVE_WS" '.[] | select(.workspace.id == $active_ws and .hidden == false) | "\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"' | slurp)
-
-        if [ -z "$GEOM" ]; then
-            notify_error
-            exit 1
-        fi
-
-        grim -g "$GEOM" "$FILE"
-        cat "$FILE" | wl-copy
-        notify_user "$FILE"
+    if [ -z "$GEOM" ]; then
+        notify_error
+        exit 1
     fi
+
+    grim -g "$GEOM" "$FILE"
+    wl-copy <"$FILE"
+    notify_user "$FILE"
     ;;
 
 --edit)
     #  TIP: Area screenshot with satty editing app
-    if $SOUND; then
-        # Create the lock file to silence the global notification script
-        touch /tmp/silence_notification_sound
-
-        GEOM=$(slurp)
-        if [ -z "$GEOM" ]; then
-            notify_error
-            exit 1
-        fi
-
-        paplay "$SOUND_FILE" &
-        # Pip the screenshot to satty
-        grim -g "$GEOM" - | satty --filename - --output-filename "$FILE"
-
-        sleep 0.5
-        rm /tmp/silence_notification_sound
-    else
-        GEOM=$(slurp)
-        if [ -z "$GEOM" ]; then
-            notify_error
-            exit 1
-        fi
-
-        # Pip the screenshot to satty
-        grim -g "$GEOM" - | satty --filename - --output-filename "$FILE"
+    GEOM=$(slurp)
+    if [ -z "$GEOM" ]; then
+        notify_error
+        exit 1
     fi
 
+    if $SOUND; then
+        touch /tmp/silence_notification_sound
+        paplay "$SOUND_FILE" &
+        (
+            sleep 0.5
+            rm -f /tmp/silence_notification_sound
+        ) &
+    fi
+
+    # Pip the screenshot to satty
+    grim -g "$GEOM" - | satty --filename - --output-filename "$FILE"
     ;;
+
 *)
-    echo "Usage: $0 {full|area|window|edit}"
+    echo "Usage: $0 {--full|--area|--window|--edit}"
     exit 1
     ;;
 esac
