@@ -134,8 +134,3 @@ Windows = "󰍲 "
 
 [nodejs]
 format = '➜ [](bold fg:#FD9B6B)[ $version](bold bg:#FD9B6B fg:#321E15)[](bold fg:#FD9B6B)'
-
-[custom.logo]
-command = "echo "
-format = ' [](bold fg:yellow)[$output ](bold bg:yellow fg:#332B14)[](bold fg:yellow)'
-when = "true"
