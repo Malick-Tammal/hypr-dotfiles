@@ -1,8 +1,8 @@
 {
-  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.colorTheme": "Monokai Night",
   "workbench.iconTheme": "material-icon-theme",
   "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace'",
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "editor.fontWeight": "500",
   "window.menuBarVisibility": "hidden",
   "workbench.startupEditor": "none",
@@ -28,6 +28,7 @@
   "editor.glyphMargin": false,
   "workbench.tree.indent": 10,
   "workbench.tree.renderIndentGuides": "always",
+  "editor.lineNumbers": "relative",
 
   // Neovim
   "extensions.experimental.affinity": {
