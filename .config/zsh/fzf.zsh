@@ -24,6 +24,6 @@ zstyle ':fzf-tab:complete:*' fzf-preview \
 'if [ -d $realpath ]; then
      eza --color=always --icons=always --tree --all $realpath | head -200
    else
-     bat --color=always --style=numbers $realpath
+     bat --color=always --style=numbers --line-range=:500 $realpath
    fi'
 

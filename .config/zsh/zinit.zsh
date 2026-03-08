@@ -6,8 +6,8 @@ if [ ! -d "$ZINIT_HOME" ]; then
 fi
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Load a few important annexes, without Turbo
-zinit light-mode for \
+# Load a few important annexes asynchronously
+zinit light-mode wait"0" lucid for \
     zdharma-continuum/zinit-annex-as-monitor \
     zdharma-continuum/zinit-annex-bin-gem-node \
     zdharma-continuum/zinit-annex-patch-dl \
