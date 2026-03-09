@@ -45,6 +45,7 @@ fastfetch
 fd
 ffmpegthumbnailer
 firefox
+fwupd
 fzf
 gcc
 gemini-cli
@@ -82,6 +83,7 @@ inotify-tools
 intel-gpu-tools
 intel-media-driver
 intel-ucode
+inxi
 iptables-nft
 kdeconnect
 kdenlive
@@ -102,9 +104,12 @@ libva-utils
 linux
 linux-firmware
 linux-headers
+linux-zen
+linux-zen-headers
 localsearch
 lua51
 luarocks
+lzip
 make
 malcontent
 man-db
@@ -150,6 +155,7 @@ python-setuptools
 qemu-full
 qqc2-breeze-style
 qt5ct
+qt6-imageformats
 qt6-languageserver
 qt6-virtualkeyboard
 qt6ct
@@ -160,6 +166,7 @@ rofi
 rofi-calc
 rofi-emoji
 rust
+s-tui
 sassc
 satty
 sddm
@@ -171,6 +178,7 @@ sshfs
 starship
 steam
 stow
+stress
 stylua
 sudo
 swaync
@@ -208,6 +216,7 @@ vlc-plugins-all
 vscodium
 vulkan-intel
 waybar
+waydroid
 wev
 wezterm
 wget
