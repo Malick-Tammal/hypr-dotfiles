@@ -10,13 +10,13 @@ alias update="yay -Syu"
 alias list="yay -Q"
 
 # INFO: Brew (macos / linux) ---
-# alias bi="brew install"
-# alias bic="brew install --cask"
-# alias br="brew uninstall"
-# alias bu="brew update"
-# alias bs="brew search"
-# alias bl="brew list"
-# alias bfu='brew update; brew upgrade --cask --greedy ; brew upgrade $(brew outdated | awk "{ print $1 }") ; brew cleanup'
+alias bi="brew install"
+alias bic="brew install --cask"
+alias br="brew uninstall"
+alias bu="brew update"
+alias bs="brew search"
+alias bl="brew list"
+alias bfu='brew update; brew upgrade --cask --greedy ; brew upgrade $(brew outdated | awk "{ print $1 }") ; brew cleanup'
 
 #  INFO: ZSH / BASH ---
 alias szsh="source ~/.zshrc"
@@ -53,11 +53,6 @@ alias la="eza --color=always --icons=always -a"
 alias lsa="eza --color=always --icons=always -la"
 alias lsc="ls --color=never --icons=never"
 alias tree="eza --color=always --icons=always --tree --all"
-
-# Lsd
-# alias ls="lsd"
-# alias lsa="lsd -a"
-# alias lsla="lsd -la"
 
 #  INFO: Move ---
 alias cd="z"

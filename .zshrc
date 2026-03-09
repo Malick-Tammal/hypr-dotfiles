@@ -4,23 +4,23 @@
 
 export ZSH_CONFIG="$HOME/.config/zsh"
 
-# 1. Load Environment variables FIRST (so they are available for plugins/aliases)
+# 1. Environment
 [[ -f "$ZSH_CONFIG/env.zsh" ]] && source "$ZSH_CONFIG/env.zsh"
 
-# 2. Load Options & History
+# 2. Options & History
 [[ -f "$ZSH_CONFIG/options.zsh" ]] && source "$ZSH_CONFIG/options.zsh"
 
-# 3. Load Aliases
+# 3. Aliases
 [[ -f "$ZSH_CONFIG/aliases.zsh" ]] && source "$ZSH_CONFIG/aliases.zsh"
 
-# 3. Load FZF customization
+# 3. FZF customization
 [[ -f "$ZSH_CONFIG/fzf.zsh" ]] && source "$ZSH_CONFIG/fzf.zsh"
 
-# 3. Load Zinit
+# 3. Zinit
 [[ -f "$ZSH_CONFIG/zinit.zsh" ]] && source "$ZSH_CONFIG/zinit.zsh"
 
-# 6. Load Plugins
+# 6. Plugins
 [[ -f "$ZSH_CONFIG/plugins.zsh" ]] && source "$ZSH_CONFIG/plugins.zsh"
 
-# 7. Load keys
+# 7. Private keys
 [[ -f "$HOME/dotfiles/keys.zsh" ]] && source "$HOME/dotfiles/keys.zsh"

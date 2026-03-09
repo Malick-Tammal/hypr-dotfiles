@@ -12,15 +12,15 @@ fi
 #  INFO: Zoxide
 eval "$(zoxide init zsh)"
 
-# OMZ Snippets & Utilities
+#  INFO: OMZ Snippets & Utilities
 zinit ice wait"0" lucid; zinit light MichaelAquilina/zsh-you-should-use
 zinit ice wait"0" lucid; zinit snippet OMZP::git
 zinit ice wait"0" lucid; zinit snippet OMZP::sudo
 
-# Completions
+#  INFO: Completions
 zinit ice wait"0" lucid; zinit light zsh-users/zsh-completions
 
-# Compinit
+#  INFO: Compinit
 zinit ice wait"0" lucid atinit'
   autoload -Uz compinit
   compinit -C
@@ -32,13 +32,11 @@ zinit ice wait"0" lucid
 zinit light Aloxaf/fzf-tab
 
 # INFO: autosuggestions
-zinit ice wait"0" lucid
 zinit light zsh-users/zsh-autosuggestions
 
 #  INFO: Syntax Highlighting
 zinit ice wait"0" lucid
 zinit light zsh-users/zsh-syntax-highlighting
-# -------------------------------------------------------------------
 
 #  INFO: NVM
 function nvm node npm npx yarn() {

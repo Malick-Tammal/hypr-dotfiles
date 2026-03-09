@@ -15,7 +15,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git/*"'
 export FZF_CTRL_T_OPTS="--preview 'bat --style=numbers --color=always --line-range=:500 {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 export FZF_ALT_C_OPTS="--preview 'eza --color=always --icons=always --tree --all {} | head -200'"
 
-# fzf tab
+#  INFO: fzf tab
 zstyle ':fzf-tab:*' fzf-flags ${(z)FZF_DEFAULT_OPTS} --prompt="$prompt_symbol"
 
 zstyle ':completion:*' menu no
