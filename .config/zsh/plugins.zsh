@@ -50,6 +50,3 @@ function nvm node npm npx yarn() {
         command "$0" "$@"
     fi
 }
-
-#  INFO: BUN
-export PATH="$BUN_INSTALL/bin:$PATH"
