@@ -1,8 +1,10 @@
+antigravity
 beautysh
 bibata-cursor-git
 figma-linux
 hyprls-git
 mpv-uosc-git
+nautilus-admin-gtk4
 nitch
 nmgui
 otf-apple-sf-pro
@@ -13,7 +15,6 @@ quickshell-git
 swaync-widgets-git
 ttf-material-design-icons-desktop-git
 typioca-bin
-wayland-idle-inhibitor-git
 wayvibes-git
 whitesur-icon-theme
 winboat-bin

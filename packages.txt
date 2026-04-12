@@ -2,6 +2,8 @@
 adw-gtk-theme
 android-tools
 android-udev
+arp-scan
+awww
 aylurs-gtk-shell-git
 balena-etcher
 base
@@ -26,6 +28,7 @@ cmake
 cmatrix
 colloid-icon-theme-git
 cpio
+ddcutil
 discord
 dmidecode
 dnsmasq
@@ -84,7 +87,7 @@ intel-gpu-tools
 intel-media-driver
 intel-ucode
 inxi
-iptables-nft
+iptables
 kdeconnect
 kdenlive
 kdiskmark
@@ -121,9 +124,10 @@ mpv-thumbfast-git
 mtools
 nano
 nautilus
+nautilus-image-converter
+nautilus-open-any-terminal
 ncdu
 nemo
-neovide
 neovim
 nethogs
 netscanner
@@ -181,9 +185,9 @@ stow
 stress
 stylua
 sudo
+sushi
 swaync
 swayosd
-swww
 taplo-cli
 tela-icon-theme
 tesseract
