@@ -15,6 +15,7 @@ bitwarden
 blueman
 bluetui
 bluez
+bluez-tools
 bluez-utils
 bridge-utils
 brightnessctl
@@ -153,7 +154,6 @@ polkit-gnome
 power-profiles-daemon
 prettier
 python-dbus
-python-pywal
 python-qrcode
 python-setuptools
 qemu-full

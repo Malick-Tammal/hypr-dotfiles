@@ -11,7 +11,10 @@ otf-apple-sf-pro
 overskride
 pipes.sh
 prettierd
+python-pywal16
+qml-language-server-bin
 quickshell-git
+snapd
 swaync-widgets-git
 ttf-material-design-icons-desktop-git
 typioca-bin
