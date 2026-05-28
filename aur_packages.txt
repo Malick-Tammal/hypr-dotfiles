@@ -17,6 +17,7 @@ quickshell-git
 snapd
 swaync-widgets-git
 ttf-material-design-icons-desktop-git
+ttf-rubik-vf
 typioca-bin
 wayvibes-git
 whitesur-icon-theme

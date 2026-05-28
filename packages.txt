@@ -134,6 +134,8 @@ nethogs
 netscanner
 network-manager-applet
 nmap
+noto-fonts
+noto-fonts-cjk
 noto-fonts-emoji
 ntfs-3g
 nwg-look
@@ -203,6 +205,7 @@ translate-shell
 trash-cli
 tree-sitter-cli
 ttf-icomoon-feather
+ttf-jetbrains-mono-nerd
 typescript
 udiskie
 udisks2
