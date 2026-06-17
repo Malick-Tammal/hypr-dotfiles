@@ -104,5 +104,5 @@ alias y="yazi"
 
 #  INFO: Systems ---
 alias check-portals="systemctl --user status xdg-desktop-portal xdg-desktop-portal-hyprland"
-alias fix-rack="sudo ntfsfix -d /dev/sdb1"
+alias fix-rack="sudo ntfsfix -d /dev/sda1"
 alias led="~/.config/hypr/scripts/ELK.py"

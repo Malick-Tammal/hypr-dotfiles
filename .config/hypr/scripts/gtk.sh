@@ -24,6 +24,7 @@ gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"
 gsettings set org.gnome.desktop.wm.preferences button-layout "$BUTTON_LAYOUT"
 gsettings set org.gnome.desktop.default-applications.terminal exec "$TERMINAL"
 gsettings set org.gnome.desktop.default-applications.terminal exec-arg "-e"
+gsettings set org.gnome.desktop.interface text-scaling-factor 1
 
 #  INFO: FLATPAK FIXES ---
 if command -v flatpak &>/dev/null; then
