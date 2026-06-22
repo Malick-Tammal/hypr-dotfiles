@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "workbench.colorTheme": "Monokai Night",
   "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace'",
   "editor.fontSize": 15,
   "editor.fontWeight": "500",
@@ -48,7 +48,7 @@
   "window.titleBarStyle": "native",
   "window.menuBarVisibility": "hidden",
   "workbench.startupEditor": "none",
-  "window.zoomLevel": 0.5,
+  "window.zoomLevel": 1,
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
   // Terminal
@@ -59,4 +59,9 @@
   "[jsonc]": {
     "editor.defaultFormatter": "prettier.prettier-vscode",
   },
+  "chat.plugins.marketplaces": [
+    "github/copilot-plugins",
+    "github/awesome-copilot",
+    "github/awesome-copilot#marketplace"
+  ],
 }
