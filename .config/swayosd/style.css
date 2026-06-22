@@ -1,67 +1,65 @@
 @import url("/home/malick-tammal/.shared/themes/monokai/swayosd/main.css");
 
 * {
-    font-family: "SF Pro";
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--fg);
-    transition: all 200ms ease-in-out;
+  font-family: "SF Pro";
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--fg);
+  transition: all 200ms ease-in-out;
 }
 
 window#osd {
-    border-radius: 8px;
-    border: 1px solid var(--bor);
-    background: var(--bg);
-    margin-bottom: 680px;
+  border-radius: 8px;
+  border: 1px solid var(--bor);
+  background: var(--bg);
 }
 
 #container {
-    margin: 13px;
+  margin: 13px;
 }
 
 image,
 label {
-    color: var(--fg);
+  color: var(--fg);
 }
 
-#container>image {
-    -gtk-icon-transform: scale(0.7);
+#container > image {
+  -gtk-icon-transform: scale(0.7);
 }
 
 progressbar:disabled,
 image:disabled {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 progressbar,
 segmentedprogress {
-    min-height: 6px;
-    border-radius: 999px;
-    background: transparent;
-    border: none;
+  min-height: 6px;
+  border-radius: 999px;
+  background: transparent;
+  border: none;
 }
 
 trough,
 segment {
-    min-height: inherit;
-    border-radius: inherit;
-    border: none;
-    background: var(--DARK3);
+  min-height: inherit;
+  border-radius: inherit;
+  border: none;
+  background: var(--DARK3);
 }
 
 progress,
 segment.active {
-    min-height: inherit;
-    border-radius: inherit;
-    border: none;
-    background: var(--fg);
+  min-height: inherit;
+  border-radius: inherit;
+  border: none;
+  background: var(--fg);
 }
 
 segment {
-    margin-left: 8px;
-
+  margin-left: 8px;
 }
 
 segment:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }
