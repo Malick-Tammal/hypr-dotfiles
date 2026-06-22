@@ -103,6 +103,6 @@ alias fix-touchpad="sudo modprobe -r i2c_hid_acpi && sudo modprobe i2c_hid_acpi"
 alias y="yazi"
 
 #  INFO: Systems ---
-alias check-portals="systemctl --user status xdg-desktop-portal xdg-desktop-portal-hyprland"
+alias check-portals='systemctl --user status xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk'
 alias fix-rack="sudo ntfsfix -d /dev/sda1"
 alias led="~/.config/hypr/scripts/ELK.py"
