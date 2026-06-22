@@ -8,6 +8,7 @@ aylurs-gtk-shell-git
 balena-etcher
 base
 base-devel
+bash-language-server
 bat
 bazaar
 bettercap
@@ -49,6 +50,7 @@ fastfetch
 fd
 ffmpegthumbnailer
 firefox
+freedownloadmanager
 fwupd
 fzf
 gcc
@@ -73,7 +75,7 @@ htop
 hyprcursor-git
 hyprgraphics-git
 hypridle
-hyprland
+hyprland-git
 hyprland-qt-support
 hyprlock
 hyprpicker
@@ -93,6 +95,8 @@ kdeconnect
 kdenlive
 kdiskmark
 kitty
+krdc
+krdp
 kvantum
 kvantum-qt5
 lazygit
@@ -155,9 +159,11 @@ pnpm
 polkit-gnome
 power-profiles-daemon
 prettier
+proton-vpn-gtk-app
 python-dbus
 python-qrcode
 python-setuptools
+qdiskinfo
 qemu-full
 qqc2-breeze-style
 qt5ct
@@ -228,7 +234,6 @@ wev
 wezterm
 wget
 wl-clipboard
-woeusb-ng
 words
 wtype
 xdg-desktop-portal-gtk

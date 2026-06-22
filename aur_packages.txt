@@ -3,6 +3,7 @@ beautysh
 bibata-cursor-git
 figma-linux
 hyprls-git
+localsend-bin
 mpv-uosc-git
 nautilus-admin-gtk4
 nitch
@@ -24,3 +25,4 @@ whitesur-icon-theme
 winboat-bin
 windscribe-v2-bin
 yay-debug
+zennotes-bin
