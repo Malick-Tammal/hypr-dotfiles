@@ -28,11 +28,11 @@ case "$1" in
     ;;
 --mute)
     swayosd-client --output-volume mute-toggle
-    play_sound "$MUTE_SOUND"
+    # play_sound "$MUTE_SOUND"
     ;;
 --mute-mic)
     swayosd-client --input-volume mute-toggle
-    play_sound "$MUTE_SOUND"
+    # play_sound "$MUTE_SOUND"
     ;;
 --display-inc)
     swayosd-client --brightness +10
