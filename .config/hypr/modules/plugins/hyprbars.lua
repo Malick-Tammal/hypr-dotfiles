@@ -28,28 +28,30 @@ hl.config({
 	},
 })
 
-if hl.plugin ~= nil and hl.plugin.hyprbars ~= nil then
-	hl.plugin.hyprbars.add_button({
-		bg_color = colors.red5,
-		fg_color = colors.red9,
-		size = 17,
-		icon = "x",
-		action = "hyprctl dispatch 'hl.dsp.window.close()'",
-	})
+-- if hl.plugin ~= nil and hl.plugin.hyprbars ~= nil then
+hl.exec_cmd("notify-send 'Hyprbars' 'Installed'")
 
-	hl.plugin.hyprbars.add_button({
-		bg_color = colors.orange5,
-		fg_color = colors.orange1,
-		size = 17,
-		icon = "",
-		action = "hyprctl dispatch 'hl.dsp.window.fullscreen()'",
-	})
+hl.plugin.hyprbars.add_button({
+	bg_color = colors.red5,
+	fg_color = colors.red9,
+	size = 17,
+	icon = "x",
+	action = "hyprctl dispatch 'hl.dsp.window.close()'",
+})
 
-	hl.plugin.hyprbars.add_button({
-		bg_color = colors.yellow5,
-		fg_color = colors.yellow1,
-		size = 17,
-		icon = "",
-		action = "hyprctl dispatch 'hl.dsp.window.float()'",
-	})
-end
+hl.plugin.hyprbars.add_button({
+	bg_color = colors.orange5,
+	fg_color = colors.orange1,
+	size = 17,
+	icon = "",
+	action = "hyprctl dispatch 'hl.dsp.window.fullscreen()'",
+})
+
+hl.plugin.hyprbars.add_button({
+	bg_color = colors.yellow5,
+	fg_color = colors.yellow1,
+	size = 17,
+	icon = "",
+	action = "hyprctl dispatch 'hl.dsp.window.float()'",
+})
+-- end
