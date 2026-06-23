@@ -180,9 +180,10 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "waydroid",
-	match = { class = "Waydroid.*" },
+	match = { class = "Waydroid" },
 	float = true,
 	center = true,
+	size = { 600, 950 },
 })
 
 hl.window_rule({
