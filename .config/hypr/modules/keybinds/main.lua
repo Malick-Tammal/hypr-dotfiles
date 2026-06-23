@@ -14,6 +14,7 @@ hl.bind(defaults.mainMod .. " + space", hl.dsp.exec_cmd(defaults.launcher)) -- A
 hl.bind(defaults.mainMod .. " + b", hl.dsp.exec_cmd(defaults.browser)) -- Launch browser
 hl.bind(defaults.mainMod .. " + n", hl.dsp.exec_cmd(defaults.notificationCenter)) -- Launch notification center
 hl.bind(defaults.mainMod .. " + Backspace", hl.dsp.window.close()) -- Close active window
+hl.bind(defaults.mainMod .. " + I", hl.dsp.exec_cmd(defaults.bar)) -- Launch terminal
 ------------------------------------------------------
 
 --  INFO: Window management ---

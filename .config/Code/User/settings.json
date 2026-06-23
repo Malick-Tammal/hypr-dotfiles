@@ -1,12 +1,12 @@
 {
   "workbench.colorTheme": "Monokai Night",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "flow-dim",
   "editor.fontFamily": "'JetBrainsMono Nerd Font', 'monospace'",
   "editor.fontSize": 15,
   "editor.fontWeight": "500",
   "window.menuBarVisibility": "hidden",
   "workbench.startupEditor": "none",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 1.2,
   "window.commandCenter": false,
   "workbench.layoutControl.enabled": false,
 

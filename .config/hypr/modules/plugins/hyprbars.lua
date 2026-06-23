@@ -28,9 +28,6 @@ hl.config({
 	},
 })
 
--- if hl.plugin ~= nil and hl.plugin.hyprbars ~= nil then
-hl.exec_cmd("notify-send 'Hyprbars' 'Installed'")
-
 hl.plugin.hyprbars.add_button({
 	bg_color = colors.red5,
 	fg_color = colors.red9,
@@ -54,4 +51,3 @@ hl.plugin.hyprbars.add_button({
 	icon = "",
 	action = "hyprctl dispatch 'hl.dsp.window.float()'",
 })
--- end
