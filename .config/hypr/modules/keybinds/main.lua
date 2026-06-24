@@ -102,3 +102,25 @@ hl.bind(
 
 hl.bind(defaults.mainModShift .. " + E", hl.dsp.exec_cmd(defaults.emojiPicker)) -- Emoji picker
 hl.bind(defaults.mainMod .. " + Return", hl.dsp.exec_cmd(defaults.pacseek)) -- Pacseek
+
+--  INFO: Touchpad ---
+local touchpadEnabled = true
+
+local function toggle_touchpad()
+	touchpadEnabled = not touchpadEnabled
+
+	hl.device({
+		name = "dell08b8:00-0488:121f-touchpad",
+		enabled = touchpadEnabled,
+	})
+
+	if touchpadEnabled then
+		hl.exec_cmd("notify-send -u low -i input-touchpad-on 'Touchpad' 'Enabled' -a 'Hyprland'")
+	else
+		hl.exec_cmd("notify-send -u low -i input-touchpad-off 'Touchpad' 'Disabled' -a 'Hyprland'")
+	end
+end
+
+hl.bind("F9", function()
+	toggle_touchpad()
+end)
