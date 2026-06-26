@@ -12,7 +12,7 @@ hl.config({
 			bar_color = colors.dark6,
 			["col.text"] = colors.fg,
 			bar_text_size = 16,
-			bar_text_font = "SF Pro Rounded Black",
+			bar_text_font = "SF Pro Rounded",
 			bar_button_padding = 10,
 			bar_text_weight = "medium",
 			bar_padding = 12,

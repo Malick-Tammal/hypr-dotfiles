@@ -367,8 +367,17 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "Windscribe",
+	name = "windscribe",
 	match = { class = "Windscribe" },
 	float = true,
 	border_size = 0,
+})
+
+hl.window_rule({
+	name = "kdenlive",
+	match = { class = "org.kde.kdenlive", title = "Kdenlive" },
+	float = true,
+	border_size = 0,
+	rounding = 0,
+	rounding_power = 1,
 })

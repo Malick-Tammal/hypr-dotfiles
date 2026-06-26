@@ -6,7 +6,7 @@
 
 #  INFO: CONFIGURATION ---
 THEME="Colloid-Monokai"        # Set GTK theme
-FONT="SF Pro Regular 13"       # Set Font
+FONT="SF Pro Rounded 13"       # Set Font
 CURSOR="Bibata-Modern-Classic" # Set Cursor theme
 CURSOR_SIZE=24                 # Set Cursor size
 BUTTON_LAYOUT="appmenu:"       # Set Header bar menu  TIP: Show all of them : "appmenu:minimize,maximize,close"

@@ -21,16 +21,16 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate=#47434c
-BackgroundNormal=#2b292f
-DecorationFocus=#FC9867
-DecorationHover=#FC9867
+BackgroundAlternate=#CCAD52
+BackgroundNormal=#FFD866
+DecorationFocus=#FFD866
+DecorationHover=#FFD866
 ForegroundActive=#1D1E19
-ForegroundInactive=#948f99
+ForegroundInactive=#4C411F
 ForegroundLink=#FFD866
 ForegroundNegative=#ffb3b4
 ForegroundNeutral=#fcb38a
-ForegroundNormal=#e6e0e9
+ForegroundNormal=#FDFFF1
 ForegroundPositive=#00e479
 ForegroundVisited=#AB9DF2
 
@@ -77,8 +77,8 @@ ForegroundPositive=#00e479
 ForegroundVisited=#AB9DF2
 
 [Colors:Selection]
-BackgroundAlternate=#FC9867
-BackgroundNormal=#FC9867
+BackgroundAlternate=#FFD866
+BackgroundNormal=#FFD866
 DecorationFocus=#1D1E19
 DecorationHover=#1D1E19
 ForegroundActive=#1D1E19
@@ -105,8 +105,8 @@ ForegroundPositive=#00e479
 ForegroundVisited=#AB9DF2
 
 [Colors:View]
-BackgroundAlternate=#1D1E19
-BackgroundNormal=#1D1E19
+BackgroundAlternate=#282922
+BackgroundNormal=#282922
 DecorationFocus=#FC9867
 DecorationHover=#65558f
 ForegroundActive=#e6e0e9
@@ -114,13 +114,13 @@ ForegroundInactive=#948f99
 ForegroundLink=#FC9867
 ForegroundNegative=#ffb3b4
 ForegroundNeutral=#fcb38a
-ForegroundNormal=#e6e0e9
+ForegroundNormal=#FDFFF1
 ForegroundPositive=#00e479
 ForegroundVisited=#AB9DF2
 
 [Colors:Window]
-BackgroundAlternate=#282922
-BackgroundNormal=#282922
+BackgroundAlternate=#1D1E19
+BackgroundNormal=#1D1E19
 DecorationFocus=#FFD866
 DecorationHover=#FFD866
 ForegroundActive=#FC9867
@@ -133,22 +133,19 @@ ForegroundPositive=#00e479
 ForegroundVisited=#FC9867
 
 [General]
-ColorScheme=MaterialYouDark
-ColorSchemeHash=3c0cecefbea43cdb8fe3da156e4a106f7384a526
+ColorScheme=MonokaiFusion
 LastUsedCustomAccentColor=184,117,220
 TerminalApplication=kitty -1
 XftHintStyle=hintslight
 XftSubPixel=none
-fixed=JetBrainsMono Nerd Font,11,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-font=Google Sans Flex,11,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
-menuFont=Google Sans Flex,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
-smallestReadableFont=Google Sans Flex,9,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
-toolBarFont=Google Sans Flex,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+fixed=SF Pro Rounded,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=SF Pro Rounded,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 
 [Icons]
 Theme=Colloid-Orange-Dark
 
 [KDE]
+ShowDeleteCommand=false
 widgetStyle=qt6ct-style
 
 [KFileDialog Settings]
@@ -168,14 +165,18 @@ Sort reversed=false
 Speedbar Width=168
 View Style=Simple
 
+[PreviewSettings]
+EnableRemoteFolderThumbnail=false
+MaximumRemoteSize=0
+
 [Sounds]
 Theme=freedesktop
 
 [WM]
 activeBackground=54,52,58
 activeBlend=252,252,252
-activeFont=Google Sans Flex,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+activeFont=SF Pro Rounded,10,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 activeForeground=230,224,233
 inactiveBackground=76,70,90
 inactiveBlend=161,169,177
-inactiveForeground=232,222,248
+inactiveForeground=#ff000

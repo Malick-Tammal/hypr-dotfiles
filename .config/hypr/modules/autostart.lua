@@ -28,6 +28,8 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("uwsm app -- " .. home .. "/.config/hypr/scripts/battery.sh")
 	hl.exec_cmd("uwsm app -- " .. home .. "/.config/hypr/scripts/charger.sh")
 
+	hl.exec_cmd("hyprpm reload")
+
 	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic " .. defaults.cursorSize)
 	hl.exec_cmd("[workspace special:hidden silent] nautilus")
 	hl.exec_cmd("xhost +si:localuser:root")
