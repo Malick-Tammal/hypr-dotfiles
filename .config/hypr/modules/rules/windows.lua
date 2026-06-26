@@ -187,6 +187,13 @@ hl.window_rule({
 })
 
 hl.window_rule({
+	name = "waydroid",
+	match = { class = "Waydroid" },
+	workspace = "name:special:Android",
+	fullscreen = true,
+})
+
+hl.window_rule({
 	name = "jetbrains-fix",
 	match = {
 		class = "^jetbrains-.*$",

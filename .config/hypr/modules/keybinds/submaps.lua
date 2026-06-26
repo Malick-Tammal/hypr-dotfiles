@@ -72,9 +72,9 @@ end)
 ------------------------------------------------------
 
 -- INFO: Group ---
-hl.bind(defaults.mainMod .. " + G", hl.dsp.submap("group"))
+hl.bind(defaults.mainMod .. " + G", hl.dsp.submap("groups"))
 
-hl.define_submap("group", function()
+hl.define_submap("groups", function()
 	hl.bind("G", function()
 		local win = hl.get_active_window()
 
