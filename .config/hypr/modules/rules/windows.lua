@@ -151,13 +151,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "vlc",
-	match = { class = "vlc" },
-	float = true,
-	center = true,
-})
-
-hl.window_rule({
 	name = "gnome-eye",
 	match = { class = "org.gnome.eog" },
 	float = true,
@@ -196,7 +189,7 @@ hl.window_rule({
 hl.window_rule({
 	name = "jetbrains-fix",
 	match = {
-		class = "^jetbrains-.*$",
+		class = "jetbrains-.*",
 		title = [[^$|^\s$|^win\d+$]],
 		float = true,
 	},
@@ -225,15 +218,15 @@ hl.window_rule({
 hl.window_rule({
 	name = "xwayland-context-menu",
 	match = {
-		class = "^()$",
-		title = "^()$",
+		class = ".*",
+		title = ".*",
 	},
 	no_blur = true,
 })
 
 hl.window_rule({
 	name = "disable-blur",
-	match = { class = "^(.*)$" },
+	match = { class = ".*" },
 	no_blur = not defaults.isBlur,
 })
 
@@ -248,22 +241,16 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "file-picker-popup",
-	match = { class = "^(xdg-desktop-portal-gtk)$" },
+	match = { class = "xdg-desktop-portal-gtk" },
 	float = true,
 	size = "800 600",
 })
 
 hl.window_rule({
-	name = "firefox-about",
-	match = { class = "^(firefox)$", title = "^(About Mozilla Firefox)$" },
-	float = true,
-})
-
-hl.window_rule({
 	name = "nautilus-popups",
 	match = {
-		class = "^(org.gnome.Nautilus)$",
-		title = "^(.*(Confirm|Copying|Moving|Deleting|Extracting|Compressing|Properties|completed).*)$",
+		class = "org.gnome.Nautilus",
+		title = ".*Confirm|Copying|Moving|Deleting|Extracting|Compressing|Properties|completed.*",
 	},
 	float = true,
 	center = true,
@@ -271,28 +258,28 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "nautilus-popup2",
-	match = { class = "^(org.gnome.Nautilus)$", title = "^$" },
+	match = { class = "org.gnome.Nautilus", title = ".*" },
 	float = true,
 	center = true,
 })
 
 hl.window_rule({
 	name = "nautilus-xdg",
-	match = { class = "^(xdg-desktop-portal-gnome)$" },
+	match = { class = "xdg-desktop-portal-gnome" },
 	float = true,
 })
 
 hl.window_rule({
 	name = "nautilus-progress",
-	match = { title = "^(File Operation Progress)$" },
+	match = { title = "File Operation Progress" },
 	float = true,
 })
 
 hl.window_rule({
 	name = "nemo-popups",
 	match = {
-		class = "^(nemo)$",
-		title = "^(.*(Confirm|Copying|Moving|Deleting|Extracting|Compressing|Properties|completed).*)$",
+		class = "nemo",
+		title = ".*(Confirm|Copying|Moving|Deleting|Extracting|Compressing|Properties|completed).*",
 	},
 	float = true,
 	center = true,
@@ -300,31 +287,14 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "nemo-popup2",
-	match = { class = "^(nemo)$", title = "^$" },
-	float = true,
-	center = true,
-})
-
-hl.window_rule({
-	name = "zen-popups",
-	match = {
-		class = "^(zen.*)$",
-		title = "^(Open File|Select a File|Choose wallpaper|Open Folder|Save As|Library|File Upload)$",
-	},
-	float = true,
-	center = true,
-})
-
-hl.window_rule({
-	name = "zen-about",
-	match = { class = "^(zen.*)$", title = "^(About Zen Browser|Zen Browser.*Sharing Indicator)$" },
+	match = { class = "nemo", title = ".*" },
 	float = true,
 	center = true,
 })
 
 hl.window_rule({
 	name = "Dolphin copy",
-	match = { title = "^(Copying.*Dolphin)$" },
+	match = { title = "Copying.*Dolphin" },
 	move = "40 80",
 })
 
@@ -335,26 +305,70 @@ hl.window_rule({
 	pin = true,
 	keep_aspect_ratio = true,
 	move = "(monitor_w*.73) (monitor_h*.72)",
-	size = "(monitor_w*.25) (monitor_h*.25)",
+	size = "(monitor_w*.25) (monitor_h.25)",
 })
 
 hl.window_rule({
-	name = "picture-in-picture-firefox",
-	match = { class = "^(firefox)$", title = "^(Picture-in-Picture)$" },
+	name = "firefox-pip",
+	match = { class = "firefox", title = "Picture-in-Picture" },
 	float = true,
 	pin = true,
+})
+
+hl.window_rule({
+	name = "firefox-about",
+	match = { class = "firefox", title = "About Mozilla Firefox" },
+	float = true,
 })
 
 hl.window_rule({
 	name = "zen-pip",
-	match = { class = "^(zen.*)$", title = "^(Picture-in-Picture)$" },
+	match = { class = "zen.", title = "Picture-in-Picture" },
 	float = true,
 	pin = true,
 })
 
 hl.window_rule({
+	name = "zen-about",
+	match = { class = "zen.*", title = "About Zen Browser|Zen Browser.*Sharing Indicator" },
+	float = true,
+	center = true,
+})
+
+hl.window_rule({
+	name = "zen-popups",
+	match = {
+		class = "zen.*",
+		title = "Open File|Select a File|Choose wallpaper|Open Folder|Save As|Library|File Upload",
+	},
+	float = true,
+	center = true,
+})
+
+hl.window_rule({
+	name = "vlc",
+	match = { class = "vlc", title = "VLC media player" },
+	float = true,
+	center = true,
+	size = "1263 779",
+})
+
+hl.window_rule({
 	name = "vlc-picker",
-	match = { class = "^(vlc)$", title = "^(Open Directory)$" },
+	match = { class = "vlc", title = "Open Directory" },
 	float = true,
 	size = "800 500",
+})
+
+hl.window_rule({
+	name = "vlc-menus",
+	match = { class = "vlc", title = "negative:.+" },
+	float = true,
+})
+
+hl.window_rule({
+	name = "Windscribe",
+	match = { class = "Windscribe" },
+	float = true,
+	border_size = 0,
 })

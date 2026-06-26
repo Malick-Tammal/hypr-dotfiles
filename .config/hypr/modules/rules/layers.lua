@@ -62,3 +62,9 @@ hl.layer_rule({
 	match = { namespace = "hyprpicker" },
 	no_anim = true,
 })
+
+hl.layer_rule({
+	name = "hyprpicker",
+	match = { namespace = "awww-daemon" },
+	no_anim = true,
+})

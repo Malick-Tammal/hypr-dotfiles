@@ -10,7 +10,7 @@ hl.env("XDG_MENU_PREFIX", "arch-")
 
 --  INFO: GDK
 hl.env("GDK_SCALE", "1")
-hl.env("GDK_DPI_SCALE", "1.25")
+hl.env("GDK_DPI_SCALE", "1.1")
 hl.env("GSK_RENDERER", "gl")
 hl.env("GDK_BACKEND", "wayland,x11,*")
 
