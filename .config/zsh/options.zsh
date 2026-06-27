@@ -12,6 +12,7 @@ setopt HIST_VERIFY
 bindkey '^k' history-search-backward
 bindkey '^j' history-search-forward
 
+
 # Force a clean initial path
 unsetopt PROMPT_SP
 
@@ -20,3 +21,17 @@ setopt auto_cd
 
 # Disable stopping the shell with Ctrl+D
 setopt IGNORE_EOF
+
+# Disabling pageup and pagedown
+noop() { }
+zle -N noop
+
+if [[ -n "$terminfo[kpp]" ]]; then
+    bindkey "$terminfo[kpp]" noop
+fi
+if [[ -n "$terminfo[knp]" ]]; then
+    bindkey "$terminfo[knp]" noop
+fi
+
+bindkey "^[[5~" noop
+bindkey "^[[6~" noop

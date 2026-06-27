@@ -347,7 +347,7 @@ hl.window_rule({
 
 hl.window_rule({
 	name = "vlc",
-	match = { class = "vlc", title = "VLC media player" },
+	match = { class = "vlc" },
 	float = true,
 	center = true,
 	size = "1263 779",
@@ -364,6 +364,12 @@ hl.window_rule({
 	name = "vlc-menus",
 	match = { class = "vlc", title = "negative:.+" },
 	float = true,
+})
+
+hl.window_rule({
+	name = "vlc-other",
+	match = { class = "vlc", title = "vlc" },
+	size = "",
 })
 
 hl.window_rule({

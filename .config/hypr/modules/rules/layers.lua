@@ -17,6 +17,12 @@ hl.layer_rule({
 })
 
 hl.layer_rule({
+	name = "cornors",
+	match = { namespace = "cornors" },
+	no_anim = true,
+})
+
+hl.layer_rule({
 	name = "rofi",
 	match = { namespace = "rofi" },
 	blur = defaults.isBlur,
