@@ -96,6 +96,7 @@ hl.window_rule({
 	float = true,
 	center = true,
 	opacity = defaults.isBlur and "0.9" or "1",
+	size = { 1200, 730 },
 })
 
 hl.window_rule({
@@ -243,7 +244,7 @@ hl.window_rule({
 	name = "file-picker-popup",
 	match = { class = "xdg-desktop-portal-gtk" },
 	float = true,
-	size = "800 600",
+	size = { 800, 600 },
 })
 
 hl.window_rule({
@@ -350,14 +351,14 @@ hl.window_rule({
 	match = { class = "vlc" },
 	float = true,
 	center = true,
-	size = "1263 779",
+	size = { 1263, 779 },
 })
 
 hl.window_rule({
 	name = "vlc-picker",
 	match = { class = "vlc", title = "Open Directory" },
 	float = true,
-	size = "800 500",
+	size = { 800, 500 },
 })
 
 hl.window_rule({
@@ -370,6 +371,7 @@ hl.window_rule({
 	name = "vlc-other",
 	match = { class = "vlc", title = "vlc" },
 	size = "",
+	center = false,
 })
 
 hl.window_rule({

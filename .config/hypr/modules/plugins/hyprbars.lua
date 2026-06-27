@@ -32,22 +32,22 @@ hl.plugin.hyprbars.add_button({
 	bg_color = colors.red5,
 	fg_color = colors.red9,
 	size = 17,
-	icon = "x",
+	icon = "",
 	action = "hyprctl dispatch 'hl.dsp.window.close()'",
 })
 
 hl.plugin.hyprbars.add_button({
 	bg_color = colors.orange5,
-	fg_color = colors.orange1,
+	fg_color = colors.orange9,
 	size = 17,
-	icon = "",
+	icon = "󰘖",
 	action = "hyprctl dispatch 'hl.dsp.window.fullscreen()'",
 })
 
 hl.plugin.hyprbars.add_button({
 	bg_color = colors.yellow5,
-	fg_color = colors.yellow1,
+	fg_color = colors.yellow9,
 	size = 17,
-	icon = "",
+	icon = "",
 	action = "hyprctl dispatch 'hl.dsp.window.float()'",
 })
