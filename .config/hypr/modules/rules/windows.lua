@@ -34,13 +34,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "firefox-popups",
-	match = { class = "firefox", title = [[Save As|Opening|Library|Extension:.*|Save Image.*|File Upload.*]] },
-	float = true,
-	center = true,
-})
-
-hl.window_rule({
 	name = "pavucontrol",
 	match = { class = "org.pulseaudio.pavucontrol" },
 	float = true,
@@ -321,6 +314,21 @@ hl.window_rule({
 	match = { class = "firefox", title = "About Mozilla Firefox" },
 	float = true,
 })
+
+hl.window_rule({
+	name = "firefox-popups",
+	match = { class = "firefox", title = [[Save As|Opening|Library|Extension:.*|Save Image.*|File Upload.*]] },
+	float = true,
+	center = true,
+})
+
+hl.on("window.title", function(win)
+	if win.class == "firefox" and string.find(win.title, "Bitwarden Password Manager") then
+		local target = "address:" .. win.address
+		hl.dispatch(hl.dsp.window.float({ action = "enable", window = target }))
+		hl.dispatch(hl.dsp.window.center({ window = target }))
+	end
+end)
 
 hl.window_rule({
 	name = "zen-pip",

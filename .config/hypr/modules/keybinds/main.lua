@@ -90,8 +90,8 @@ hl.bind(defaults.mainModShift .. " + P", hl.dsp.exec_cmd(defaults.powermenu))
 
 --  INFO: Lid Switch ---
 hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("loginctl lock-session"), { locked = true })
-hl.bind("switch:on:Lid Switch", hl.dsp.dpms("off"), { locked = true })
-hl.bind("switch:off:Lid Switch", hl.dsp.dpms("on"), { locked = true })
+hl.bind("switch:on:Lid Switch", hl.dsp.dpms({ action = "disable" }), { locked = true })
+hl.bind("switch:off:Lid Switch", hl.dsp.dpms({ action = "enable" }), { locked = true })
 
 --  INFO: Caffeine (toggle hypridle) ---
 hl.bind(
