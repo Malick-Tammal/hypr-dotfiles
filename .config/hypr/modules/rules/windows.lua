@@ -397,3 +397,18 @@ hl.window_rule({
 	rounding = 0,
 	rounding_power = 1,
 })
+
+hl.window_rule({
+	name = "proton_vpn",
+	match = { class = "proton.vpn.app.gtk" },
+	float = true,
+	center = true,
+})
+
+hl.window_rule({
+	name = "fdm",
+	match = { class = "fdm" },
+	float = true,
+	center = true,
+	size = { 1440, 820 },
+})
