@@ -4,6 +4,7 @@
 
 local defaults = require("modules.defaults")
 local home = os.getenv("HOME")
+local utils = require("modules.utils")
 
 require("modules.keybinds.submaps")
 
@@ -93,34 +94,17 @@ hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("loginctl lock-session"), { lock
 hl.bind("switch:on:Lid Switch", hl.dsp.dpms({ action = "disable" }), { locked = true })
 hl.bind("switch:off:Lid Switch", hl.dsp.dpms({ action = "enable" }), { locked = true })
 
---  INFO: Caffeine (toggle hypridle) ---
-hl.bind(
-	defaults.mainModShift .. " + I",
-	hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/caffeine.sh"),
-	{ locked = true }
-)
+hl.bind(defaults.mainModShift .. " + I", utils.toggle_caffeine, { locked = true }) -- Caffeine (toggle hypridle)
 
 hl.bind(defaults.mainModShift .. " + E", hl.dsp.exec_cmd(defaults.emojiPicker)) -- Emoji picker
 hl.bind(defaults.mainMod .. " + Return", hl.dsp.exec_cmd(defaults.pacseek)) -- Pacseek
 
---  INFO: Touchpad ---
-local touchpadEnabled = true
-
-local function toggle_touchpad()
-	touchpadEnabled = not touchpadEnabled
-
-	hl.device({
-		name = "dell08b8:00-0488:121f-touchpad",
-		enabled = touchpadEnabled,
-	})
-
-	if touchpadEnabled then
-		hl.exec_cmd("notify-send -u low -i input-touchpad-on 'Touchpad' 'Enabled' -a 'Hyprland'")
-	else
-		hl.exec_cmd("notify-send -u low -i input-touchpad-off 'Touchpad' 'Disabled' -a 'Hyprland'")
-	end
-end
-
+-- Toggle touchapd
 hl.bind("F9", function()
-	toggle_touchpad()
+	utils.toggle_touchpad()
+end)
+
+-- Toggle gamemode
+hl.bind(defaults.mainModShift .. " + G", function()
+	utils.toggle_game_mode()
 end)
