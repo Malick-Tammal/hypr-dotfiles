@@ -39,14 +39,19 @@ zinit ice wait"0" lucid
 zinit light zsh-users/zsh-syntax-highlighting
 
 #  INFO: NVM
-function nvm node npm npx yarn() {
-    unset -f nvm node npm npx yarn
-    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+lazy_load_nvm() {
+    unset -f nvm node npm npx pnpm yarn bun
+
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-    if [ "$0" = "nvm" ]; then
-        nvm "$@"
-    else
-        command "$0" "$@"
-    fi
+
+    "$@"
 }
+
+nvm()  { lazy_load_nvm nvm "$@"; }
+node() { lazy_load_nvm node "$@"; }
+npm()  { lazy_load_nvm npm "$@"; }
+npx()  { lazy_load_nvm npx "$@"; }
+pnpm() { lazy_load_nvm pnpm "$@"; }
+yarn() { lazy_load_nvm yarn "$@"; }
+bun()  { lazy_load_nvm bun "$@"; }

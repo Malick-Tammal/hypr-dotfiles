@@ -3,7 +3,7 @@
 //---------------------------------------------------------
 
 // Importing shared colors ---
-@import                         "~/.shared/themes/monokai/rofi/main.rasi"
+@import                          "~/.config/rofi/style.rasi"
 
 // Configuration ---
 configuration {
@@ -23,7 +23,7 @@ configuration {
 
 * {
 	background-color:            @BG;
-    font:                        @font2;
+    font:                        @fontSm;
 }
 
 // Main Window  ---
@@ -32,14 +32,14 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       800px;
-    height:                      500px;
+    width:                       850px;
+    height:                      600px;
 
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
     border:                      1px solid;
-    border-radius:               8px;
+    border-radius:               15px;
     border-color:                @BOR;
     background-color:            @BG;
     cursor:                      "default";
@@ -66,10 +66,11 @@ inputbar {
     padding:                     20px 0px 20px 20px;
     border:                      0px 0px 1px 0px;
     border-radius:               0px;
-    border-color:                @DARK5;
+    border-color:                @GRAY3;
     background-color:            transparent;
-    text-color:                  @DARK5;
+    text-color:                  @GRAY2;
     children:                    [ "prompt", "entry" ];
+    font:                        @fontXl;
 }
 
 prompt {
@@ -89,10 +90,10 @@ entry {
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "Type to calculate or convert";
+    placeholder:                 "Type to search";
     placeholder-color:           inherit;
     margin:                      0 0 0 10px;
-    font:                        @font4;
+    font:                        @fontMd;
 }
 
 // Listview
@@ -132,7 +133,7 @@ element {
     margin:                      0px 10px 0px 10px;
     padding:                     10px;
     border:                      0px solid;
-    border-radius:               4px;
+    border-radius:               10px;
     border-color:                @SEL;
     background-color:            transparent;
     text-color:                  @FG;
@@ -143,12 +144,12 @@ element normal.normal {
 }
 element selected.normal {
     background-color:            @SEL-BG;
-    text-color:                  @DARK1;
+    text-color:                  @DARK5;
 }
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        28px;
+    size:                        35px;
     cursor:                      inherit;
 }
 element-text {

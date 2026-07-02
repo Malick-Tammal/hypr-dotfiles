@@ -1,0 +1,34 @@
+/*----------------------------------------------------------*/
+/*--  HACK: Colors --*/
+/*----------------------------------------------------------*/
+
+:root {
+  --GREEN: #a9dc76;
+  --RED: #ff6188;
+  --ORANGE: #fc9867;
+  --YELLOW: #ffd866;
+  --PURPLE: #ab9df2;
+  --BLUE: #78dce8;
+
+  --DARK: #1d1e19;
+  --DARK1: #221f22;
+  --DARK2: #2d2a2e;
+  --DARK3: #403e41;
+  --DARK4: #727072;
+  --DARK5: #949491;
+
+  --WHITE: #fdfff1;
+  --GRAY: #dadada;
+
+  --DARK-TRA: #1d1e19e6;
+  --DARK-TRA1: #221f22e6;
+  --DARK-TRA2: #2d2a2ee6;
+  --DARK-TRA3: #403e41e6;
+  --DARK-TRA4: #727072e6;
+  --DARK-TRA5: #949491e6;
+
+  --bg: var(--DARK);
+  --bor: var(--YELLOW);
+  --fg: var(--WHITE);
+  --fg-alt: var(--GRAY);
+}

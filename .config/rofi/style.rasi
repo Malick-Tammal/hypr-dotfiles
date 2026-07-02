@@ -1,0 +1,46 @@
+
+* {
+    //  INFO: Main colors
+    GREEN  : #A9DC76;
+    RED    : #FF6188;
+    ORANGE : #fc9867;
+    YELLOW : #FFD866;
+    PURPLE : #AB9DF2;
+    BLUE   : #78DCE8;
+
+    DARK5  : #1D1E19;
+    DARK4  : #282922;
+    DARK3  : #33342B;
+    DARK2  : #3D4035;
+    DARK1  : #3D4035;
+
+    GRAY5  : #3D4035;
+    GRAY4  : #606359;
+    GRAY3  : #84867E;
+    GRAY2  : #A7A9A2;
+    GRAY1  : #CBCCC7;
+
+
+    WHITE : #FDFFF1;
+
+    //  INFO: Transparent colors
+    DARK-TRA  : #1D1E19E6;
+    DARK-TRA1 : #221F22E6;
+    DARK-TRA2 : #2D2A2EE6;
+    DARK-TRA3 : #403E41E6;
+    DARK-TRA4 : #727072E6;
+    DARK-TRA5 : #949491E6;
+
+    BG: @DARK5;
+    BG-ALT: @DARK1;
+    FG: @WHITE;
+    SEL: @BLUE;
+    BOR: @YELLOW; 
+    SEL-BG: @YELLOW; 
+
+	fontXs: "SF Pro Rounded medium 9";
+	fontSm: "SF Pro Rounded medium 12";
+	fontMd: "SF Pro Rounded medium 14";
+	fontLg: "SF Pro Rounded medium 16";
+	fontXl: "SF Pro Rounded medium 18";
+}
