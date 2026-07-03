@@ -412,3 +412,18 @@ hl.window_rule({
 	center = true,
 	size = { 1440, 820 },
 })
+
+hl.window_rule({
+	name = "video-player",
+	match = { class = "org.gnome.Showtime" },
+	float = true,
+	center = true,
+	size = { 1200, 720 },
+})
+
+hl.window_rule({
+	name = "video-downloader",
+	match = { class = "com.github.unrud.VideoDownloader" },
+	float = true,
+	center = true,
+})
