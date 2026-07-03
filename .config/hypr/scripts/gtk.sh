@@ -38,6 +38,8 @@ if command -v flatpak &>/dev/null; then
     flatpak override --user --env=GTK_THEME="$THEME"
     flatpak override --user --filesystem="$HOME/.local/share/fonts"
     flatpak override --user --filesystem="$HOME/.fonts"
+    flatpak override --user --talk-name=org.freedesktop.portal.Background
+    flatpak override --user --talk-name=org.freedesktop.portal.Notification
 fi
 
 #  INFO: CLEANUP OF GTK CONFIGS ---
