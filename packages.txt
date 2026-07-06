@@ -12,6 +12,7 @@ bash-language-server
 bat
 bazaar
 bettercap
+bindfs
 bitwarden
 blueman
 bluetui
@@ -36,6 +37,7 @@ dmidecode
 dnsmasq
 docker
 docker-compose
+dolphin
 dosfstools
 downgrade
 dragon-drop-git
@@ -54,6 +56,7 @@ freedownloadmanager
 fwupd
 fzf
 gcc
+gcc15
 gemini-cli
 ghostty
 gimp
@@ -77,7 +80,7 @@ hyprgraphics-git
 hypridle
 hyprland-git
 hyprland-qt-support
-hyprlock
+hyprlock-git
 hyprpicker
 hyprshade
 hyprshot
@@ -85,6 +88,7 @@ hyprsunset
 hyprutils-git
 ibus
 imagemagick
+inkscape
 inotify-tools
 intel-gpu-tools
 intel-media-driver
@@ -183,6 +187,7 @@ sassc
 satty
 sddm
 seahorse
+sioyek-git
 sl
 socat
 sof-firmware
@@ -217,6 +222,7 @@ udiskie
 udisks2
 ufw
 unixodbc
+uwsm
 valent-git
 ventoy-bin
 vesktop

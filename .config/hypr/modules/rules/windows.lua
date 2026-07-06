@@ -427,3 +427,10 @@ hl.window_rule({
 	float = true,
 	center = true,
 })
+
+hl.window_rule({
+	name = "focus_timer",
+	match = { class = "io.github.focustimerhq.FocusTimer" },
+	float = true,
+	center = true,
+})

@@ -35,6 +35,6 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("xhost +si:localuser:root")
 
 	--  INFO: Apps ---
-	hl.exec_cmd("flatpak run io.github.alainm23.planify -b")
+	-- hl.exec_cmd("flatpak run io.github.alainm23.planify -b")
 	-- hl.exec_cmd("kdeconnect-indicator")
 end)

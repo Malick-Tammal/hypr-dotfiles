@@ -13,11 +13,11 @@ hl.workspace_rule({
 })
 
 hl.workspace_rule({
-	workspace = "4",
+	workspace = "6",
 	layout = "dwindle",
 })
 
 hl.workspace_rule({
-	workspace = "5",
+	workspace = "7",
 	layout = "master",
 })
