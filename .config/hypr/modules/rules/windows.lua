@@ -434,3 +434,9 @@ hl.window_rule({
 	float = true,
 	center = true,
 })
+
+hl.window_rule({
+	name = "kitty",
+	match = { class = "kitty" },
+	size = { 680, 220 },
+})
