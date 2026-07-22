@@ -53,28 +53,28 @@ hl.bind(defaults.mainModShift .. " + " .. key.TAB, hl.dsp.focus({ workspace = "e
 --  INFO: Laptop multimedia keys ---
 hl.bind(
 	key.BRIGHT_UP,
-	hl.dsp.exec_cmd("~/.config/hypr/scripts/swayosd.sh --display-inc"), -- Increase display brightness
+	hl.dsp.exec_cmd("qs ipc call brightness increase"), -- Increase display brightness
 	{ locked = true, repeating = true }
 )
 hl.bind(
 	key.BRIGHT_DOWN,
-	hl.dsp.exec_cmd("~/.config/hypr/scripts/swayosd.sh --display-dec"), -- Decrease display brightness
+	hl.dsp.exec_cmd("qs ipc call brightness decrease"), -- Decrease display brightness
 	{ locked = true, repeating = true }
 )
 
 hl.bind(
 	key.VOL_UP,
-	hl.dsp.exec_cmd("~/.config/hypr/scripts/swayosd.sh --audio-inc"), -- Increase audio volume
+	hl.dsp.exec_cmd("qs ipc call volume increase"), -- Increase audio volume
 	{ locked = true, repeating = true }
 )
 hl.bind(
 	key.VOL_DOWN,
-	hl.dsp.exec_cmd("~/.config/hypr/scripts/swayosd.sh --audio-dec"), -- Decrease audio volume
+	hl.dsp.exec_cmd("qs ipc call volume decrease"), -- Decrease audio volume
 	{ locked = true, repeating = true }
 )
 hl.bind(
 	key.MUTE,
-	hl.dsp.exec_cmd("~/.config/hypr/scripts/swayosd.sh --mute"), -- Mute audio
+	hl.dsp.exec_cmd("qs ipc call volume mute"), -- Mute audio
 	{ locked = true, repeating = true }
 )
 hl.bind(

@@ -50,6 +50,11 @@ hl.layer_rule({
 })
 
 hl.layer_rule({
+	match = { namespace = "osd" },
+	no_anim = true,
+})
+
+hl.layer_rule({
 	match = { namespace = "swaync-control-center" },
 	animation = "slide left",
 })
