@@ -79,7 +79,7 @@ hl.bind(
 )
 hl.bind(
 	key.MIC_MUTE,
-	hl.dsp.exec_cmd("~/.config/hypr/scripts/swayosd.sh --mute-mic"), -- Mute microphone
+	hl.dsp.exec_cmd("qs ipc call mic mute"), -- Mute microphone
 	{ locked = true, repeating = true }
 )
 ------------------------------------------------------
