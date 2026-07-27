@@ -84,7 +84,7 @@ hl.bind(
 )
 ------------------------------------------------------
 
-hl.bind("ALT + Space", hl.dsp.exec_cmd(home .. "/.config/hypr/scripts/kb_switch.sh")) -- Keybaord layout switcher
+hl.bind("ALT + Space", hl.dsp.exec_cmd("hyprctl switchxkblayout all next")) -- Keybaord layout switcher
 hl.bind(defaults.mainMod .. " + " .. key.C, hl.dsp.exec_cmd(defaults.clipboard))
 hl.bind(defaults.mainModShift .. " + " .. key.C, hl.dsp.exec_cmd(defaults.calculator))
 hl.bind(defaults.mainModShift .. " + " .. key.W, hl.dsp.exec_cmd(defaults.wallpaperManager))

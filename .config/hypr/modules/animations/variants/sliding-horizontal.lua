@@ -55,6 +55,11 @@ hl.layer_rule({
 })
 
 hl.layer_rule({
+	match = { namespace = "top-toast" },
+	no_anim = true,
+})
+
+hl.layer_rule({
 	match = { namespace = "swaync-control-center" },
 	animation = "slide left",
 })
