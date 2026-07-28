@@ -50,13 +50,13 @@ hl.layer_rule({
 })
 
 hl.layer_rule({
-	match = { namespace = "osd" },
-	no_anim = true,
+	match = { namespace = "brightness-osd" },
+	animation = "slide right",
 })
 
 hl.layer_rule({
-	match = { namespace = "top-toast" },
-	no_anim = true,
+	match = { namespace = "volume-osd" },
+	animation = "slide left",
 })
 
 hl.layer_rule({

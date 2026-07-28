@@ -440,3 +440,11 @@ hl.window_rule({
 	match = { class = "kitty" },
 	size = { 680, 220 },
 })
+
+hl.window_rule({
+	name = "warp",
+	match = { class = "warp-taskbar" },
+	size = { 750, 830 },
+	float = true,
+	center = true,
+})
