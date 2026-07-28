@@ -106,3 +106,5 @@ alias y="yazi"
 alias check-portals='systemctl --user status xdg-desktop-portal xdg-desktop-portal-hyprland xdg-desktop-portal-gtk'
 alias fix-rack="sudo ntfsfix -d /dev/sda1"
 alias led="~/.config/hypr/scripts/ELK.py"
+alias update-mirrors="sudo reflector --latest 20 --protocol https --sort rate --country France,Spain,Germany --save /etc/pacman.d/mirrorlist"
+alias clean-waydroid-desktop="~/.config/hypr/scripts/hide_waydroid_desk.sh"

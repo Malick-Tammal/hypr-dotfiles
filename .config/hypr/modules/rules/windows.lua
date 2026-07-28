@@ -449,3 +449,11 @@ hl.window_rule({
 	float = true,
 	center = true,
 })
+
+hl.window_rule({
+	name = "ente-auth",
+	match = { class = "io.ente.auth" },
+	float = true,
+	center = true,
+	size = { 590, 860 },
+})
