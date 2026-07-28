@@ -74,3 +74,9 @@ hl.layer_rule({
 	match = { namespace = "awww-daemon" },
 	no_anim = true,
 })
+
+hl.layer_rule({
+	match = { namespace = "quickshell" },
+	blur = defaults.isBlur,
+	ignore_alpha = 0.2,
+})
