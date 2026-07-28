@@ -5,3 +5,9 @@ unbind <C-f>
 unbind <d>
 unbind <m>
 unbind <Esc>
+unbind <f>
+bind <s> hint
+unbind <L>
+unbind <H>
+bind <L> forward
+bind <H> back

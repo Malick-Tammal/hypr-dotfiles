@@ -1,23 +1,46 @@
-/* 
-┌─┐┬┌┬┐┌─┐┬  ┌─┐
-└─┐││││├─┘│  ├┤ 
-└─┘┴┴ ┴┴  ┴─┘└─┘
-┌─┐┌─┐─┐ ┬      
-├┤ │ │┌┴┬┘      
-└  └─┘┴ └─
-
-by Miguel Avila
-
-*/
-
 :root {
-  scrollbar-width: none !important;
+  --sfwindow: #1d1e19;
+  --sfsecondary: #33342b;
+
+  --bg-color: #1d1e19;
+  --bg-color-2: #282922;
+  --bg-color-3: #33342b;
+  --bg-color-4: #3d4035;
+  --bg-color-5: #606359;
+
+  --fg-color: #fdfff1;
+  --fg-color-2: #cbccc7;
+  --fg-color-3: #a7a9a2;
+
+  --orange: #fc9867;
+  --red: #ff6188;
+  --yellow: #ffd866;
+  --green: #a9dc76;
+  --blue: #78dce8;
+  --purple: ##ab9df2;
+
+  --background-color-canvas: var(--bg-color-2) !important;
+  --icon-color: var(--fg-color) !important;
+  --color-accent-primary: var(--yellow) !important;
+  --text-color: var(--fg-color) !important;
+  --background-color-box: var(--bg-color-1) !important;
+  --border-color-interactive: var(--bg-color-5) !important;
 }
 
-@-moz-document url(about:privatebrowsing) {
-  :root {
-    scrollbar-width: none !important;
-  }
+#input {
+  background-color: var(--bg-color-2) !important;
+}
+
+#handlersView {
+  background: var(--bg-color-3) !important;
+  border-color: var(--bg-color-4) !important;
+}
+
+.search-handoff-button {
+  background-color: var(--bg-color) !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .TridactylHint {

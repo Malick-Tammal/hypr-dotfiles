@@ -1,46 +1,24 @@
-/* 
-┌─┐┬┌┬┐┌─┐┬  ┌─┐
-└─┐││││├─┘│  ├┤ 
-└─┘┴┴ ┴┴  ┴─┘└─┘
-┌─┐┌─┐─┐ ┬      
-├┤ │ │┌┴┬┘      
-└  └─┘┴ └─
-
-by Miguel Avila
-
-*/
-
-/*
- 
-┌─┐┌─┐┌┐┌┌─┐┬┌─┐┬ ┬┬─┐┌─┐┌┬┐┬┌─┐┌┐┌
-│  │ ││││├┤ ││ ┬│ │├┬┘├─┤ │ ││ ││││
-└─┘└─┘┘└┘└  ┴└─┘└─┘┴└─┴ ┴ ┴ ┴└─┘┘└┘
-
-*/
-
 :root {
   --sfwindow: #1d1e19;
   --sfsecondary: #33342b;
+
+  --bg-color: #1d1e19;
+  --bg-color-2: #282922;
+  --bg-color-3: #33342b;
+  --bg-color-4: #3d4035;
+  --bg-color-5: #606359;
+
+  --fg-color: #fdfff1;
+  --fg-color-2: #cbccc7;
+  --fg-color-3: #a7a9a2;
+
+  --orange: #fc9867;
+  --red: #ff6188;
+  --yellow: #ffd866;
+  --green: #a9dc76;
+  --blue: #78dce8;
+  --purple: ##ab9df2;
 }
-
-/* Urlbar View */
-
-/*─────────────────────────────*/
-/* Comment this section if you */
-/* want to show the URL Bar    */
-/*─────────────────────────────*/
-
-/* .urlbarView { */
-/*   display: none !important; */
-/* } */
-
-/*─────────────────────────────*/
-
-/* 
-┌─┐┌─┐┬  ┌─┐┬─┐┌─┐
-│  │ ││  │ │├┬┘└─┐
-└─┘└─┘┴─┘└─┘┴└─└─┘ 
-*/
 
 /* Tabs colors  */
 #tabbrowser-tabs:not([movingtab])
@@ -54,26 +32,70 @@ by Miguel Avila
   > .tab-stack
   > .tab-background[selected="true"] {
   background-image: none !important;
-  background-color: var(--toolbar-bgcolor) !important;
+  background-color: red !important;
 }
 
 /* Inactive tabs color */
 #navigator-toolbox {
-  background-color: var(--sfwindow) !important;
+  background-color: var(--bg-color) !important;
 }
 
-/* Window colors  */
+/* Window */
 :root {
-  --toolbar-bgcolor: var(--sfsecondary) !important;
-  --tabs-border-color: var(--sfsecondary) !important;
-  --lwt-sidebar-background-color: var(--sfwindow) !important;
-  --lwt-toolbar-field-focus: var(--sfsecondary) !important;
+  --toolbar-bgcolor: var(--bg-color-3) !important;
+  --toolbar-background-color: var(--bg-color-3) !important;
+  --tabs-border-color: var(--bg-color) !important;
+  --lwt-sidebar-background-color: var(--bg-color) !important;
+  --lwt-toolbar-field-focus: var(--bg-color) !important;
 }
 
-/* Sidebar color  */
-#sidebar-box,
+Sidebar #sidebar-box,
 .sidebar-placesTree {
-  background-color: var(--sfwindow) !important;
+  background-color: var(--bg-color) !important;
+}
+
+/* Downloads */
+#downloads-button[progress] {
+  --toolbarbutton-icon-fill-attention: var(--yellow) !important;
+}
+
+#downloads-button[progress] #downloads-indicator-progress-outer {
+  border-color: var(--yellow) !important;
+}
+
+#downloads-button[attention="success"] {
+  --toolbarbutton-icon-fill-attention: var(--green) !important;
+}
+#downloads-button[attention="success"] #downloads-indicator-progress-outer {
+  border-color: var(--green) !important;
+}
+
+#downloads-button:is([attention="warning"], [attention="severe"]) {
+  --toolbarbutton-icon-fill-attention: var(--orange) !important;
+}
+#downloads-button:is([attention="warning"], [attention="severe"])
+  #downloads-indicator-progress-outer {
+  border-color: var(--orange) !important;
+}
+
+.downloadProgress::-moz-progress-bar {
+  background-color: var(--yellow) !important;
+}
+
+.downloadProgress {
+  background-color: var(--bg-color-4) !important;
+  border-radius: 10px !important;
+  border: none !important;
+}
+
+#downloadsListBox richlistitem[selected="true"] {
+  background-color: var(--bg-color-3) !important;
+  color: var(--fg-color) !important;
+}
+
+#downloadsListBox richlistitem[selected="true"] .download-state,
+#downloadsListBox richlistitem[selected="true"] .download-name {
+  color: var(--fg-color) !important;
 }
 
 /* 

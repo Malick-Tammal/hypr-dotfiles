@@ -237,7 +237,7 @@ hl.window_rule({
 	name = "file-picker-popup",
 	match = { class = "xdg-desktop-portal-gtk" },
 	float = true,
-	size = { 800, 600 },
+	size = { 1050, 650 },
 })
 
 hl.window_rule({
@@ -320,6 +320,7 @@ hl.window_rule({
 	match = { class = "firefox", title = [[Save As|Opening|Library|Extension:.*|Save Image.*|File Upload.*]] },
 	float = true,
 	center = true,
+	size = { 1130, 690 },
 })
 
 hl.on("window.title", function(win)
