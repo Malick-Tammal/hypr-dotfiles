@@ -1,6 +1,7 @@
 antigravity
 beautysh
 bibata-cursor-git
+ente-auth-bin
 figma-linux
 hyprls-git
 localsend-bin
@@ -14,7 +15,6 @@ pipes.sh
 prettierd
 python-pywal16
 qml-language-server-bin
-quickshell-git
 snapd
 swaync-widgets-git
 ttf-material-design-icons-desktop-git
@@ -24,5 +24,6 @@ wayvibes-git
 whitesur-icon-theme
 winboat-bin
 windscribe-v2-bin
+wsu
 yay-debug
 zennotes-bin

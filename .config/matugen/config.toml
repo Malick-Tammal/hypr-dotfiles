@@ -1,0 +1,6 @@
+[config]
+reload_app = true
+
+[templates.kitty]
+input_path = "./templates/kitty.conf"
+output_path = "~/.config/kitty/current-theme.conf"
