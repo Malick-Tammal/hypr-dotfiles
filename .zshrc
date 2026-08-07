@@ -23,4 +23,4 @@ export ZSH_CONFIG="$HOME/.config/zsh"
 [[ -f "$ZSH_CONFIG/plugins.zsh" ]] && source "$ZSH_CONFIG/plugins.zsh"
 
 # 7. Private keys
-[[ -f "$HOME/dotfiles/keys.zsh" ]] && source "$HOME/dotfiles/keys.zsh"
+[[ -f "$ZSH_CONFIG/keys.zsh" ]] && source "$ZSH_CONFIG/keys.zsh"
