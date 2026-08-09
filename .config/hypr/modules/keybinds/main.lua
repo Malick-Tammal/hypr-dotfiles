@@ -107,6 +107,4 @@ hl.bind(key.F9, function()
 end)
 
 -- Toggle gamemode
-hl.bind(defaults.mainModShift .. " + " .. key.G, function()
-	toggles.toggle_game_mode()
-end)
+hl.bind(defaults.mainModShift .. " + " .. key.G, hl.dsp.exec_cmd("qs ipc call gamemode toggle"))
