@@ -10,7 +10,7 @@ M.gapsIn = 5
 M.gapsOut = 10
 M.isBlur = false
 M.cursorSize = 24
-M.matugenColors = true
+M.matugenColors = false
 
 M.mainMod = "SUPER"
 M.mainModShift = "SUPER + SHIFT"
