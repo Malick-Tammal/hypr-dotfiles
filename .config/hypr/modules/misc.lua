@@ -1,13 +1,13 @@
 -----------------------------------------------------------
 --  HACK: Misc
 -----------------------------------------------------------
-local colors = require("modules.colors")
+local theme = require("modules.theme")
 
 hl.config({
 	misc = {
 		disable_hyprland_logo = true,
 		disable_splash_rendering = true,
-		["col.splash"] = colors.fg,
+		["col.splash"] = theme.colors.textPrimary,
 		font_family = "SF Pro Rounded",
 		splash_font_family = "SF Pro Rounded",
 		force_default_wallpaper = 0,
@@ -16,7 +16,7 @@ hl.config({
 		key_press_enables_dpms = true,
 		allow_session_lock_restore = true,
 		session_lock_xray = true,
-		background_color = colors.dark5,
+		background_color = theme.colors.background,
 	},
 
 	render = {

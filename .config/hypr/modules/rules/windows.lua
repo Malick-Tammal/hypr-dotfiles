@@ -2,7 +2,7 @@
 --  HACK: Windows
 -----------------------------------------------------------
 
-local defaults = require("modules.defaults")
+local configs = require("modules.configs")
 
 hl.window_rule({
 	name = "network-manager",
@@ -54,7 +54,7 @@ hl.window_rule({
 	float = true,
 	center = true,
 	size = { 1300, 800 },
-	opacity = defaults.isBlur and "0.9" or "1",
+	opacity = configs.isBlur and "0.9" or "1",
 })
 
 hl.window_rule({
@@ -71,7 +71,7 @@ hl.window_rule({
 	float = true,
 	center = true,
 	size = { 1300, 800 },
-	opacity = defaults.isBlur and "0.9" or "1",
+	opacity = configs.isBlur and "0.9" or "1",
 })
 
 hl.window_rule({
@@ -80,7 +80,7 @@ hl.window_rule({
 	float = true,
 	center = true,
 	size = { 383, 616 },
-	opacity = defaults.isBlur and "0.9" or "1",
+	opacity = configs.isBlur and "0.9" or "1",
 })
 
 hl.window_rule({
@@ -88,7 +88,7 @@ hl.window_rule({
 	match = { class = "io.missioncenter.MissionCenter" },
 	float = true,
 	center = true,
-	opacity = defaults.isBlur and "0.9" or "1",
+	opacity = configs.isBlur and "0.9" or "1",
 	size = { 1200, 730 },
 })
 
@@ -97,7 +97,7 @@ hl.window_rule({
 	match = { class = "gedit" },
 	float = true,
 	center = true,
-	opacity = defaults.isBlur and "0.9" or "1",
+	opacity = configs.isBlur and "0.9" or "1",
 })
 
 hl.window_rule({
@@ -105,7 +105,7 @@ hl.window_rule({
 	match = { class = "io.github.kaii_lb.Overskride" },
 	float = true,
 	center = true,
-	opacity = defaults.isBlur and "0.9" or "1",
+	opacity = configs.isBlur and "0.9" or "1",
 })
 
 hl.window_rule({
@@ -113,7 +113,7 @@ hl.window_rule({
 	match = { class = "blueman-manager" },
 	float = true,
 	center = true,
-	opacity = defaults.isBlur and "0.9" or "1",
+	opacity = configs.isBlur and "0.9" or "1",
 })
 
 hl.window_rule({
@@ -221,7 +221,7 @@ hl.window_rule({
 hl.window_rule({
 	name = "disable-blur",
 	match = { class = ".*" },
-	no_blur = not defaults.isBlur,
+	no_blur = not configs.isBlur,
 })
 
 hl.window_rule({

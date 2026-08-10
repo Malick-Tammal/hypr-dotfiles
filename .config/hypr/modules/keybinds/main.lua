@@ -2,7 +2,7 @@
 --  HACK: Main keybinds
 -----------------------------------------------------------
 
-local defaults = require("modules.defaults")
+local configs = require("modules.configs")
 local home = os.getenv("HOME")
 local toggles = require("utils.toggles")
 local key = require("utils.keys")
@@ -10,13 +10,13 @@ local key = require("utils.keys")
 require("modules.keybinds.submaps")
 
 --  INFO: Essential ---
-hl.bind(defaults.mainMod .. " + " .. key.T, hl.dsp.exec_cmd(defaults.terminal)) -- Launch terminal
-hl.bind(defaults.mainMod .. " + " .. key.E, hl.dsp.exec_cmd(defaults.filemanager)) -- Launch file manager
-hl.bind(defaults.mainMod .. " + " .. key.SPACE, hl.dsp.exec_cmd(defaults.launcher)) -- App launcher
-hl.bind(defaults.mainMod .. " + " .. key.B, hl.dsp.exec_cmd(defaults.browser)) -- Launch browser
-hl.bind(defaults.mainMod .. " + " .. key.N, hl.dsp.exec_cmd(defaults.notificationCenter)) -- Launch notification center
-hl.bind(defaults.mainMod .. " + " .. key.BACKSPACE, hl.dsp.window.close()) -- Close active window
-hl.bind(defaults.mainMod .. " + " .. key.I, hl.dsp.exec_cmd(defaults.bar)) -- Launch terminal
+hl.bind(configs.mainMod .. " + " .. key.T, hl.dsp.exec_cmd(configs.terminal)) -- Launch terminal
+hl.bind(configs.mainMod .. " + " .. key.E, hl.dsp.exec_cmd(configs.filemanager)) -- Launch file manager
+hl.bind(configs.mainMod .. " + " .. key.SPACE, hl.dsp.exec_cmd(configs.launcher)) -- App launcher
+hl.bind(configs.mainMod .. " + " .. key.B, hl.dsp.exec_cmd(configs.browser)) -- Launch browser
+hl.bind(configs.mainMod .. " + " .. key.N, hl.dsp.exec_cmd(configs.notificationCenter)) -- Launch notification center
+hl.bind(configs.mainMod .. " + " .. key.BACKSPACE, hl.dsp.window.close()) -- Close active window
+hl.bind(configs.mainMod .. " + " .. key.I, hl.dsp.exec_cmd(configs.bar)) -- Launch terminal
 ------------------------------------------------------
 
 --  INFO: Window management ---
@@ -24,30 +24,30 @@ require("modules.keybinds.windows.general") -- Load keybinds for specific layout
 ------------------------------------------------------
 
 --  INFO: SYSTEM CONTROLS ---
-hl.bind(defaults.mainModShift .. " + " .. key.BACKSPACE, hl.dsp.exec_cmd(defaults.lockScreen)) -- Lock screen
+hl.bind(configs.mainModShift .. " + " .. key.BACKSPACE, hl.dsp.exec_cmd(configs.lockScreen)) -- Lock screen
 hl.bind(
-	defaults.mainModShift .. " + " .. key.DELETE,
+	configs.mainModShift .. " + " .. key.DELETE,
 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'") -- Logout
 )
-hl.bind(defaults.mainMod .. " + " .. key.P, hl.dsp.exec_raw(defaults.colorPicker)) -- Color picker
-hl.bind(defaults.mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true }) -- Drag window with mouse
-hl.bind(defaults.mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true }) -- Resize window with mouse
+hl.bind(configs.mainMod .. " + " .. key.P, hl.dsp.exec_raw(configs.colorPicker)) -- Color picker
+hl.bind(configs.mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true }) -- Drag window with mouse
+hl.bind(configs.mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true }) -- Resize window with mouse
 ------------------------------------------------------
 
 --  INFO: Workspaces ---
 for i = 1, 10 do
 	local key = i % 10
-	hl.bind(defaults.mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
-	hl.bind(defaults.mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+	hl.bind(configs.mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
+	hl.bind(configs.mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
 -- Scroll through existing workspaces with mainMod + scroll wheel
-hl.bind(defaults.mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(defaults.mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(configs.mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(configs.mainMod .. " + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
 
 -- Cycle through workspaces with mainMod + Tab
-hl.bind(defaults.mainMod .. " + " .. key.TAB, hl.dsp.focus({ workspace = "e+1" }))
-hl.bind(defaults.mainModShift .. " + " .. key.TAB, hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(configs.mainMod .. " + " .. key.TAB, hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(configs.mainModShift .. " + " .. key.TAB, hl.dsp.focus({ workspace = "e-1" }))
 ------------------------------------------------------
 
 --  INFO: Laptop multimedia keys ---
@@ -85,10 +85,10 @@ hl.bind(
 ------------------------------------------------------
 
 hl.bind("ALT + Space", hl.dsp.exec_cmd("hyprctl switchxkblayout all next")) -- Keybaord layout switcher
-hl.bind(defaults.mainMod .. " + " .. key.C, hl.dsp.exec_cmd(defaults.clipboard))
-hl.bind(defaults.mainModShift .. " + " .. key.C, hl.dsp.exec_cmd(defaults.calculator))
-hl.bind(defaults.mainModShift .. " + " .. key.W, hl.dsp.exec_cmd(defaults.wallpaperManager))
-hl.bind(defaults.mainModShift .. " + " .. key.P, hl.dsp.exec_cmd(defaults.powermenu))
+hl.bind(configs.mainMod .. " + " .. key.C, hl.dsp.exec_cmd(configs.clipboard))
+hl.bind(configs.mainModShift .. " + " .. key.C, hl.dsp.exec_cmd(configs.calculator))
+hl.bind(configs.mainModShift .. " + " .. key.W, hl.dsp.exec_cmd(configs.wallpaperManager))
+hl.bind(configs.mainModShift .. " + " .. key.P, hl.dsp.exec_cmd(configs.powermenu))
 
 --  INFO: Lid Switch ---
 hl.bind("switch:on:Lid Switch", hl.dsp.exec_cmd("loginctl lock-session"), { locked = true })
@@ -96,10 +96,10 @@ hl.bind("switch:on:Lid Switch", hl.dsp.dpms({ action = "disable" }), { locked = 
 hl.bind("switch:off:Lid Switch", hl.dsp.exec_cmd("brightnessctl -r"), { locked = true })
 hl.bind("switch:off:Lid Switch", hl.dsp.dpms({ action = "enable" }), { locked = true })
 
-hl.bind(defaults.mainModShift .. " + " .. key.I, toggles.toggle_caffeine, { locked = true }) -- Caffeine (toggle hypridle)
+hl.bind(configs.mainModShift .. " + " .. key.I, toggles.toggle_caffeine, { locked = true }) -- Caffeine (toggle hypridle)
 
-hl.bind(defaults.mainModShift .. " + " .. key.E, hl.dsp.exec_cmd(defaults.emojiPicker)) -- Emoji picker
-hl.bind(defaults.mainMod .. " + " .. key.RETURN, hl.dsp.exec_cmd(defaults.pacseek)) -- Pacseek
+hl.bind(configs.mainModShift .. " + " .. key.E, hl.dsp.exec_cmd(configs.emojiPicker)) -- Emoji picker
+hl.bind(configs.mainMod .. " + " .. key.RETURN, hl.dsp.exec_cmd(configs.pacseek)) -- Pacseek
 
 -- Toggle touchapd
 hl.bind(key.F9, function()
@@ -107,4 +107,4 @@ hl.bind(key.F9, function()
 end)
 
 -- Toggle gamemode
-hl.bind(defaults.mainModShift .. " + " .. key.G, hl.dsp.exec_cmd("qs ipc call gamemode toggle"))
+hl.bind(configs.mainModShift .. " + " .. key.G, hl.dsp.exec_cmd("qs ipc call gamemode toggle"))

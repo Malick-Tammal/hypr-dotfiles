@@ -2,7 +2,7 @@
 --  HACK: Layers
 -----------------------------------------------------------
 
-local defaults = require("modules.defaults")
+local configs = require("modules.configs")
 
 hl.layer_rule({
 	name = "walli",
@@ -25,35 +25,35 @@ hl.layer_rule({
 hl.layer_rule({
 	name = "rofi",
 	match = { namespace = "rofi" },
-	blur = defaults.isBlur,
+	blur = configs.isBlur,
 	ignore_alpha = 0.3,
 })
 
 hl.layer_rule({
 	name = "swaync-control-center",
 	match = { namespace = "swaync-control-center" },
-	blur = defaults.isBlur,
+	blur = configs.isBlur,
 	ignore_alpha = 0.3,
 })
 
 hl.layer_rule({
 	name = "swaync-notification-window",
 	match = { namespace = "swaync-notification-window" },
-	blur = defaults.isBlur,
+	blur = configs.isBlur,
 	ignore_alpha = 0.3,
 })
 
 hl.layer_rule({
 	name = "swayosd",
 	match = { namespace = "swayosd" },
-	blur = defaults.isBlur,
+	blur = configs.isBlur,
 	ignore_alpha = 0.3,
 })
 
 hl.layer_rule({
 	name = "waybar",
 	match = { namespace = "waybar" },
-	blur = defaults.isBlur,
+	blur = configs.isBlur,
 	ignore_alpha = 0.3,
 })
 
@@ -77,6 +77,6 @@ hl.layer_rule({
 
 hl.layer_rule({
 	match = { namespace = "quickshell" },
-	blur = defaults.isBlur,
+	blur = configs.isBlur,
 	ignore_alpha = 0.2,
 })

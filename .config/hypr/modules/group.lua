@@ -1,14 +1,14 @@
 -----------------------------------------------------------
 --  HACK: Group
 -----------------------------------------------------------
-local colors = require("modules.colors")
+local theme = require("modules.theme")
 
 hl.config({
 	group = {
-		["col.border_active"] = colors.green5,
-		["col.border_inactive"] = colors.green7,
-		["col.border_locked_active"] = colors.red5,
-		["col.border_locked_inactive"] = colors.red7,
+		["col.border_active"] = theme.colors.success,
+		["col.border_inactive"] = theme.colors.successBorder,
+		["col.border_locked_active"] = theme.colors.error,
+		["col.border_locked_inactive"] = theme.colors.errorBorder,
 
 		groupbar = {
 			enabled = true,
@@ -20,10 +20,10 @@ hl.config({
 			indicator_height = 15,
 			rounding = 10,
 			text_offset = -6,
-			["col.active"] = colors.green5,
-			["col.inactive"] = colors.green7,
-			text_color = colors.green9,
-			text_color_inactive = colors.green3,
+			["col.active"] = theme.colors.success,
+			["col.inactive"] = theme.colors.successBorder,
+			text_color = theme.colors.onSuccess,
+			text_color_inactive = theme.colors.successContainer,
 			gaps_in = 5,
 			gaps_out = 5,
 		},

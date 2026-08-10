@@ -2,7 +2,7 @@
 --  HACK: Autostart
 -----------------------------------------------------------
 
-local defaults = require("modules.defaults")
+local configs = require("modules.configs")
 
 hl.on("hyprland.start", function()
 	local home = os.getenv("HOME")
@@ -30,7 +30,7 @@ hl.on("hyprland.start", function()
 
 	hl.exec_cmd("hyprpm reload")
 
-	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic " .. defaults.cursorSize)
+	hl.exec_cmd("hyprctl setcursor Bibata-Modern-Classic " .. configs.cursorSize)
 	hl.exec_cmd("[workspace special:hidden silent] nautilus")
 	hl.exec_cmd("xhost +si:localuser:root")
 

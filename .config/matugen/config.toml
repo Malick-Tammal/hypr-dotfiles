@@ -4,3 +4,8 @@ reload_app = true
 [templates.kitty]
 input_path = "./templates/kitty.conf"
 output_path = "~/.config/kitty/current-theme.conf"
+
+[templates.hyprland]
+input_path = "./templates/hyprland.lua"
+output_path = "./output/hyprland.lua"
+post_hook = 'hyprctl reload'

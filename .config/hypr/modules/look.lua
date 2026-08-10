@@ -2,20 +2,20 @@
 --  HACK: Look
 -----------------------------------------------------------
 
-local colors = require("modules.colors")
-local defaults = require("modules.defaults")
+local theme = require("modules.theme")
+local configs = require("modules.configs")
 
 hl.config({
 	general = {
 		border_size = 1,
 
-		gaps_in = defaults.gapsIn,
-		gaps_out = defaults.gapsOut,
+		gaps_in = configs.gapsIn,
+		gaps_out = configs.gapsOut,
 		gaps_workspaces = 10,
 
 		col = {
-			active_border = { colors = { colors.orange5, colors.yellow5 }, angle = 45 },
-			inactive_border = colors.dark1,
+			active_border = { colors = { theme.colors.border, theme.colors.borderAlt }, angle = 45 },
+			inactive_border = theme.colors.borderDim,
 		},
 
 		layout = "scrolling",
@@ -28,8 +28,8 @@ hl.config({
 
 		snap = {
 			enabled = true,
-			window_gap = defaults.gapsOut,
-			monitor_gap = defaults.gapsOut,
+			window_gap = configs.gapsOut,
+			monitor_gap = configs.gapsOut,
 			border_overlap = true,
 			respect_gaps = true,
 		},
@@ -43,7 +43,7 @@ hl.config({
 		dim_around = 0.4,
 
 		blur = {
-			enabled = defaults.blur,
+			enabled = configs.blur,
 			size = 6,
 			passes = 5,
 			noise = 0.055,
@@ -66,8 +66,8 @@ hl.config({
 			enabled = false,
 			range = 20,
 			render_power = 2,
-			color = colors.orange7,
-			color_inactive = colors.dark1,
+			color = theme.colors.warning,
+			color_inactive = theme.colors.textMuted,
 		},
 	},
 

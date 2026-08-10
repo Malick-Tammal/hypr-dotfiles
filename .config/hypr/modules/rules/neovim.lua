@@ -2,28 +2,28 @@
 --  HACK: Neovim (Adaptive border color)
 -----------------------------------------------------------
 
-local colors = require("modules.colors")
+local theme = require("modules.theme")
 
 hl.window_rule({
 	name = "neovim-normal",
 	match = { class = "kitty", title = [[.*(nvim-normal).*]] },
-	border_color = colors.yellow5,
+	border_color = theme.colors.primary,
 })
 
 hl.window_rule({
 	name = "neovim-insert",
 	match = { class = "kitty", title = [[.*(nvim-insert).*]] },
-	border_color = colors.green5,
+	border_color = theme.colors.success,
 })
 
 hl.window_rule({
 	name = "neovim-visual",
 	match = { class = "kitty", title = [[.*(nvim-visual).*]] },
-	border_color = colors.purple5,
+	border_color = theme.colors.info,
 })
 
 hl.window_rule({
 	name = "neovim-replace",
 	match = { class = "kitty", title = [[.*(nvim-replace).*]] },
-	border_color = colors.red5,
+	border_color = theme.colors.error,
 })
