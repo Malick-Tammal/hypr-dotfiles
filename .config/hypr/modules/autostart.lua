@@ -12,7 +12,6 @@ hl.on("hyprland.start", function()
 
 	hl.exec_cmd("uwsm app -- hypridle")
 	hl.exec_cmd("uwsm app -- swaync")
-	-- hl.exec_cmd("uwsm app -- swayosd-server")
 	hl.exec_cmd("uwsm app -- udiskie")
 	hl.exec_cmd("uwsm app -- awww-daemon")
 	hl.exec_cmd("uwsm app -- quickshell")
@@ -25,8 +24,6 @@ hl.on("hyprland.start", function()
 	--  INFO: Scripts ---
 	hl.exec_cmd("uwsm app -- " .. home .. "/.config/hypr/scripts/gtk.sh")
 	hl.exec_cmd("uwsm app -- " .. home .. "/.config/hypr/scripts/notification_sound.sh")
-	hl.exec_cmd("uwsm app -- " .. home .. "/.config/hypr/scripts/battery.sh")
-	-- hl.exec_cmd("uwsm app -- " .. home .. "/.config/hypr/scripts/charger.sh")
 
 	hl.exec_cmd("hyprpm reload")
 

@@ -173,13 +173,6 @@ hl.window_rule({
 	size = { 600, 950 },
 })
 
--- hl.window_rule({
--- 	name = "waydroid",
--- 	match = { class = "Waydroid" },
--- 	workspace = "name:special:Android",
--- 	fullscreen = true,
--- })
-
 hl.window_rule({
 	name = "jetbrains-fix",
 	match = {

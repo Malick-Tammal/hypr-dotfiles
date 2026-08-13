@@ -30,7 +30,7 @@ hl.define_submap("scratchpad", function()
 	hl.bind(key.MINUS, hl.dsp.window.move({ workspace = "+0", follow = false }))
 
 	hl.bind(key.T, hl.dsp.workspace.toggle_special("Terminal"))
-	hl.bind(key.A, hl.dsp.workspace.toggle_special("Android"))
+	hl.bind(key.S, hl.dsp.workspace.toggle_special("Server"))
 
 	--  TIP: Exit submap
 	hl.bind(key.ESCAPE, hl.dsp.submap("reset"))

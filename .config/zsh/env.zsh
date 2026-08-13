@@ -6,3 +6,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$PATH:/usr/lib/qt6/bin
 export NVM_DIR="$HOME/.nvm"
 export PATH="/usr/lib/qt6/bin:$PATH"
+export PATH="$HOME/.local/share/pnpm/bin:$PATH"
+export LIBVIRT_DEFAULT_URI="qemu:///system"

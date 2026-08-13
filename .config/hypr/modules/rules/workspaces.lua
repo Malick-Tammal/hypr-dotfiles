@@ -8,8 +8,8 @@ hl.workspace_rule({
 })
 
 hl.workspace_rule({
-	workspace = "special:Android",
-	on_created_empty = "waydroid show-full-ui",
+	workspace = "special:Server",
+	on_created_empty = "virt-manager",
 })
 
 hl.workspace_rule({
