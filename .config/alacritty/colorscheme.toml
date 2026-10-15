@@ -1,0 +1,36 @@
+#----------------------------------------------------------
+#-- HACK: Monokai Fusion
+#----------------------------------------------------------
+
+[colors.primary]
+background = "#1D1E19"
+foreground = "#FDFFF1"
+
+[colors.cursor]
+text = "#1D1E19"
+cursor = "#FDFFF1"
+
+[colors.selection]
+text = "#272822"
+background = "#FDFFF1"
+
+# 16 Color Space
+[colors.normal]
+black = "#1D1E19"
+red = "#FF6188"
+green = "#A9DC76"
+yellow = "#FFD866"
+blue = "#78DCE8"
+magenta = "#FC9867"
+cyan = "#AB9DF2"
+white = "#FDFFF1"
+
+[colors.bright]
+black = "#727072"
+red = "#FF6188"
+green = "#A9DC76"
+yellow = "#FFD866"
+blue = "#78DCE8"
+magenta = "#FC9867"
+cyan = "#AB9DF2"
+white = "#A7A9A2"

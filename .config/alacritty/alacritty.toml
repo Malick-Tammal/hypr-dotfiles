@@ -1,0 +1,78 @@
+#----------------------------------------------------------
+#-- HACK: Alacritty config
+#----------------------------------------------------------
+
+[general]
+import = ["~/.config/alacritty/colorscheme.toml"]
+
+#  INFO: Font
+
+[font]
+size = 10
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+style = "Italic"
+
+[font.bold_italic]
+style = "Bold Italic"
+
+#  INFO: Theme
+
+#  INFO: Window / Opacity
+
+[window]
+opacity = 1.0
+dynamic_padding = false
+padding = { x = 5, y = 5 }
+
+#  INFO: Cursor shape & Animation
+
+[cursor]
+style = { shape = "Block", blinking = "Never" }
+
+#  INFO: Shell
+
+[terminal]
+shell = "zsh"
+
+#  INFO: Scrolling (scrollback + wheel multiplier)
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+#  INFO: Selection / Clipboard
+
+[selection]
+save_to_clipboard = true
+
+#  INFO: Mouse
+
+[mouse]
+hide_when_typing = false
+
+#  INFO: Keybinds
+
+[keyboard]
+bindings = [
+  # Scroll page
+  { key = "K", mods = "Control|Shift", action = "ScrollPageUp" },
+  { key = "J", mods = "Control|Shift", action = "ScrollPageDown" },
+
+  # Scroll to top/bottom of history
+  { key = "Home", mods = "Control|Shift", action = "ScrollToTop" },
+  { key = "End", mods = "Control|Shift", action = "ScrollToBottom" },
+
+  { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+  { key = "Q", mods = "Control|Shift", action = "Quit" },
+
+  # ctrl+x -> no_op
+  { key = "X", mods = "Control", action = "None" },
+]
